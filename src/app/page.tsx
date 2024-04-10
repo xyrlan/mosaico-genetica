@@ -5,8 +5,8 @@ import { motion } from "framer-motion"
 export default function Home() {
   return (
     <>
-      <main className="flex items-center min-h-screen p-4 md:p-24 relative ">
-        <script type="module" crossOrigin="anonymous" src="https://unpkg.com/@splinetool/viewer@1.0.93/build/spline-viewer.js" async></script>
+      <main className="flex items-center min-h-screen p-4 md:p-24 relative overflow-hidden ">
+        <script type="module" intersection-observer="true" src="https://unpkg.com/@splinetool/viewer@1.0.93/build/spline-viewer.js" async></script>
         <div className="z-30">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -19,7 +19,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
-          className="text-lg md:text-xl font-medium text-gray-600 max-w-2xl text-center text-balance">
+            className="text-lg md:text-xl font-medium text-gray-600 max-w-2xl text-center text-balance">
             Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias com doenças raras.
             <br />
             Atendimento de genética médica presencial em Brasília (DF) e online em todo o Brasil.
