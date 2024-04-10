@@ -19,6 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <script type="module" intersection-observer="true" src="https://unpkg.com/@splinetool/viewer@1.0.93/build/spline-viewer.js" async ></script>
       <body className={inter.className}>{children}</body>
     </html>
   );
