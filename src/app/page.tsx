@@ -37,11 +37,12 @@ export default function Home() {
         </div>
  
           <div className="h-full w-full md:w-1/2 flex-none z-10 max-md:opacity-20 right-0 top-0 absolute">
-            <spline-viewer url="https://prod.spline.design/7qKeFzcwV5yLrtkF/scene.splinecode"></spline-viewer>
+            <spline-viewer url="https://prod.spline.design/ZNUUDkDh9yJcH65u/scene.splinecode"></spline-viewer>
             <div className="absolute bottom-4 right-2 bg-gray-50 h-10 w-40 z-20  " />
           </div>
-     
+          <div className="hidden max-md:block absolute top-0 h-full w-full bg-white/20 z-20" />
       </main>
+     <div className="min-h-screen bg-black flex items-center"> blablabla</div>
     </>
   );
 }

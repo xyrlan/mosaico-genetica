@@ -18,9 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <script type="module" intersection-observer="true" src="https://unpkg.com/@splinetool/viewer@1.0.93/build/spline-viewer.js" async ></script>
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR">
+      <body className={inter.className}>
+        {children}
+        <Script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.93/build/spline-viewer.js" strategy="beforeInteractive"></Script>
+      </body>
     </html>
   );
 }
