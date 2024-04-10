@@ -1,5 +1,4 @@
 import React from 'react'
-import Spline from '@splinetool/react-spline';
 import Script from 'next/script';
 
 const SplineViewer = () => {
