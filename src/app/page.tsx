@@ -26,15 +26,10 @@ export default function Home() {
           </motion.p>
         </div>
 
-        <motion.div
-          initial={{ x: 800 }}
-          whileInView={{ x: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="h-full w-full md:w-1/2 flex-none z-10 max-md:opacity-20 right-0 top-0 absolute">
+        <div className="h-full w-full md:w-1/2 flex-none z-10 max-md:opacity-20 right-0 top-0 absolute">
           <spline-viewer url="https://prod.spline.design/7qKeFzcwV5yLrtkF/scene.splinecode"></spline-viewer>
           <div className="absolute bottom-4 right-2 bg-gray-50 h-10 w-40 z-20  " />
-        </motion.div>
+        </div>
 
       </main>
     </>
