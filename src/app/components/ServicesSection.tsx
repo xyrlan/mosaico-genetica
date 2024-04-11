@@ -36,7 +36,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id='servicos' className='min-h-screen relative py-24  flex flex-col items-center'>
+    <section id='servicos' className='min-h-screen relative py-24 px-4 flex flex-col items-center'>
       <div className='max-w-6xl'>
         <div className='flex flex-col items-center gap-7'>
           <h2 className='text-4xl font-semibold text-center max-w-2xl'>Serviços que estão além do diagnóstico</h2>
@@ -49,7 +49,7 @@ const ServicesSection = () => {
               <dt className="font-semibold  justify-center text-3xl mt-5 text-center">
                 {service.name}
               </dt>
-              <dd className="mt-3">{service.description}</dd>
+              <dd className="mt-3 text-center">{service.description}</dd>
             </div>
           ))}
         </dl>
