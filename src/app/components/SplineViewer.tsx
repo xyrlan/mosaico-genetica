@@ -2,15 +2,11 @@ import React from 'react'
 import Spline from '@splinetool/react-spline';
 
 const SplineViewer = () => {
-const [isHidden, setIsHidden] = React.useState(true)
+  const [isHidden, setIsHidden] = React.useState(true)
 
   return (
-    <div className='hidden lg:block z-10'>
-      <div className="h-full w-full md:w-1/2 flex-none max-md:opacity-20 right-0 top-0 absolute">
-        <Spline className={isHidden ? 'hidden' : 'block'} onLoad={() => setIsHidden(false)} scene="https://prod.spline.design/ZNUUDkDh9yJcH65u/scene.splinecode"
-      />
-        {/* <div className="absolute bottom-4 right-2 bg-gray-200 h-10 w-40 z-20  " /> */}
-      </div>
+    <div className='hidden lg:block z-10 h-full w-full md:w-1/2 '>
+      <Spline className={isHidden ? 'hidden' : 'block'} onLoad={() => setIsHidden(false)} scene="https://prod.spline.design/ZNUUDkDh9yJcH65u/scene.splinecode" />
     </div>
   )
 }

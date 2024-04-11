@@ -4,7 +4,7 @@ import React from 'react'
 
 const AboutSection = () => {
   return (
-    <section id="nosso-especialista" className="min-h-screen flex items-center relative py-24 bg-[#f5eaf0]">
+    <section id="nosso-especialista" className="min-h-screen flex items-center relative py-24 ">
       <Image src={'/background.png'} width={1000} height={1000} alt="background" className="absolute bottom-0 left-0 z-0  opacity-40 select-none" />
       <div className="container mx-auto z-10">
         <div className=" flex md:flex-row flex-col justify-between items-center gap-10">
