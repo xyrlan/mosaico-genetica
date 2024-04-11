@@ -4,7 +4,7 @@ import Spline from '@splinetool/react-spline';
 
 const SplineViewer = () => {
   return (
-    <div className=''>
+    <div className='hidden lg:block'>
       <Script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.93/build/spline-viewer.js" strategy="beforeInteractive" ></Script>
       <div className="h-full w-full md:w-1/2 flex-none z-10 max-md:opacity-20 right-0 top-0 absolute">
         <Spline scene="https://prod.spline.design/ZNUUDkDh9yJcH65u/scene.splinecode"
