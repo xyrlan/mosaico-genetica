@@ -18,10 +18,32 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    scroll-behavior: smooth;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Estilização da barra de rolagem */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+
+/* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor de fundo da área da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Cor da barra de rolagem */
+  border-radius: 5px; /* Raio das bordas da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Cor da barra de rolagem ao passar o mouse por cima */
 }

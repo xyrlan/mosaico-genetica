@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Script from "next/script";
 import SplineViewer from "./components/SplineViewer";
+import Header from "./components/Header";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
+        <Header />
         {children}
       </body>
     </html>
