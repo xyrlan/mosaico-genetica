@@ -37,14 +37,14 @@ const ServicesSection = () => {
 
   return (
     <section id='servicos' className='min-h-screen relative py-24  flex flex-col items-center'>
-      <div className='container'>
+      <div className='max-w-6xl'>
         <div className='flex flex-col items-center gap-7'>
           <h2 className='text-4xl font-semibold text-center max-w-2xl'>Serviços que estão além do diagnóstico</h2>
           <p className='text-lg md:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>Entendemos que cada jornada na genética é única, e na Mosaico abraçamos oferecemos aconselhamento nas diversas áreas da genética clínica para oferecer suporte holístico às necessidades específicas de cada paciente.</p>
         </div>
-        <dl className="mt-10 text-base leading-7 text-gray-600 lg:max-w-none grid md:grid-cols-2 gap-8">
+        <dl className="mt-14 text-base leading-7 text-gray-600 lg:max-w-none grid md:grid-cols-2 gap-8">
           {services.map((service) => (
-            <div key={service.name} className="relative pl-9 flex flex-col items-center bg-gray-200 rounded-2xl p-8 hover:-translate-y-2 duration-300 transition-all hover:text-white">
+            <div key={service.name} className="relative pl-9 flex flex-col items-center bg-gray-200 rounded-2xl p-8 hover:-translate-y-2 duration-300 transition-all hover:text-white shadow-lg hover:shadow-2xl">
               <Image src={service.icon} alt={service.name} width={600} height={600} className='h-[150px] md:h-[300px] w-auto object-center' />
               <dt className="font-semibold  justify-center text-3xl mt-5">
                 {service.name}
