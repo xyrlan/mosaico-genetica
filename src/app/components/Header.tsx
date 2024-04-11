@@ -21,7 +21,7 @@ const [scroll, setScroll] = React.useState(false)
   }, [])
 
   return (
-    <header className={`z-50 duration-300 transition-all w-full flex justify-center px-6 py-3 top-0 ${scroll ? 'bg-[#d9d9d9] fixed' : 'bg-transparent fixed'}`}>
+    <header className={`z-50 duration-300 transition-all w-full flex justify-center px-6 py-3 top-0  ${scroll ? 'bg-[#d9d9d9] fixed h-14' : 'bg-transparent fixed h-20'}`}>
       <div className="flex items-center justify-between sm:container">
         <Logo />
         <Navbar />

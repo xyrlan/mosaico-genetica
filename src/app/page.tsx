@@ -10,7 +10,7 @@ import ServicesSection from "./components/ServicesSection";
 export default function Home() {
   return (
     <>
-      <main role="main" className="flex items-center min-h-screen p-4 md:p-24 relative overflow-hidden ">
+      <main role="main" className="flex items-center min-h-screen p-4 py-20 md:p-24 relative overflow-hidden ">
         <HeroSection />
         <SplineViewer />
       </main>
