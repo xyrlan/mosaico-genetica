@@ -47,3 +47,13 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555; /* Cor da barra de rolagem ao passar o mouse por cima */
 }
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: #7ec2d3;
+  transform-origin: 0%;
+}

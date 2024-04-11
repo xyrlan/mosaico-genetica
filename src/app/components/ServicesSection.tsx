@@ -11,7 +11,7 @@ const ServicesSection = () => {
     {
       name: 'Neurogenética',
       description: 'Na Mosaico, compreendemos as nuances da Neurogenética, focando em condições neurológicas hereditárias e oferecendo soluções clínicas avançadas para enfrentar desafios neurogenéticos.',
-      icon: '/neurogenetica.png'
+      icon: '/braindna.png'
     },
     {
       name: 'Genética Reprodutiva',
@@ -44,8 +44,8 @@ const ServicesSection = () => {
         </div>
         <dl className="mt-14 text-base leading-7 text-gray-600 lg:max-w-none grid md:grid-cols-2 gap-8">
           {services.map((service) => (
-            <div key={service.name} className="relative pl-9 flex flex-col items-center bg-gray-200 rounded-2xl p-8 hover:-translate-y-2 duration-300 transition-all shadow-lg hover:shadow-2xl">
-              <Image src={service.icon} alt={service.name} width={600} height={600} className='h-[150px] md:h-[300px] w-auto object-center opacity-70' />
+            <div key={service.name} className="relative pl-9 flex flex-col items-center bg-gray-200 rounded p-8 hover:-translate-y-2 duration-300 transition-all shadow-lg hover:shadow-2xl ">
+              <Image src={service.icon} alt={service.name} width={600} height={600} className='h-[100px] md:h-[150px] w-auto object-center saturate-50 select-none' />
               <dt className="font-semibold  justify-center text-3xl mt-5 text-center">
                 {service.name}
               </dt>

@@ -4,8 +4,8 @@ import Logo from './Logo'
 import Navbar from './Navbar'
 
 const Header = () => {
-  
-const [scroll, setScroll] = React.useState(false)
+
+  const [scroll, setScroll] = React.useState(false)
   React.useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -21,10 +21,10 @@ const [scroll, setScroll] = React.useState(false)
   }, [])
 
   return (
-    <header className={`z-50 duration-300 transition-all w-full flex justify-center px-6 py-3 top-0  ${scroll ? 'bg-[#d9d9d9] fixed h-14' : 'bg-transparent fixed h-20'}`}>
+    <header className={`z-50 duration-300 transition-all w-full flex justify-center px-6  top-0  ${scroll ? 'bg-[#d9d9d9] fixed py-1' : 'bg-transparent fixed py-3 '}`}>
       <div className="flex items-center justify-between sm:container">
-        <Logo />
-        <Navbar />
+        <Logo scroll={scroll} />
+        <Navbar scroll={scroll} />
       </div>
     </header>
   )
