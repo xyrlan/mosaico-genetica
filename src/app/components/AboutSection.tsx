@@ -12,11 +12,11 @@ const AboutSection = () => {
 
         <div className="flex lg:flex-row flex-col justify-between items-center gap-5 lg:gap-10  ">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ ease: 'easeOut', duration: 1 }}
-            className="max-lg:block hidden relative w-full h-full shadow-lg hover:shadow-2xl overflow-hidden duration-300 transition-all rounded ">
-            <Image src="/fabricio2.png" alt="Especialista" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none " />
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1}}
+            className="max-lg:block hidden relative w-full h-full rounded overflow-hidden">
+            <Image src="/fabricio2.png" alt="Especialista" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl " />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -40,21 +40,21 @@ const AboutSection = () => {
             </p>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.8 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ ease: 'easeOut', duration: 1 }}
-            className="lg:block hidden relative w-full h-full shadow-lg hover:shadow-2xl overflow-hidden duration-300 transition-all rounded ">
-            <Image src="/fabricio2.png" alt="Especialista" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none " />
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="lg:block hidden relative w-full h-full shadow-lg hover:shadow-2xl overflow-hidden rounded ">
+            <Image src="/fabricio2.png" alt="Especialista" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl " />
           </motion.div>
         </div>
 
         <div className=" flex lg:flex-row flex-col justify-between items-center gap-5 lg:gap-10 max-lg:mt-5">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ ease: 'easeOut', duration: 1 }}
-            className="relative w-full h-full shadow-lg hover:shadow-2xl overflow-hidden duration-300 transition-all rounded">
-            <Image src="/atendimento.png" alt="foto-atendimento" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none" />
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1}}
+            className="relative w-full h-full shadow-lg hover:shadow-2xl rounded overflow-hidden">
+            <Image src="/atendimento.png" alt="foto-atendimento" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}

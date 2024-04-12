@@ -12,9 +12,9 @@ const HeroSection = () => {
     offset: ['end end', 'end start']
   })
 
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
   const position = useTransform(scrollYProgress, (pos) => {
-    return pos > 1 ? "relative" : "fixed"
+    return pos === 1 ? "relative" : "fixed"
   })
   const x = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "25%", "50%", "100%"])
   const x_ = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "-25%", "-50%", "-100%"])

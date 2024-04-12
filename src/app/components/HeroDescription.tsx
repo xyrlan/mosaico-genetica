@@ -14,7 +14,7 @@ const HeroDescription = () => {
       </div>
       <Image src="/slogan-mosaico.png" alt="Mosaico Genética" width={500} height={500} priority className="h-auto hidden max-lg:block w-full select-none" />
       <p className="text-base lg:text-xl font-medium text-gray-600 max-w-2xl text-center text-balance tracking-wide mt-5 xl:mt-5">
-        Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias com doenças raras.
+        Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias. 
         <br />
         <br />
         Atendimento de genética médica presencial em Brasília (DF) e online em todo o Brasil.

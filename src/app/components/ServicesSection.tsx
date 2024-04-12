@@ -1,13 +1,20 @@
 import Image from 'next/image'
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useRef } from 'react'
+import { motion, useScroll } from 'framer-motion'
 
 
 const ServicesSection = () => {
+
+  const targetRef = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ['end end', 'end start']
+  })
+
   const services = [
     {
       name: 'Erros Inatos do Metabolismo',
-      description: 'Nossa equipe especializada em Erros Inatos do Metabolismo está aqui para desvendar os complexos desafios metabólicos.',
+      description: 'Nossa equipe especializada em Erros Inatos do Metabolismo está aqui para desvendar os complexos desafios metabólicos especíicos da pessoa.',
       icon: '/metabolism.png'
     },
     {
@@ -50,18 +57,22 @@ const ServicesSection = () => {
         </motion.div>
         <dl className="mt-14 text-base leading-7 text-gray-600 lg:max-w-none grid md:grid-cols-2 gap-8">
           {services.map((service) => (
-            <div
+            <motion.div
               key={service.name}
-              className="relative pl-9 flex flex-col items-center bg-gray-200 rounded p-8 hover:-translate-y-2 duration-300 transition-all shadow-lg hover:shadow-2xl ">
-              <Image src={service.icon} alt={service.name} width={600} height={600} className='h-[100px] md:h-[150px] w-auto object-center saturate-50 select-none' />
-              <dt className="font-semibold  justify-center text-3xl mt-5 text-center">
-                {service.name}
-              </dt>
-              <dd className="mt-3 text-center">{service.description}</dd>
-            </div>
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ ease: 'easeOut', duration: 1 }}
+            >
+              <div className="relative pl-9 flex flex-col items-center bg-gray-200 rounded p-8 hover:-translate-y-2 duration-300 transition-all shadow-lg hover:shadow-2xl ">
+                <Image src={service.icon} alt={service.name} width={600} height={600} className='h-[100px] md:h-[150px] w-auto object-center saturate-50 select-none' />
+                <dt className="font-semibold  justify-center text-3xl mt-5 text-center">
+                  {service.name}
+                </dt>
+                <dd className="mt-3 text-center">{service.description}</dd>
+              </div>
+            </motion.div>
           ))}
         </dl>
-
       </div>
     </section>
   )
