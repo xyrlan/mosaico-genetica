@@ -1,11 +1,19 @@
 import React from 'react'
 import Spline from '@splinetool/react-spline';
 
-const SplineViewer = () => {
+type SplineViewerProps = {
+  onLoaded: () => void
+}
+
+const SplineViewer = ({ onLoaded }: SplineViewerProps) => {
   const [isHidden, setIsHidden] = React.useState(true)
 
   return (
-      <Spline className={isHidden ? 'hidden' : 'block'} onLoad={() => setIsHidden(false)} scene="https://prod.spline.design/ZNUUDkDh9yJcH65u/scene.splinecode" />
+    <Spline className={isHidden ? 'hidden' : 'block'} onLoad={() => {
+      onLoaded()
+      setIsHidden(false)
+    }}
+      scene="https://prod.spline.design/ZNUUDkDh9yJcH65u/scene.splinecode" />
   )
 }
 
