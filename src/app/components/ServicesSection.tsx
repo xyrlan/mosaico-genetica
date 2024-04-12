@@ -53,9 +53,9 @@ const ServicesSection = () => {
           transition={{ ease: 'easeOut', duration: 1 }}
           className='flex flex-col items-center gap-7'>
           <h2 className='text-4xl font-semibold text-center max-w-2xl'>Serviços que estão além do diagnóstico</h2>
-          <p className='text-lg md:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>Entendemos que cada jornada na genética é única, e na Mosaico abraçamos oferecemos aconselhamento nas diversas áreas da genética clínica para oferecer suporte holístico às necessidades específicas de cada paciente.</p>
+          <p className='md:text-lg lg:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>Entendemos que cada jornada na genética é única, e na Mosaico abraçamos oferecemos aconselhamento nas diversas áreas da genética clínica para oferecer suporte holístico às necessidades específicas de cada paciente.</p>
         </motion.div>
-        <dl className="mt-14 text-base leading-7 text-gray-600 lg:max-w-none grid md:grid-cols-2 gap-8">
+        <dl className="mt-14 text-base leading-7 text-gray-600 lg:max-w-none grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <motion.div
               key={service.name}
@@ -64,11 +64,11 @@ const ServicesSection = () => {
               transition={{ ease: 'easeOut', duration: 1 }}
             >
               <div className="relative pl-9 flex flex-col items-center bg-gray-200 rounded p-8 hover:-translate-y-2 duration-300 transition-all shadow-lg hover:shadow-2xl ">
-                <Image src={service.icon} alt={service.name} width={600} height={600} className='h-[100px] md:h-[150px] w-auto object-center saturate-50 select-none' />
-                <dt className="font-semibold  justify-center text-3xl mt-5 text-center">
+                <Image src={service.icon} alt={service.name} width={600} height={600} className='h-[50px] md:h-[80px] w-auto object-center saturate-[40%] select-none' />
+                <dt className="font-semibold justify-center text-xl lg:text-2xl 2xl:text-3xl mt-5 text-center">
                   {service.name}
                 </dt>
-                <dd className="mt-3 text-center">{service.description}</dd>
+                <dd className="mt-3 text-center text-sm xl:text-base">{service.description}</dd>
               </div>
             </motion.div>
           ))}

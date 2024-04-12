@@ -38,15 +38,15 @@ const HeroSection = () => {
       >
         <motion.div
           style={{ x: x_ }}
-          className='w-full flex justify-center'
-        >
-          <HeroDescription />
-        </motion.div>
-        <motion.div
-          style={{ x: x }}
           className='z-10 h-full w-full hidden lg:block'
         >
           <SplineViewer onLoaded={handleLoad} />
+        </motion.div>
+        <motion.div
+          style={{ x: x }}
+          className='w-full flex justify-center '
+        >
+          <HeroDescription />
         </motion.div>
       </motion.div>
     </motion.section>

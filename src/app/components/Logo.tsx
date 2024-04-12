@@ -6,7 +6,7 @@ const Logo = (props: {scroll: boolean}) => {
 
   return (
     <Link href='#hero' className='cursor-pointer'>
-      <Image src="/mosaicologo.png" alt="Logo" width={250} height={250} className='w-auto h-auto select-none' priority />
+      <Image src="/mosaicologo.png" alt="Logo" width={250} height={250} className='w-auto h-auto select-none drop-shadow-xl' priority />
     </Link> 
   )
 }

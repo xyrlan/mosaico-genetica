@@ -21,7 +21,7 @@ const Navbar = (props: { scroll: boolean }) => {
             <p className='text-gray-500 hover:text-black duration-300 transition-all font-semibold tracking-tight  '>{item.name}</p>
           </div>
         ))}
-        <button className={`h-12 px-5 py-1.5 duration-200 text-white font-medium rounded select-none ${props.scroll ? 'bg-[#7fc2d2] hover:bg-[#63b4c9]' : 'bg-gray-500'}`}>
+        <button className={`h-12 px-5 py-1.5 duration-200 text-white font-medium rounded select-none text-sm ${props.scroll ? 'bg-[#7fc2d2] hover:bg-[#63b4c9]' : 'bg-gray-500'}`}>
           Agendar consulta
         </button>
       </div>

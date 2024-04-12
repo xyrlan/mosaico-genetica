@@ -10,12 +10,12 @@ const AboutSection = () => {
       className="min-h-screen flex items-center relative py-24  ">
       <div className="container mx-auto z-10">
 
-        <div className="flex lg:flex-row flex-col justify-between items-center gap-5 lg:gap-10  ">
+        <div className="flex lg:flex-row flex-col justify-between items-center gap- lg:gap-20  ">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1}}
-            className="max-lg:block hidden relative w-full h-full rounded overflow-hidden">
+            transition={{ duration: 1 }}
+            className="max-lg:block hidden relative w-full h-full rounded-full overflow-hidden">
             <Image src="/fabricio2.png" alt="Especialista" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl " />
           </motion.div>
           <motion.div
@@ -23,10 +23,10 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: 'easeOut', duration: 1 }}
             className="flex items-center flex-col w-full p-5 lg:p-10">
-            <h2 className="text-4xl font-semibold text-center">
+            <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-center">
               Fabrício Maciel, MD, MSc
             </h2>
-            <p className="text-center text-gray-500 mt-8 text-lg font-medium">
+            <p className="text-center text-gray-500 mt-8 text-base xl:text-lg font-medium">
               Meu caminho na medicina começou na Universidade Federal do Maranhão, onde mergulhei no estudo da complexidade humana e na busca pela compreensão das intrincadas peças que formam a vida.
               <br />
               <br />
@@ -43,17 +43,17 @@ const AboutSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="lg:block hidden relative w-full h-full shadow-lg hover:shadow-2xl overflow-hidden rounded ">
+            className="lg:block hidden relative shadow-lg hover:shadow-2xl overflow-hidden rounded-full ">
             <Image src="/fabricio2.png" alt="Especialista" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl " />
           </motion.div>
         </div>
 
-        <div className=" flex lg:flex-row flex-col justify-between items-center gap-5 lg:gap-10 max-lg:mt-5">
+        <div className=" flex lg:flex-row flex-col justify-between items-center gap-5 lg:gap-20 max-lg:mt-5 mt-20">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1}}
-            className="relative w-full h-full shadow-lg hover:shadow-2xl rounded overflow-hidden">
+            transition={{ duration: 1 }}
+            className="relative shadow-lg hover:shadow-2xl rounded-full overflow-hidden">
             <Image src="/atendimento.png" alt="foto-atendimento" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl" />
           </motion.div>
           <motion.div
@@ -61,23 +61,25 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: 'easeOut', duration: 1 }}
             className="flex items-center flex-col w-full p-5 lg:p-10 ">
-            <h2 className="text-4xl font-semibold text-center">
+            <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-center">
               Atendimento onde você estiver
             </h2>
-            <h3 className="text-2xl font-semibold text-center mt-8 inline-flex items-center gap-2">
-              <Wifi />
-              Online
+            <h3 className=" text-xl xl:text-2xl font-semibold text-center mt-8 inline-flex items-center gap-4">
+              <div className='inline-flex items-center gap-2'>
+                <Wifi />
+                Online
+              </div>
+              e
+              <div className='inline-flex items-center gap-2'>
+                <Hospital />
+                Presencial
+              </div>
             </h3>
-            <p className="text-center text-gray-500 mt-8 text-lg font-medium">
-              O atendimento online é realizado por videochamada.
+            <p className="text-center text-gray-500 mt-8 text-base xl:text-lg font-medium">
+              Estendemos nosso compromisso de cuidado a todo o Brasil, proporcionando suporte especializado e acolhimento a famílias em cada canto do país, porque acreditamos que nenhuma jornada genética deve ser percorrida sozinho.
             </p>
-            <h3 className="text-2xl font-semibold text-center mt-8 inline-flex items-center gap-2">
-              <Hospital />
-              Presencial
-            </h3>
-            <p className="text-center text-gray-500 mt-8 text-lg font-medium">
-              A consulta presencial é realizada no Hospital ... - Brasília.
-            </p>
+
+
           </motion.div>
         </div>
 
