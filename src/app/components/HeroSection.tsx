@@ -15,6 +15,9 @@ const HeroSection = () => {
   const position = useTransform(scrollYProgress, (pos) => {
     return pos > 1 ? "relative" : "fixed"
   })
+  const x = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "25%", "50%", "100%"])
+  const x_ = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "-25%", "-50%", "-100%"])
+
 
   return (
     <motion.section
@@ -24,10 +27,20 @@ const HeroSection = () => {
       className="relative flex items-center min-h-screen overflow-hidden container">
       <motion.div
         style={{ position }}
-        className='flex w-full h-full justify-center lg:justify-around items-center py-20 lg:p-24 px-4'
+        className='flex w-full h-full justify-center lg:justify-around items-center px-4'
       >
-        <HeroDescription />
-        <SplineViewer />
+        <motion.div
+          style={{ x: x_ }}
+          className='w-full flex justify-center'
+        >
+          <HeroDescription />
+        </motion.div>
+        <motion.div
+          style={{ x: x }}
+          className='z-10 h-full w-full hidden lg:block'
+        >
+          <SplineViewer />
+        </motion.div>
       </motion.div>
     </motion.section>
   )

@@ -9,9 +9,11 @@ const HeroDescription = () => {
 
   return (
     <div className="lg:max-w-lg z-20">
-      <Image src="/mosaicosloganprancheta.png" alt="Mosaico Genética" width={500} height={500} priority className="h-auto hidden lg:block w-full select-none" />
+      <div className='flex justify-center'>
+        <Image src="/mosaicosloganprancheta.png" alt="Mosaico Genética" width={500} height={500} priority className="h-auto hidden lg:block max-2xl:w-[70%] w-[80%] select-none" />
+      </div>
       <Image src="/slogan-mosaico.png" alt="Mosaico Genética" width={500} height={500} priority className="h-auto hidden max-lg:block w-full select-none" />
-      <p className="text-base lg:text-xl font-medium text-gray-600 max-w-2xl text-center text-balance tracking-wide mt-5 lg:mt-10">
+      <p className="text-base lg:text-xl font-medium text-gray-600 max-w-2xl text-center text-balance tracking-wide mt-5 xl:mt-5">
         Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias com doenças raras.
         <br />
         <br />

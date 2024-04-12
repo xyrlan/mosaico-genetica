@@ -1,18 +1,28 @@
 import { Hospital, Wifi } from 'lucide-react'
+import React, { } from 'react'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
-import React from 'react'
-
 const AboutSection = () => {
+
   return (
-    <section id="nosso-especialista" className="min-h-screen flex items-center relative py-24 from-[#f5eaf0] to-transparent bg-gradient-to-t">
-      <Image src={'/background.png'} width={1000} height={1000} alt="background" className="absolute bottom-0 left-0 z-0  opacity-40 select-none" />
+    <motion.section
+      id="nosso-especialista"
+      className="min-h-screen flex items-center relative py-24  ">
       <div className="container mx-auto z-10">
 
-      <div className="flex lg:flex-row flex-col justify-between items-center gap-5 lg:gap-10  ">
-          <div className="max-lg:block hidden relative w-full h-full shadow-lg hover:shadow-2xl overflow-hidden duration-300 transition-all rounded ">
+        <div className="flex lg:flex-row flex-col justify-between items-center gap-5 lg:gap-10  ">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ ease: 'easeOut', duration: 1 }}
+            className="max-lg:block hidden relative w-full h-full shadow-lg hover:shadow-2xl overflow-hidden duration-300 transition-all rounded ">
             <Image src="/fabricio2.png" alt="Especialista" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none " />
-          </div>
-          <div className="flex items-center flex-col w-full p-5 lg:p-10">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ ease: 'easeOut', duration: 1 }}
+            className="flex items-center flex-col w-full p-5 lg:p-10">
             <h2 className="text-4xl font-semibold text-center">
               Fabrício Maciel, MD, MSc
             </h2>
@@ -28,17 +38,29 @@ const AboutSection = () => {
               <br />
               Na Mosaico, meu objetivo é trazer a expertise adquirida ao longo desses anos de formação para criar um espaço acolhedor, onde as famílias encontrem não apenas um profissional, mas um parceiro dedicado em suas jornadas genéticas.
             </p>
-          </div>
-          <div className="lg:block hidden relative w-full h-full shadow-lg hover:shadow-2xl scale-[80%] overflow-hidden duration-300 transition-all rounded ">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ ease: 'easeOut', duration: 1 }}
+            className="lg:block hidden relative w-full h-full shadow-lg hover:shadow-2xl overflow-hidden duration-300 transition-all rounded ">
             <Image src="/fabricio2.png" alt="Especialista" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none " />
-          </div>
+          </motion.div>
         </div>
 
         <div className=" flex lg:flex-row flex-col justify-between items-center gap-5 lg:gap-10 max-lg:mt-5">
-          <div className="relative w-full h-full shadow-lg hover:shadow-2xl overflow-hidden duration-300 transition-all rounded">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ ease: 'easeOut', duration: 1 }}
+            className="relative w-full h-full shadow-lg hover:shadow-2xl overflow-hidden duration-300 transition-all rounded">
             <Image src="/atendimento.png" alt="foto-atendimento" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none" />
-          </div>
-          <div className="flex items-center flex-col w-full p-5 lg:p-10 ">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ ease: 'easeOut', duration: 1 }}
+            className="flex items-center flex-col w-full p-5 lg:p-10 ">
             <h2 className="text-4xl font-semibold text-center">
               Atendimento onde você estiver
             </h2>
@@ -56,14 +78,14 @@ const AboutSection = () => {
             <p className="text-center text-gray-500 mt-8 text-lg font-medium">
               A consulta presencial é realizada no Hospital ... - Brasília.
             </p>
-          </div>
+          </motion.div>
         </div>
 
-   
+
 
       </div>
 
-    </section>
+    </motion.section>
   )
 }
 
