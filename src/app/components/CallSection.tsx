@@ -3,6 +3,8 @@ import Button from './Button'
 import { useScroll, motion, useTransform } from 'framer-motion'
 import Image from 'next/image'
 import StepsComponent from './StepsComponent'
+import H2 from './H2'
+import ButtonSecondary from './ButtonSecondary'
 
 const CallSection = () => {
   const targetRef = useRef<HTMLDivElement>(null)
@@ -12,32 +14,33 @@ const CallSection = () => {
   })
 
   const scale = useTransform(scrollYProgress, [0, 0.5], [0, 1])
-  const y = useTransform(scrollYProgress, [0, 0.5], [900, 0])
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1])
-  const leftx = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.7], [-600, -400, -200, 0])
-  const rightx = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.7], [600, 400, 200, 0])
-
-
+  // const y = useTransform(scrollYProgress, [0, 0.5], [600, 0])
+  // const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1])
+  // const leftx = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.7], [-600, -400, -200, 0])
+  // const rightx = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.7], [600, 400, 200, 0])
 
   return (
     <motion.section
       ref={targetRef}
       id='call'
-      className='min-h-screen py-40 flex justify-center '
+      className='min-h-screen flex justify-center px-4 py-24 '
     >
       <motion.div
         style={{ scale }}
         className='absolute h-full w-full bottom-0 bg-gradient-to-b from-[#d9edf2] to-transparent from-70% rounded-full -z-10' />
-      <div className="container flex flex-col items-center ">
-        <motion.div
-          style={{ y, opacity }}
-          className="flex flex-col items-center ">
-          <h2 className="text-5xl font-bold text-center">Todo gene conta uma história, qual é a sua?</h2>
-          {/* <p className="text-center text-xl mt-2">Estamos aqui para te ajudar</p>
-          <p className='text-center text-gray-500 mt-2'>Tire suas dúvidas - Garanta orientações personalizadas</p>
-          <Button >Agendar consulta</Button> */}
-        <StepsComponent />
+
+      <div className="max-w-6xl flex flex-col items-center ">
+        <motion.div className="flex flex-col items-center ">
+          <H2>Todo gene conta uma história,<br /> <span className=''>qual é a sua?</span></H2>
         </motion.div>
+        <StepsComponent />
+        <div className="flex flex-col justify-center items-center my-5 gap-10 w-full">
+          <H2 className='font-medium text-center px-4  '>Como posso te ajudar?</H2>
+          <div className='flex flex-col lg:flex-row items-center justify-center gap-5'>
+            <Button>Agendar consulta</Button>
+            <ButtonSecondary >Preços e informações</ButtonSecondary>
+          </div>
+        </div>
       </div>
     </motion.section>
   )

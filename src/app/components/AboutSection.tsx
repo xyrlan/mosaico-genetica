@@ -2,13 +2,16 @@ import { Hospital, Wifi } from 'lucide-react'
 import React, { } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import H2 from './H2'
+import Button from './Button'
+import ButtonSecondary from './ButtonSecondary'
 const AboutSection = () => {
 
   return (
     <motion.section
       id="nosso-especialista"
       className="min-h-screen flex items-center relative py-24  ">
-      <div className="container mx-auto z-10">
+      <div className="max-w-6xl mx-auto z-10">
 
         <div className="flex lg:flex-row flex-col justify-between items-center gap- lg:gap-20  ">
           <motion.div
@@ -22,12 +25,12 @@ const AboutSection = () => {
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: 'easeOut', duration: 1 }}
-            className="flex items-center flex-col w-full p-5 lg:p-10">
-            <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-center">
+            className="flex items-center flex-col w-full p-5 lg:p-10 ">
+            <H2>
               Fabrício Maciel, MD, MSc
-            </h2>
+            </H2>
             <p className="text-center text-gray-500 mt-8 text-base xl:text-lg font-medium">
-              Meu caminho na medicina começou na Universidade Federal do Maranhão, onde mergulhei no estudo da complexidade humana e na busca pela compreensão das intrincadas peças que formam a vida.
+              {/* Meu caminho na medicina começou na Universidade Federal do Maranhão, onde mergulhei no estudo da complexidade humana e na busca pela compreensão das intrincadas peças que formam a vida.
               <br />
               <br />
               Fiz Genética Médica no Hospital de Clínica de Porto Alegre, onde pude explorar todas as áreas da genética clínica, moldando minha visão sobre como oferecer suporte integral às famílias enfrentando desafios genéticos.
@@ -35,9 +38,10 @@ const AboutSection = () => {
               <br />
               Fortaleci minha paixão pelos mistérios genéticos ao concluir meu mestrado em Neurogenética pela Universidade Federal do Rio Grande do Sul.
               <br />
-              <br />
+              <br /> */}
               Na Mosaico, meu objetivo é trazer a expertise adquirida ao longo desses anos de formação para criar um espaço acolhedor, onde as famílias encontrem não apenas um profissional, mas um parceiro dedicado em suas jornadas genéticas.
             </p>
+            <ButtonSecondary>Mais sobre mim</ButtonSecondary>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -61,10 +65,10 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: 'easeOut', duration: 1 }}
             className="flex items-center flex-col w-full p-5 lg:p-10 ">
-            <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-center">
+            <H2>
               Atendimento onde você estiver
-            </h2>
-            <h3 className=" text-xl xl:text-2xl font-semibold text-center mt-8 inline-flex items-center gap-4">
+            </H2>
+            <h3 className=" text-lg xl:text-2xl font-semibold text-center mt-8 inline-flex items-center gap-4">
               <div className='inline-flex items-center gap-2'>
                 <Wifi />
                 Online
@@ -78,8 +82,7 @@ const AboutSection = () => {
             <p className="text-center text-gray-500 mt-8 text-base xl:text-lg font-medium">
               Estendemos nosso compromisso de cuidado a todo o Brasil, proporcionando suporte especializado e acolhimento a famílias em cada canto do país, porque acreditamos que nenhuma jornada genética deve ser percorrida sozinho.
             </p>
-
-
+            <Button>Agendar consulta</Button>
           </motion.div>
         </div>
 

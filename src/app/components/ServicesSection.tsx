@@ -1,15 +1,10 @@
 import Image from 'next/image'
 import React, { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
+import H2 from './H2'
 
 
 const ServicesSection = () => {
-
-  const targetRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ['end end', 'end start']
-  })
 
   const services = [
     {
@@ -29,7 +24,7 @@ const ServicesSection = () => {
     },
     {
       name: 'Oncogenética',
-      description: 'Para aqueles enfrentando desafios oncológicos hereditários, nossa equipe proporciona aconselhamento e estratégias personalizadas de monitoramento.',
+      description: 'Para aqueles que enfrentam desafios oncológicos hereditários, nossa equipe proporciona aconselhamento e estratégias personalizadas de monitoramento.',
       icon: '/dna.png'
     },
     {
@@ -52,8 +47,8 @@ const ServicesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: 'easeOut', duration: 1 }}
           className='flex flex-col items-center gap-7'>
-          <h2 className='text-4xl font-semibold text-center max-w-2xl'>Serviços que estão além do diagnóstico</h2>
-          <p className='md:text-lg lg:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>Entendemos que cada jornada na genética é única, e na Mosaico abraçamos oferecemos aconselhamento nas diversas áreas da genética clínica para oferecer suporte holístico às necessidades específicas de cada paciente.</p>
+          <H2>Serviços que estão além do diagnóstico</H2>
+          <p className='text-sm md:text-lg lg:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>Entendemos que cada jornada na genética é única, e na Mosaico abraçamos oferecemos aconselhamento nas diversas áreas da genética clínica para oferecer suporte holístico às necessidades específicas de cada paciente.</p>
         </motion.div>
         <dl className="mt-14 text-base leading-7 text-gray-600 lg:max-w-none grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (

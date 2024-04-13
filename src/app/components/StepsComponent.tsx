@@ -1,118 +1,81 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CalendarCheck, Ear, Microscope, ShieldPlus } from 'lucide-react';
+import { CalendarCheck, Ear, Microscope, ShieldPlus, HandHelping } from 'lucide-react';
 
-const StepsComponent = () => {
+const stepData = [
+  { icon: CalendarCheck, label: "Agendamento", color: 'text-green-700' },
+  { icon: HandHelping, label: "Consultar" },
+  { icon: Microscope, label: "Diagnóstico" },
+  { icon: ShieldPlus, label: "Tratamento" }
+];
+
+const StepIcon = ({ IconComponent, index }: any) => {
   const stepVariants = {
     hidden: { scale: 0.8, opacity: 0 },
-    visible: (index: number) => ({
+    visible: {
       scale: 1,
       opacity: 1,
       transition: {
-        delay: index * 1, // Each step's animation is delayed more than the previous
+        delay: index * 0.7,
         type: 'spring',
         stiffness: 260,
-        damping: 20,
-
+        damping: 20
       }
-    })
-  };
-
-  // This defines the animation for the connecting lines
-  const lineVariants = {
-    hidden: { scaleX: 0, width: 100 },
-    visible: (index: number) => ({
-      scaleX: 1,
-      width: 100,
-      transition: {
-        delay: (index * 1) - 0.15, // Start the line animation a bit before the next step's icon
-        duration: 0.5,
-        ease: 'easeInOut',
-
-      }
-    })
+    }
   };
 
   return (
-    <div className="flex justify-between items-center p-5">
-      {/* Step 1 */}
-      <motion.div
-        className="flex flex-col items-center"
-        custom={0} // custom prop to control the delay
-        variants={stepVariants}
-        initial="hidden"
-        whileInView="visible"
-      >
-        <div className="w-24 h-24 rounded-full flex justify-center items-center bg-gray-200">
-          <CalendarCheck size={40} />
-        </div>
-        <div className="mt-2 text-sm">Agendamento</div>
-      </motion.div>
+    <motion.div
+      className={`flex lg:flex-col items-center relative text-gray-600 ${stepData[index]?.color}`}
+      custom={index}
+      variants={stepVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <div className="h-16 w-16 lg:w-24 lg:h-24 rounded-full flex lg:justify-center items-center ">
+        <IconComponent className={'drop-shadow-md'} size={40}  />
+      </div>
+      <div className="mt-2 text-sm max-lg:absolute max-lg:left-16 font-semibold">{stepData[index].label}</div>
+    </motion.div>
+  );
+};
 
-      {/* Connecting Line */}
-      <motion.div
-        custom={1} // custom prop to control the delay
-        variants={lineVariants}
-        initial="hidden"
-        whileInView="visible"
-        className="flex-auto border-2 border-gray-800 mx-4 origin-left  " />
+const ConnectingLine = ({ index }: any) => {
+  const lineVariants = {
+    hidden: { scaleX: 0, scaleY: 0 },
+    visible: {
+      scaleX: 1,
+      scaleY: 1,
+      transition: {
+        delay: (index * 0.7) - 0.20,
+        duration: 0.5,
+        ease: 'easeInOut'
+      }
+    }
+  };
 
-      <motion.div
-        className="flex flex-col items-center"
-        custom={1} // custom prop to control the delay
-        variants={stepVariants}
-        initial="hidden"
-        whileInView="visible"
-      >
-        <div className="w-24 h-24 rounded-full flex justify-center items-center bg-gray-200">
-          <Ear size={40} />
-        </div>
-        <div className="mt-2 text-sm">Ouvir</div>
-      </motion.div>
+  return (
+    <motion.div
+      custom={index}
+      variants={lineVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="flex-auto border-2 border-gray-600 mx-4 max-lg:h-10 lg:w-20 origin-left max-lg:origin-top"
+    />
+  );
+};
 
-      {/* Connecting Line */}
-      <motion.div
-        custom={2} // custom prop to control the delay
-        variants={lineVariants}
-        initial="hidden"
-        whileInView="visible"
-        className="flex-auto border-2 border-gray-800 mx-4 origin-left  " />
-
-      <motion.div
-        className="flex flex-col items-center"
-        custom={2} // custom prop to control the delay
-        variants={stepVariants}
-        initial="hidden"
-        whileInView="visible"
-      >
-        <div className="w-24 h-24 rounded-full flex justify-center items-center bg-gray-200">
-          <Microscope size={40} />
-        </div>
-        <div className="mt-2 text-sm">Diagnóstico</div>
-      </motion.div>
-
-      {/* Connecting Line */}
-      <motion.div
-        custom={3} // custom prop to control the delay
-        variants={lineVariants}
-        initial="hidden"
-        whileInView="visible"
-        className="flex-auto border-2 border-gray-800 mx-4 origin-left  " />
-
-      {/* Step 2 */}
-      <motion.div
-        custom={3} // custom prop to control the delay
-        variants={stepVariants}
-        initial="hidden"
-        whileInView="visible"
-        className="flex flex-col items-center">
-        <div className="w-24 h-24 rounded-full flex justify-center items-center bg-gray-200">
-          <ShieldPlus size={40} />
-        </div>
-        <div className="mt-2 text-sm">Tratamento</div>
-      </motion.div>
-
-     
+const StepsComponent = () => {
+  return (
+    <div className="flex max-lg:flex-col justify-between items-start lg:items-center p-5 lg:my-10">
+      {stepData.map((step, index) => (
+        <React.Fragment key={`step-${index}`}>
+          <StepIcon IconComponent={step.icon} index={index} />
+          {index < stepData.length - 1 && <ConnectingLine index={index + 1} />}
+        </React.Fragment>
+      ))}
     </div>
   );
 };
