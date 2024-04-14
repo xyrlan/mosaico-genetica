@@ -10,7 +10,7 @@ const HeroDescription = () => {
   return (
     <div className="lg:max-w-lg z-20">
       <div className='flex justify-center'>
-        <Image src="/slogan-mosaico.png" alt="Mosaico Genética" width={300} height={300} priority className="h-auto w-auto hidden lg:block  select-none" />
+        <Image src="/slogan-mosaico.png" alt="Mosaico Genética" width={300} height={300} priority className="h-auto w-auto  select-none" />
       </div>
    
       <p className="text-base lg:text-xl 2xl:text-2xl font-medium text-gray-700 max-w-2xl text-center text-balance tracking-wide mt-5 xl:mt-5">

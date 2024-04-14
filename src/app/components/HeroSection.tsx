@@ -1,8 +1,9 @@
-import React, { use, useRef } from 'react'
+import React, { use, useEffect, useRef } from 'react'
 import HeroDescription from './HeroDescription'
 import SplineViewer from './SplineViewer'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import Image from 'next/image'
+import useMediaQuery from '../utils/useMediaQuery'
 
 const HeroSection = () => {
   const [loading, setLoading] = React.useState(true)
@@ -23,6 +24,13 @@ const HeroSection = () => {
     setLoading(false);
   };
 
+  const isLargeScreen = useMediaQuery('(min-width: 1024px)');
+  useEffect(() => {
+    if (!isLargeScreen) {
+      setLoading(false);
+    } 
+  }, [isLargeScreen]);
+
   return (
     <motion.section
       style={{ opacity }}
@@ -36,12 +44,14 @@ const HeroSection = () => {
         style={{ position }}
         className='flex w-full h-full justify-center lg:justify-around items-center px-4'
       >
-        <motion.div
-          style={{ x: x_ }}
-          className='z-10 h-full w-full hidden lg:block'
-        >
-          <SplineViewer onLoaded={handleLoad} />
-        </motion.div>
+        {isLargeScreen && (
+          <motion.div
+            style={{ x: x_ }}
+            className='z-10 h-full w-full hidden lg:block'
+          >
+            <SplineViewer onLoaded={handleLoad} />
+          </motion.div>
+        )}
         <motion.div
           style={{ x: x }}
           className='w-full flex justify-center '
