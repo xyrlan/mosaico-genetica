@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <motion.div className="progress-bar z-50 " style={{ scaleX: scrollYProgress }} />
+      <motion.div className="progress-bar z-50" style={{ scaleX: scrollYProgress }} />
       <main className="selection:bg-[#82a170]">
         <HeroSection />
         <AboutSection />

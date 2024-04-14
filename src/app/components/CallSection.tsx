@@ -18,7 +18,7 @@ const CallSection = () => {
   // const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1])
   // const leftx = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.7], [-600, -400, -200, 0])
   // const rightx = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.7], [600, 400, 200, 0])
-
+  const text = "Como posso te ajudar?".split(" ");
   return (
     <motion.section
       ref={targetRef}
@@ -27,7 +27,7 @@ const CallSection = () => {
     >
       <motion.div
         style={{ scale }}
-        className='absolute h-full w-full bottom-0 bg-gradient-to-b from-[#d9edf2] to-transparent from-70% rounded-full -z-10' />
+        className='absolute h-full w-full bottom-0 bg-gradient-to-b from-[#d9edf2] to-transparent rounded-full -z-10' />
 
       <div className="max-w-6xl flex flex-col items-center ">
         <motion.div className="flex flex-col items-center ">
@@ -35,7 +35,21 @@ const CallSection = () => {
         </motion.div>
         <StepsComponent />
         <div className="flex flex-col justify-center items-center my-5 gap-10 w-full">
-          <H2 className='font-medium text-center px-4  '>Como posso te ajudar?</H2>
+          <H2 className='font-medium text-center px-4  '>
+            {text.map((el, i) => (
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: i / 10,
+                }}
+                key={i}
+              >
+                {el}{" "}
+              </motion.span>
+            ))}
+          </H2>
           <div className='flex flex-col lg:flex-row items-center justify-center gap-5'>
             <Button>Agendar consulta</Button>
             <ButtonSecondary >Preços e informações</ButtonSecondary>
