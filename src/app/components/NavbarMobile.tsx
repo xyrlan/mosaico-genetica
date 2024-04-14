@@ -15,8 +15,8 @@ const NavbarMobile = () => {
 
   // Define the number of tiles and their animation
   const numTiles = 6;
-  const colors = ['#FF5733', '#33FF57', '#3357FF', '#57FF33', '#5733FF', '#FF3357'];
-  const tileVariants = (index) => ({
+
+  const tileVariants = (index: number) => ({
     initial: {
       scaleY: 0,
       originY: index % 2 === 0 ? 0 : 1 // Alternate originY based on the tile's index
