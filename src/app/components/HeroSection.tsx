@@ -28,7 +28,7 @@ const HeroSection = () => {
   useEffect(() => {
     if (!isLargeScreen) {
       setLoading(false);
-    } 
+    }
   }, [isLargeScreen]);
 
   return (
@@ -44,14 +44,14 @@ const HeroSection = () => {
         style={{ position }}
         className='flex w-full h-full justify-center lg:justify-around items-center px-4'
       >
-        {isLargeScreen && (
-          <motion.div
-            style={{ x: x_ }}
-            className='z-10 h-full w-full hidden lg:block'
-          >
-            <SplineViewer onLoaded={handleLoad} />
-          </motion.div>
-        )}
+
+        <motion.div
+          style={{ x: x_ }}
+          className='z-10 h-full w-full hidden lg:block'
+        >
+          <SplineViewer onLoaded={handleLoad} />
+        </motion.div>
+
         <motion.div
           style={{ x: x }}
           className='w-full flex justify-center '
