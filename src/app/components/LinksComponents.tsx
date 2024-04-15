@@ -49,7 +49,7 @@ const LinksComponents = () => {
         className="text-gray-700 transition hover:text-gray-700/75"
       >
         <span className="sr-only">Linktree</span>
-        <Image src={'/lintree.png'} width={42} height={42} alt='linktree' className=' duration-300 hover:saturate-150 transition-all' />
+        <Image src={'/lintree.png'} width={42} height={42} alt='linktree-logo' className=' duration-300 hover:saturate-150 transition-all' />
       </Link>
     </li>
 
