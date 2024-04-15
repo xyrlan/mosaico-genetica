@@ -31,7 +31,7 @@ const HeroSection = () => {
         style={{ position }}
         className='flex w-full h-full justify-center lg:justify-around items-center px-4'
       >
-        <Image src="/bg-mosaic3.png" alt="BackgroundImage" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply " />
+        <Image src="/bg-mosaic3.png" alt="BackgroundImage2" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply " />
 
         <motion.div
           style={{ x: x_ }}

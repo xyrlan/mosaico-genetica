@@ -43,7 +43,7 @@ const CallSection = () => {
         <motion.div className='flex max-md:flex-col w-full relative rounded-xl mt-10 md:mt-20 border '>
 
           <div className="flex flex-col justify-around max-md:items-center gap-10 w-full md:w-1/2 py-4 md:py-10 md:h-[475px] shadow-xl z-20 relative rounded-xl">
-            <Image src="/bg-mosaic3.png" alt="BackgroundImage" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply rounded-xl drop-shadow-lg -z-10 " />
+            <Image src="/bg-mosaic3.png" alt="BackgroundImage2" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply rounded-xl drop-shadow-lg -z-10 " />
             <div className='bg-[#d9edf2] -z-20 absolute left-0 top-0 w-full h-full rounded-xl ' />
             <H3Card text={text} />
             <p className='max-md:text-center text-gray-500 mt-8 text-base xl:text-lg font-medium px-4 md:px-10'>Em caso de dúvidas ou problemas para agendar seu atendimento entre em contato com a nossa equipe por telefone ou Whatsapp.</p>

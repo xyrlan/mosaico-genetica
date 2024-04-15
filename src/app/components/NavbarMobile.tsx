@@ -80,7 +80,7 @@ const NavbarMobile = () => {
                 animate={{ opacity: 1, y: 0, transition: { delay: 0.5 } }}
                 exit={{ opacity: 0, y: 20, transition: { duration: 0.1 } }}
               >
-                <Image src="/mosaicologo.png" alt="logo" width={200} height={200} />
+                <Image src="/mosaicologo.png" alt="Logo" width={200} height={200} />
               </motion.div>
               {navItems.map((item, index) => (
                 <motion.div

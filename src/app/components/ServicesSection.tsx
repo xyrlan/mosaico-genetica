@@ -42,7 +42,7 @@ const ServicesSection = () => {
 
   return (
     <section id='servicos' className='min-h-screen relative py-24 px-4 flex flex-col items-center justify-center'>
-      <Image src="/bg-mosaic3.png" alt="BackgroundImage" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply -z-10 " />
+      <Image src="/bg-mosaic3.png" alt="BackgroundImage2" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply -z-10 " />
       <div className='max-w-6xl'>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
