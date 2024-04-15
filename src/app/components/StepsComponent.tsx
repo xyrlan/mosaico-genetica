@@ -69,7 +69,7 @@ const ConnectingLine = ({ index }: any) => {
 
 const StepsComponent = () => {
   return (
-    <div className="flex max-lg:flex-col justify-between items-start lg:items-center p-5 lg:my-10">
+    <div className="flex max-lg:flex-col justify-between items-start lg:items-center p-5 my-3 lg:my-10">
       {stepData.map((step, index) => (
         <React.Fragment key={`step-${index}`}>
           <StepIcon IconComponent={step.icon} index={index} />

@@ -41,14 +41,18 @@ const ServicesSection = () => {
 
   return (
     <section id='servicos' className='min-h-screen relative py-24 px-4 flex flex-col items-center'>
+      <Image src="/bg-mosaic3.png" alt="BackgroundImage" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply -z-10 " />
+
+
+
       <div className='max-w-6xl'>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: 'easeOut', duration: 1 }}
-          className='flex flex-col items-center gap-7'>
+          className='flex flex-col items-center lg:gap-7'>
           <H2>Serviços que estão além do diagnóstico</H2>
-          <p className='text-sm md:text-lg lg:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>Entendemos que cada jornada na genética é única, e na Mosaico abraçamos oferecemos aconselhamento nas diversas áreas da genética clínica para oferecer suporte holístico às necessidades específicas de cada paciente.</p>
+          <p className='text-sm md:text-lg 2xl:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>Entendemos que cada jornada na genética é única, e na Mosaico abraçamos oferecemos aconselhamento nas diversas áreas da genética clínica para oferecer suporte holístico às necessidades específicas de cada paciente.</p>
         </motion.div>
         <dl className="mt-14 text-base leading-7 text-gray-600 lg:max-w-none grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (

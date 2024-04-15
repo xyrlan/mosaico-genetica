@@ -40,10 +40,13 @@ const HeroSection = () => {
       {loading && <div className="fixed inset-0 bg-[#e5f3f6] bg-opacity-90 backdrop-blur-lg flex items-center justify-center z-50">
         <Image src="/mosaicoico.png" alt="loading" width={200} height={200} className='animate-pulse' />
       </div>}
+
+
       <motion.div
         style={{ position }}
         className='flex w-full h-full justify-center lg:justify-around items-center px-4'
       >
+      <Image src="/bg-mosaic3.png" alt="BackgroundImage" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply " />
 
         <motion.div
           style={{ x: x_ }}

@@ -1,10 +1,12 @@
 import React, { useRef } from 'react'
 import Button from './Button'
-import { useScroll, motion, useTransform } from 'framer-motion'
+import { useScroll, motion, useTransform, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import StepsComponent from './StepsComponent'
 import H2 from './H2'
 import ButtonSecondary from './ButtonSecondary'
+import { ArrowUpRightIcon, MapPinned, Phone } from 'lucide-react'
+import Link from 'next/link'
 
 const CallSection = () => {
   const targetRef = useRef<HTMLDivElement>(null)
@@ -13,51 +15,127 @@ const CallSection = () => {
     offset: ['start end', 'end start']
   })
 
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0, 1])
+  const scaleY = useTransform(scrollYProgress, [0, 0.5], [0, 1])
   // const y = useTransform(scrollYProgress, [0, 0.5], [600, 0])
   // const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1])
   // const leftx = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.7], [-600, -400, -200, 0])
   // const rightx = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.7], [600, 400, 200, 0])
+
   const text = "Como posso te ajudar?".split(" ");
+  const text2 = "Entre em contato".split(" ");
+
   return (
     <motion.section
       ref={targetRef}
-      id='call'
-      className='min-h-screen flex justify-center px-4 py-24 '
+      id='contato'
+      className='min-h-screen flex justify-center px-4 py-24 relative'
     >
-      <motion.div
-        style={{ scale }}
-        className='absolute h-full w-full bottom-0 bg-gradient-to-b from-[#d9edf2] to-transparent rounded-full -z-10' />
-
+      <motion.div style={{ scaleY }} className='absolute h-full w-full bottom-0 bg-gradient-to-b from-[#d9edf2]/90   to-transparent -z-10 origin-top opacity-80' />
       <div className="max-w-6xl flex flex-col items-center ">
-        <motion.div className="flex flex-col items-center ">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: 'easeOut', duration: 1 }}
+          className="flex flex-col items-center gap-4 lg:gap-7">
           <H2>Todo gene conta uma história,<br /> <span className=''>qual é a sua?</span></H2>
+          <p className='text-sm  2xl:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>Na genética, cada gene possui uma narrativa única e um impacto profundo. Em nosso trabalho, além der lermos essas histórias genéticas; nós as interpretamos e utilizamos esse conhecimento para orientar tratamentos, prever riscos e, em última análise, melhorar vidas.</p>
         </motion.div>
+
         <StepsComponent />
-        <div className="flex flex-col justify-center items-center my-5 gap-10 w-full">
-          <H2 className='font-medium text-center px-4  '>
-            {text.map((el, i) => (
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                  duration: 0.5,
-                  delay: i / 10,
-                }}
-                key={i}
-              >
-                {el}{" "}
-              </motion.span>
-            ))}
-          </H2>
-          <div className='flex flex-col lg:flex-row items-center justify-center gap-5'>
-            <Button>Agendar consulta</Button>
-            <ButtonSecondary >Preços e informações</ButtonSecondary>
+
+        <motion.div className='flex max-md:flex-col w-full relative rounded-xl mt-10 md:mt-20 border '>
+
+          <div className="flex flex-col justify-around max-md:items-center gap-10 w-full md:w-1/2 py-4 md:py-10 md:h-[475px] shadow-xl z-20 relative rounded-xl">
+            <Image src="/bg-mosaic3.png" alt="BackgroundImage" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply rounded-xl drop-shadow-lg -z-10 " />
+            <div className='bg-[#d9edf2] -z-20 absolute left-0 top-0 w-full h-full rounded-xl ' />
+            <H3Card text={text} />
+            <p className='max-md:text-center text-gray-500 mt-8 text-base xl:text-lg font-medium px-4 md:px-10'>Em caso de dúvidas ou problemas para agendar seu atendimento entre em contato com a nossa equipe por telefone, Whatsapp ou e-mail.</p>
+            <div className='flex flex-col lg:flex-row items-center justify-center lg:gap-5'>
+              <Button>Agendar consulta</Button>
+              <ButtonSecondary >Preços e informações</ButtonSecondary>
+            </div>
           </div>
-        </div>
+
+          <motion.div
+            initial={{ x: -600 }}
+            whileInView={{ x: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+            }}
+            className="max-md:hidden flex flex-col max-md:items-center gap-10 bg-[#f5eaf0] bg-opacity-50 py-4 sm:py-10 origin-left z-10 h-full w-1/2 shadow-inner absolute left-1/2">
+            <Image src="/bg-mosaic3.png" alt="BackgroundImage2" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply rounded-xl drop-shadow-lg -z-10 " />
+            <H3Card text={text2} />
+            <ContactLinks />
+          </motion.div>
+
+          <motion.div
+            initial={{ y: -400 }}
+            whileInView={{ y: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+            }}
+            className="md:hidden flex flex-col max-md:items-center gap-10 bg-[#f5eaf0] bg-opacity-50 py-4 sm:py-10 origin-left z-10 w-full h-full relative shadow-inner">
+            <Image src="/bg-mosaic3.png" alt="BackgroundImage2" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply rounded-xl drop-shadow-lg -z-10 " />
+            <H3Card text={text2} />
+            <ContactLinks />
+          </motion.div>
+
+        </motion.div>
       </div>
     </motion.section>
   )
 }
 
+const ContactLinks = () => (
+  <ul className='text-gray-500 px-6 sm:px-10'>
+    <li>
+      <Link href={'https://wa.me/5561998570759'} target='_blank' className='inline-flex items-center gap-3 font-medium my-3 text-base max-md:text-sm duration-300 transition-all hover:text-gray-700 group '>
+        <Image src={'/whats.png'} width={20} height={20} className='w-7 h-7' alt='whatsapp-icon' /> (61) 9 9857-0759
+        <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={20} />
+      </Link>
+    </li>
+    <li>
+      <div className='inline-flex items-center gap-3 font-medium my-3 text-base max-md:text-sm  '><Phone size={30} /> (61) 3020-1402</div>
+    </li>
+    <li>
+      <Link href={'https://www.instagram.com/mosaico.gen'} target='_blank' className='inline-flex items-center gap-3 font-medium my-3 text-base max-md:text-sm duration-300 transition-all hover:text-gray-700 group'>
+        <Image src={'/insta.jpg'} width={20} height={20} className='w-7 h-7' alt='insta-icon' />
+        @mosaico.gen
+        <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={20} />
+      </Link>
+    </li>
+    <li>
+      <div className='flex flex-col gap-3 font-medium my-3 text-base max-md:text-sm  '>
+        <Link href={'https://www.google.com/maps/dir//Biosphere+-+Bloco+G+-+Lote+09,+Shln+-+Asa+Norte,+Bras%C3%ADlia+-+DF,+70770-560/@-15.7347274,-47.8950968,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x935a398fcc35baab:0x63994bb0af3e39df!2m2!1d-47.8942142!2d-15.7361804!3e0?entry=ttu'} target='_blank' className='inline-flex gap-3 items-center  duration-300 transition-all hover:text-gray-700 group  '>
+          <MapPinned className='' size={30} />
+          Localização
+          <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={20} />
+        </Link>
+        <p className='max-w-sm'> SHLN CONJ 1 Lote 09, Edificio Biosphere, Bloco A, Salas 415/417 - Asa Norte, Brasília - DF, 70770-560</p>
+      </div>
+    </li>
+  </ul>
+);
+
+
+const H3Card = ({ text }: any) => (
+  <h3 className='font-medium justify-center text-xl lg:text-2xl 2xl:text-3xl mt-5 max-md:text-center px-6 sm:px-10'>
+    {text.map((el: string, i: number) => (
+      <motion.span
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          ease: 'easeOut',
+          duration: 1,
+          delay: 1 + i * 0.2,
+        }}
+        key={i}
+      >
+        {el}{" "}
+      </motion.span>
+    ))}
+  </h3>
+)
 export default CallSection

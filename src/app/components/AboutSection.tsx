@@ -11,15 +11,15 @@ const AboutSection = () => {
     <motion.section
       id="nosso-especialista"
       className="min-h-screen flex items-center relative py-24  ">
-      <div className="max-w-6xl mx-auto z-10">
 
+      <div className="max-w-6xl mx-auto z-10">
         <div className="flex lg:flex-row flex-col justify-between items-center gap- lg:gap-20  ">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="max-lg:block hidden relative w-full h-full rounded-full overflow-hidden">
-            <Image src="/fabricio2.png" alt="Especialista" width={700} height={700} className="w-full h-full hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl " />
+            className="max-lg:block hidden relative rounded-t-full  w-[258px] overflow-hidden">
+            <Image src="/fabricio2.png" alt="Especialista" width={200} height={200} className="w-auto h-auto hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl " />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
