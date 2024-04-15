@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import { handleScrollToElement } from './Navbar'
 import Button from './Button'
+import { ArrowUpRightIcon } from 'lucide-react'
 
 const Footer = () => {
 
@@ -32,7 +33,14 @@ const Footer = () => {
             </li>
           ))}
           <li>
-            <Button>Agendar Consulta</Button>
+            <Link href={'https://wa.me/5561998570759'} target='_blank' className='group' >
+              <Button>
+                <div className='inline-flex gap-3 items-center'>
+                  Agendar Consulta
+                  <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={20} />
+                </div>
+              </Button>
+            </Link>
           </li>
         </ul>
 
@@ -85,7 +93,7 @@ const Footer = () => {
             </Link>
           </li>
 
-         
+
         </ul>
         <div className='flex flex-col items-center my-6 gap-2'>
           <p className="text-xs text-gray-500 ">&copy; 2024. Mosaico genética médica. Todos os direitos reservados.</p>

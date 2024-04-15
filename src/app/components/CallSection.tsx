@@ -51,8 +51,22 @@ const CallSection = () => {
             <H3Card text={text} />
             <p className='max-md:text-center text-gray-500 mt-8 text-base xl:text-lg font-medium px-4 md:px-10'>Em caso de dúvidas ou problemas para agendar seu atendimento entre em contato com a nossa equipe por telefone, Whatsapp ou e-mail.</p>
             <div className='flex flex-col lg:flex-row items-center justify-center lg:gap-5'>
-              <Button>Agendar consulta</Button>
-              <ButtonSecondary >Preços e informações</ButtonSecondary>
+              <Link href={'https://wa.me/5561998570759'} target='_blank' className='group'>
+                <Button>
+                  <div className='inline-flex gap-3 items-center'>
+                    Agendar Consulta
+                    <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={20} />
+                  </div>
+                </Button>
+              </Link>
+              <Link href={'https://wa.me/5561998570759'} target='_blank' className='group' >
+                <ButtonSecondary >
+                  <div className='inline-flex gap-3 items-center '>
+                    Preços e informações
+                    <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={20} />
+                  </div>
+                </ButtonSecondary>
+              </Link>
             </div>
           </div>
 
