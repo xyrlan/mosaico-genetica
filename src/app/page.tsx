@@ -27,12 +27,12 @@ export default function Home() {
           <Image src="/mosaicoico.png" alt="loading" width={100} height={100} className='animate-pulse' />
         </div>
       }>
-        <main className="selection:bg-[#82a170]">
+        <main>
           <HeroSection />
-          <AboutSection />
-          <ServicesSection />
-          <CallSection />
         </main>
+        <AboutSection />
+        <ServicesSection />
+        <CallSection />
       </Suspense>
     </>
   );

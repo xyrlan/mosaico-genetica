@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.className} relative`}>
+      <body className={`${inter.className} relative selection:bg-[#82a170]`}>
         <Header />
         {children}
         <Footer />
