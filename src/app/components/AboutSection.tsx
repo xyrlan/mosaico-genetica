@@ -1,11 +1,10 @@
-import { ArrowUpRightIcon, Hospital, Wifi } from 'lucide-react'
+import { Hospital, Wifi } from 'lucide-react'
 import React, { } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import H2 from './H2'
-import Button from './Button'
 import ButtonSecondary from './ButtonSecondary'
-import Link from 'next/link'
+import AgendarConsulta from './AgendarConsulta'
 const AboutSection = () => {
 
   return (
@@ -83,14 +82,7 @@ const AboutSection = () => {
             <p className="text-center text-gray-500 mt-8 text-base xl:text-lg font-medium">
               Estendemos nosso compromisso de cuidado a todo o Brasil, proporcionando suporte especializado e acolhimento a famílias em cada canto do país, porque acreditamos que nenhuma jornada genética deve ser percorrida sozinho.
             </p>
-            <Link href={'https://wa.me/5561998570759'} target='_blank' className='group'>
-              <Button>
-                <div className='inline-flex gap-3 items-center'>
-                  Agendar Consulta
-                  <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={20} />
-                </div>
-              </Button>
-            </Link>
+            <AgendarConsulta />
           </motion.div>
         </div>
 

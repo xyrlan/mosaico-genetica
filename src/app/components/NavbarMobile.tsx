@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { motion, AnimatePresence, delay } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { handleScrollToElement } from "./Navbar";
 import Image from "next/image";
+import LinksComponents from "./LinksComponents";
+import CopyCredits from "./CopyCredits";
+import AgendarConsulta from "./AgendarConsulta";
 
 const NavbarMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,11 +89,21 @@ const NavbarMobile = () => {
                   animate={{ opacity: 1, y: 0, transition: { delay: 0.4 + index * 0.1 } }}
                   exit={{ opacity: 0, y: 20, transition: { duration: 0.1 } }}
                   onClick={() => { handleScrollToElement(item.href); setIsOpen(false); }}
-                  className="text-center cursor-pointer font-semibold text-xl text-gray-700"
+                  className="text-center cursor-pointer font-semibold text-xl text-gray-600"
                 >
                   {item.name}
                 </motion.div>
               ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0, transition: { delay: 0.5 } }}
+                exit={{ opacity: 0, y: 20, transition: { duration: 0.1 } }}
+                className="absolute bottom-10 w-fit mx-4"
+              >
+                <AgendarConsulta />
+                <LinksComponents />
+                <CopyCredits />
+              </motion.div>
             </motion.div>
           </motion.div>
         )}

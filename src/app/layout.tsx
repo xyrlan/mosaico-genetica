@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({ weight: ['400', '500', '600', '700'], subsets: ['latin']});
 
 export const metadata: Metadata = {
   title: "Mosaico Genética Médica",

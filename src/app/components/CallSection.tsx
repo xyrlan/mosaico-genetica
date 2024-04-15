@@ -1,12 +1,12 @@
 import React, { useRef } from 'react'
-import Button from './Button'
-import { useScroll, motion, useTransform, AnimatePresence } from 'framer-motion'
+import { useScroll, motion, useTransform } from 'framer-motion'
 import Image from 'next/image'
 import StepsComponent from './StepsComponent'
 import H2 from './H2'
 import ButtonSecondary from './ButtonSecondary'
 import { ArrowUpRightIcon, MapPinned, Phone } from 'lucide-react'
 import Link from 'next/link'
+import AgendarConsulta from './AgendarConsulta'
 
 const CallSection = () => {
   const targetRef = useRef<HTMLDivElement>(null)
@@ -28,7 +28,7 @@ const CallSection = () => {
     <motion.section
       ref={targetRef}
       id='contato'
-      className='min-h-screen flex justify-center px-4 py-24 relative'
+      className='min-h-screen flex justify-center items-center px-4 py-24 relative'
     >
       <motion.div style={{ scaleY }} className='absolute h-full w-full bottom-0 bg-gradient-to-b from-[#d9edf2]/90   to-transparent -z-10 origin-top opacity-80' />
       <div className="max-w-6xl flex flex-col items-center ">
@@ -49,16 +49,9 @@ const CallSection = () => {
             <Image src="/bg-mosaic3.png" alt="BackgroundImage" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply rounded-xl drop-shadow-lg -z-10 " />
             <div className='bg-[#d9edf2] -z-20 absolute left-0 top-0 w-full h-full rounded-xl ' />
             <H3Card text={text} />
-            <p className='max-md:text-center text-gray-500 mt-8 text-base xl:text-lg font-medium px-4 md:px-10'>Em caso de dúvidas ou problemas para agendar seu atendimento entre em contato com a nossa equipe por telefone, Whatsapp ou e-mail.</p>
+            <p className='max-md:text-center text-gray-500 mt-8 text-base xl:text-lg font-medium px-4 md:px-10'>Em caso de dúvidas ou problemas para agendar seu atendimento entre em contato com a nossa equipe por telefone ou Whatsapp.</p>
             <div className='flex flex-col lg:flex-row items-center justify-center lg:gap-5'>
-              <Link href={'https://wa.me/5561998570759'} target='_blank' className='group'>
-                <Button>
-                  <div className='inline-flex gap-3 items-center'>
-                    Agendar Consulta
-                    <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={20} />
-                  </div>
-                </Button>
-              </Link>
+              <AgendarConsulta />
               <Link href={'https://wa.me/5561998570759'} target='_blank' className='group' >
                 <ButtonSecondary >
                   <div className='inline-flex gap-3 items-center '>
@@ -71,7 +64,7 @@ const CallSection = () => {
           </div>
 
           <motion.div
-            initial={{ x: -600 }}
+            initial={{ x: -575 }}
             whileInView={{ x: 0 }}
             transition={{
               duration: 1,

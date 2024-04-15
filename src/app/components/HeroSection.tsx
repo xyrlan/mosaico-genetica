@@ -1,4 +1,4 @@
-import React, { use, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import HeroDescription from './HeroDescription'
 import SplineViewer from './SplineViewer'
 import { useScroll, useTransform, motion } from 'framer-motion'
@@ -15,7 +15,7 @@ const HeroSection = () => {
 
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
   const position = useTransform(scrollYProgress, (pos) => {
-    return pos === 1 ? "relative" : "fixed"
+    return pos >= 1 ? "relative" : "fixed"
   })
   const x = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "25%", "50%", "100%"])
   const x_ = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "-25%", "-50%", "-100%"])
@@ -37,6 +37,7 @@ const HeroSection = () => {
       ref={targetRef}
       id="hero"
       className="relative flex items-center min-h-screen overflow-hidden container">
+
       {loading && <div className="fixed inset-0 bg-[#e5f3f6] bg-opacity-90 backdrop-blur-lg flex items-center justify-center z-50">
         <Image src="/mosaicoico.png" alt="loading" width={200} height={200} className='animate-pulse' />
       </div>}
@@ -46,7 +47,7 @@ const HeroSection = () => {
         style={{ position }}
         className='flex w-full h-full justify-center lg:justify-around items-center px-4'
       >
-      <Image src="/bg-mosaic3.png" alt="BackgroundImage" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply " />
+        <Image src="/bg-mosaic3.png" alt="BackgroundImage" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply " />
 
         <motion.div
           style={{ x: x_ }}

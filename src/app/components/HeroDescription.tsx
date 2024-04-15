@@ -1,10 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
-import Button from './Button'
 import ButtonSecondary from './ButtonSecondary'
 import { handleScrollToElement } from './Navbar'
-import { ArrowUpRightIcon } from 'lucide-react'
-import Link from 'next/link'
+import AgendarConsulta from './AgendarConsulta'
 
 
 const HeroDescription = () => {
@@ -22,15 +20,7 @@ const HeroDescription = () => {
         Atendimento de genética médica presencial em Brasília (DF) e online em todo o Brasil.
       </p>
       <div className='flex lg:flex-row flex-col justify-center lg:gap-10 mt-5 lg:mt-10'>
-        <Link href={'https://wa.me/5561998570759'} target='_blank' className='group'>
-          <Button>
-            <div className='inline-flex gap-3 items-center'>
-              Agendar Consulta
-              <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={20} />
-            </div>
-          </Button>
-        </Link>
-
+        <AgendarConsulta />
         <ButtonSecondary onClick={() => handleScrollToElement('nosso-especialista')}>
           Conheça nosso especialista
         </ButtonSecondary>
