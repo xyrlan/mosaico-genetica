@@ -10,9 +10,13 @@ export default function manifest(): MetadataRoute.Manifest {
     prefer_related_applications: true,
     icons: [
       {
-        src: '/moasicoico.png',
+        src: '/mosaicoico.png',
         sizes: 'any',
-        type: 'image/x-icon',
+      },
+      {
+        src: '/mosaicosloganprancheta.png',
+        sizes: 'any',
+        purpose: 'maskable',
       },
     ],
   }
