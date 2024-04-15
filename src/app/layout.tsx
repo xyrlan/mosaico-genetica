@@ -5,11 +5,16 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 
-const inter = Poppins({ weight: ['400', '500', '600', '700'], subsets: ['latin']});
+const inter = Poppins({ weight: ['400', '500', '600', '700'], subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Mosaico Genética Médica",
   description: "Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias com doenças raras.",
+  alternates: {
+    canonical: '/',
+    languages: { 'pt-BR': '/pt-BR' },
+  },
+
 };
 
 export default function RootLayout({

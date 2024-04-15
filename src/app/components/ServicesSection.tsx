@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
@@ -51,9 +52,9 @@ const ServicesSection = () => {
           <H2>Serviços que estão além do diagnóstico</H2>
           <p className='text-sm md:text-lg 2xl:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>Entendemos que cada jornada na genética é única, e na Mosaico abraçamos oferecemos aconselhamento nas diversas áreas da genética clínica para oferecer suporte holístico às necessidades específicas de cada paciente.</p>
         </motion.div>
-        <dl className="mt-14 text-base leading-7 text-gray-600 lg:max-w-none grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ul className="mt-14 text-base leading-7 text-gray-600 lg:max-w-none grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <motion.div
+            <motion.li
               key={service.name}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -61,14 +62,14 @@ const ServicesSection = () => {
             >
               <div className="relative pl-9 flex flex-col items-center bg-gray-200 rounded p-8 hover:-translate-y-2 duration-300 transition-all shadow-lg hover:shadow-2xl ">
                 <Image src={service.icon} alt={service.name} width={600} height={600} className='h-[50px] md:h-[80px] w-auto object-center saturate-[40%] select-none' />
-                <dt className="font-semibold justify-center text-xl lg:text-2xl 2xl:text-3xl mt-5 text-center">
+                <h3 className="font-semibold justify-center text-xl lg:text-2xl 2xl:text-3xl mt-5 text-center">
                   {service.name}
-                </dt>
-                <dd className="mt-3 text-center text-sm xl:text-base">{service.description}</dd>
+                </h3>
+                <p className="mt-3 text-center text-sm xl:text-base">{service.description}</p>
               </div>
-            </motion.div>
+            </motion.li>
           ))}
-        </dl>
+        </ul>
       </div>
     </section>
   )

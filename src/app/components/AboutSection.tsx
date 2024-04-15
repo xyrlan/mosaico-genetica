@@ -1,3 +1,4 @@
+'use client'
 import { Hospital, Wifi } from 'lucide-react'
 import React, { } from 'react'
 import { motion } from 'framer-motion'

@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef } from 'react'
 import { useScroll, motion, useTransform } from 'framer-motion'
 import Image from 'next/image'
@@ -16,10 +17,6 @@ const CallSection = () => {
   })
 
   const scaleY = useTransform(scrollYProgress, [0, 0.5], [0, 1])
-  // const y = useTransform(scrollYProgress, [0, 0.5], [600, 0])
-  // const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1])
-  // const leftx = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.7], [-600, -400, -200, 0])
-  // const rightx = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.7], [600, 400, 200, 0])
 
   const text = "Como posso te ajudar?".split(" ");
   const text2 = "Entre em contato".split(" ");

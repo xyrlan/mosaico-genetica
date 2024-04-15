@@ -12,7 +12,7 @@ const HeroDescription = () => {
       <div className='flex justify-center'>
         <Image src="/slogan-mosaico.png" alt="Mosaico Genética" width={300} height={300} priority className="h-auto w-auto  select-none" />
       </div>
-
+      <h1 className='sr-only'>Mosaico Genética Médica</h1>
       <p className="text-base lg:text-xl 2xl:text-2xl font-medium text-gray-700 max-w-2xl text-center text-balance tracking-wide mt-5 xl:mt-5">
         Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias.
         <br />
