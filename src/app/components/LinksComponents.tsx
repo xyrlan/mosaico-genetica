@@ -4,7 +4,7 @@ import React from 'react'
 
 const LinksComponents = () => {
   return (
-    <ul className="mt-12 flex justify-center gap-6 md:gap-8">
+    <ul className="mt-7 flex justify-center gap-6 md:gap-8">
     <li>
       <Link
         href="https://wa.me/5561998570759"
@@ -49,7 +49,7 @@ const LinksComponents = () => {
         className="text-gray-700 transition hover:text-gray-700/75"
       >
         <span className="sr-only">Linktree</span>
-        <Image src={'/lintree.png'} width={42} height={42} alt='linktree-logo' className=' duration-300 hover:saturate-150 transition-all' />
+        <Image src={'/lintree.png'} width={42} height={42} alt='linktree-logo' className=' duration-300 hover:saturate-150 transition-all -translate-x-2 -translate-y-[1px]' />
       </Link>
     </li>
 

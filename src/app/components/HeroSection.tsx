@@ -11,14 +11,14 @@ const HeroSection = () => {
     target: targetRef,
     offset: ['end end', 'end start']
   })
-  
+
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
   const position = useTransform(scrollYProgress, (pos) => {
     return pos >= 1 ? "relative" : "fixed"
   })
   const x = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "25%", "50%", "100%"])
   const x_ = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "-25%", "-50%", "-100%"])
-  
+
 
   return (
     <motion.section
@@ -26,18 +26,16 @@ const HeroSection = () => {
       ref={targetRef}
       id="hero"
       className="relative flex items-center min-h-screen overflow-hidden container">
-
       <motion.div
         style={{ position }}
         className='flex w-full h-full justify-center lg:justify-around items-center px-4'
       >
-        <Image src="/bg-mosaic3.png" alt="BackgroundImage2" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply " />
 
         <motion.div
           style={{ x: x_ }}
           className='z-10 h-full w-full hidden lg:block'
         >
-          <SplineViewer />
+          {/* <SplineViewer /> */}
         </motion.div>
 
         <motion.div

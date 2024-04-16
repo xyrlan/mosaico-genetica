@@ -6,19 +6,21 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 230, 220;
   --background-end-rgb: 245, 234, 240;
+  --background-rgb: 221, 221, 221
 }
 
 
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
-    scroll-behavior: smooth;
+    rgb(var(--background-start-rgb)); */
+  background-color: #F8FAFC;
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
@@ -32,20 +34,24 @@ body {
   width: 5px;
   height: 8px;
 
-/* Largura da barra de rolagem */
+  /* Largura da barra de rolagem */
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Cor de fundo da área da barra de rolagem */
+  background: #f1f1f1;
+  /* Cor de fundo da área da barra de rolagem */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888; /* Cor da barra de rolagem */
-  border-radius: 5px; /* Raio das bordas da barra de rolagem */
+  background: #888;
+  /* Cor da barra de rolagem */
+  border-radius: 5px;
+  /* Raio das bordas da barra de rolagem */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Cor da barra de rolagem ao passar o mouse por cima */
+  background: #555;
+  /* Cor da barra de rolagem ao passar o mouse por cima */
 }
 
 .progress-bar {

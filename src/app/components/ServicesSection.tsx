@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
 import H2 from './H2'
+import AgendarConsulta from './AgendarConsulta'
 
 
 const ServicesSection = () => {
@@ -42,15 +43,16 @@ const ServicesSection = () => {
 
   return (
     <section id='servicos' className='min-h-screen relative py-24 px-4 flex flex-col items-center justify-center'>
-      <Image src="/bg-mosaic3.png" alt="BackgroundImage2" width={1000} height={1000} className="w-full h-full absolute top-0 opacity-20 object-cover mix-blend-multiply -z-10 " />
-      <div className='max-w-6xl'>
+
+      <div className='max-w-6xl flex flex-col gap-7'>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: 'easeOut', duration: 1 }}
           className='flex flex-col items-center lg:gap-7'>
-          <H2>Serviços que estão além do diagnóstico</H2>
-          <p className='text-sm md:text-lg 2xl:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>Entendemos que cada jornada na genética é única, e na Mosaico abraçamos oferecemos aconselhamento nas diversas áreas da genética clínica para oferecer suporte holístico às necessidades específicas de cada paciente.</p>
+          <H2>Cuidado além do diagnóstico</H2>
+          <p className='text-sm md:text-lg 2xl:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>
+            Na Mosaico, reconhecemos que cada jornada na genética é única. Por isso, proporcionamos aconselhamento especializado em várias áreas da genética clínica, buscando oferecer um suporte holístico e personalizado que atenda às necessidades específicas de cada paciente.</p>
         </motion.div>
         <ul className="mt-14 text-base leading-7 text-gray-600 lg:max-w-none grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
@@ -59,13 +61,17 @@ const ServicesSection = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ ease: 'easeOut', duration: 1 }}
+              className='h-full'
             >
-              <div className="relative pl-9 flex flex-col items-center bg-gray-200 rounded p-8 hover:-translate-y-2 duration-300 transition-all shadow-lg hover:shadow-2xl ">
+              <div className="h-full relative flex flex-col justify-around items-center bg-gray-200 rounded p-8 hover:-translate-y-2 duration-300 transition-all shadow-lg hover:shadow-2xl ">
                 <Image src={service.icon} alt={service.name} width={600} height={600} className='h-[50px] md:h-[80px] w-auto object-center saturate-[40%] select-none' />
                 <h3 className="font-semibold justify-center text-xl lg:text-2xl 2xl:text-3xl mt-5 text-center">
                   {service.name}
                 </h3>
                 <p className="mt-3 text-center text-sm xl:text-base">{service.description}</p>
+                <div className=' flex justify-center mt-4'>
+                  <AgendarConsulta />
+                </div>
               </div>
             </motion.li>
           ))}
