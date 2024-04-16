@@ -20,7 +20,7 @@ const HeroDescription = () => {
           whileInView={{ scaleY: 0 }}
           transition={{ ease: 'easeOut', duration: 1, delay: 0.5 }}
           className='w-full h-full absolute bottom-0 bg-gray-50 origin-top' />
-        <Image src="/mosaicoazul.png" alt="Mosaico Genética" width={400} height={400} priority className="h-auto w-auto max-3xl:max-h-[300px] select-none" />
+        <Image src="/mosaicoazul.png" alt="Mosaico Genética" width={300} height={86} priority className="h-auto w-auto max-3xl:max-h-[300px] select-none" />
       </div>
       <h1 className='sr-only'>Mosaico Genética Médica</h1>
       <p className="text-base lg:text-xl 3xl:text-2xl font-medium text-gray-700 max-w-2xl text-center text-balance tracking-wide mt-5 max-lg:px-4">
