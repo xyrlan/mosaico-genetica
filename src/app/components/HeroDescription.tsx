@@ -13,7 +13,7 @@ const HeroDescription = () => {
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ ease: 'easeOut', duration: 1 }}
-      className="max-w-lg z-20 ">
+      className="max-w-lg z-20 max-h-screen">
       <div className='flex justify-center max-lg:hidden relative'>
         <motion.div
           initial={{ scaleY: 1 }}
