@@ -16,7 +16,7 @@ const StepIcon = ({ IconComponent, index }: any) => {
       scale: 1,
       opacity: 1,
       transition: {
-        delay: index * 0.7,
+        delay: index * 0.5,
         type: 'spring',
         stiffness: 260,
         damping: 20
@@ -48,7 +48,7 @@ const ConnectingLine = ({ index }: any) => {
       scaleX: 1,
       scaleY: 1,
       transition: {
-        delay: (index * 0.7) - 0.20,
+        delay: (index * 0.5) - 0.20,
         duration: 0.5,
         ease: 'easeInOut'
       }
