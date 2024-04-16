@@ -14,6 +14,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "bg-mosaic": "url('/bg-mosaic.png')",
       },
+      screens: {
+        '3xl': "1920px",
+      }
     },
   },
   plugins: [],

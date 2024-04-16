@@ -4,9 +4,9 @@ import { CalendarCheck, Ear, Microscope, ShieldPlus, HandHelping } from 'lucide-
 
 const stepData = [
   { icon: CalendarCheck, label: "Agendamento", color: 'text-green-700' },
-  { icon: HandHelping, label: "Consultar" },
+  { icon: HandHelping, label: "Consulta" },
   { icon: Microscope, label: "Diagnóstico" },
-  { icon: ShieldPlus, label: "Tratamento" }
+  { icon: ShieldPlus, label: "Aconselhamento genético" }
 ];
 
 const StepIcon = ({ IconComponent, index }: any) => {
