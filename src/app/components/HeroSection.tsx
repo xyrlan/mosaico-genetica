@@ -25,22 +25,24 @@ const HeroSection = () => {
       style={{ opacity }}
       ref={targetRef}
       id="hero"
-      className="relative flex items-center min-h-screen overflow-hidden container">
+      className="relative flex items-center min-h-screen overflow-hidden container ">
       <motion.div
         style={{ position }}
-        className='flex w-full h-full justify-center lg:justify-around items-center px-4'
+        className='flex max-lg:flex-col w-full h-full justify-center lg:justify-around items-center lg:gap-20'
       >
 
         <motion.div
           style={{ x: x_ }}
-          className='z-10 h-full w-full hidden lg:block'
+          className='z-10 flex items-center justify-center w-full lg:w-1/2 relative max-sm:mt-20 max-lg:mt-20'
         >
-          {/* <SplineViewer /> */}
+          <div className='bg-[#f5eaf0] absolute  w-full h-2/3 bottom-0 -z-10 shadow-2xl'>
+          </div>
+          <Image src={'/image3.png'} width={5616} height={3744} alt='Mulher com criança' className=' max-lg:max-h-[350px] max-lg:object-contain' />
         </motion.div>
 
         <motion.div
           style={{ x: x }}
-          className='w-full flex justify-center '
+          className='lg:w-1/2 w-full h-full flex items-center justify-center'
         >
           <HeroDescription />
         </motion.div>

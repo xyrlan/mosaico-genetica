@@ -32,7 +32,7 @@ const AboutSection = () => {
               Fabrício Maciel, MD, MSc
             </H2>
             <LinksComponents />
-            <p className="text-center text-gray-500 mt-4 text-base xl:text-lg font-medium">
+            <p className="text-center text-gray-500 lg:mt-4 text-base xl:text-lg font-medium">
               {/* Meu caminho na medicina começou na Universidade Federal do Maranhão, onde mergulhei no estudo da complexidade humana e na busca pela compreensão das intrincadas peças que formam a vida.
               <br />
               <br />

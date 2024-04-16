@@ -18,9 +18,9 @@ const SplineViewer = () => {
     setLoading(false);
   };
 
-  if (!isLargeScreen) {
-    return null;
-  }
+  // if (!isLargeScreen) {
+  //   return null;
+  // }
 
   return loading ? (
     <div className='flex items-center justify-center h-full'>
