@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import HeroDescription from './HeroDescription'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import Image from 'next/image'

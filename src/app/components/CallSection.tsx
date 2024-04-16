@@ -5,7 +5,7 @@ import Image from 'next/image'
 import StepsComponent from './StepsComponent'
 import H2 from './H2'
 import ButtonSecondary from './ButtonSecondary'
-import { ArrowUpRightIcon, Dna, MapPinned, Phone } from 'lucide-react'
+import { ArrowUpRightIcon, MapPinned, Phone } from 'lucide-react'
 import Link from 'next/link'
 import AgendarConsulta from './AgendarConsulta'
 

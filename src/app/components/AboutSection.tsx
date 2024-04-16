@@ -1,19 +1,15 @@
 'use client'
 import { Hospital, Wifi } from 'lucide-react'
 import React, { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import H2 from './H2'
 import ButtonSecondary from './ButtonSecondary'
 import AgendarConsulta from './AgendarConsulta'
 import LinksComponents from './LinksComponents'
-import Modal from './Modal'
 
 const AboutSection = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
 
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
   return (
     <motion.section
       id="nosso-especialista"
