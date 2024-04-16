@@ -49,7 +49,7 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: 'easeOut', duration: 1 }}
-          className='flex flex-col items-center lg:gap-7'>
+          className='flex flex-col items-center gap-4 lg:gap-7'>
           <H2>Cuidado além do diagnóstico</H2>
           <p className='text-sm md:text-lg 3xl:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>
             Na Mosaico, reconhecemos que cada jornada na genética é única. Por isso, proporcionamos aconselhamento especializado em várias áreas da genética clínica, buscando oferecer um suporte holístico e personalizado que atenda às necessidades específicas de cada paciente.</p>

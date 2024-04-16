@@ -1,14 +1,19 @@
 'use client'
 import { Hospital, Wifi } from 'lucide-react'
-import React, { } from 'react'
-import { motion } from 'framer-motion'
+import React, { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import H2 from './H2'
 import ButtonSecondary from './ButtonSecondary'
 import AgendarConsulta from './AgendarConsulta'
 import LinksComponents from './LinksComponents'
-const AboutSection = () => {
+import Modal from './Modal'
 
+const AboutSection = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
   return (
     <motion.section
       id="nosso-especialista"
@@ -33,15 +38,6 @@ const AboutSection = () => {
             </H2>
             <LinksComponents />
             <p className="text-center text-gray-500 lg:mt-4 text-base xl:text-lg font-medium">
-              {/* Meu caminho na medicina começou na Universidade Federal do Maranhão, onde mergulhei no estudo da complexidade humana e na busca pela compreensão das intrincadas peças que formam a vida.
-              <br />
-              <br />
-              Fiz Genética Médica no Hospital de Clínica de Porto Alegre, onde pude explorar todas as áreas da genética clínica, moldando minha visão sobre como oferecer suporte integral às famílias enfrentando desafios genéticos.
-              <br />
-              <br />
-              Fortaleci minha paixão pelos mistérios genéticos ao concluir meu mestrado em Neurogenética pela Universidade Federal do Rio Grande do Sul.
-              <br />
-              <br /> */}
               Na Mosaico, meu objetivo é trazer a expertise adquirida ao longo desses anos de formação para criar um espaço acolhedor, onde as famílias encontrem não apenas um profissional, mas um parceiro dedicado em suas jornadas genéticas.
             </p>
             <ButtonSecondary>Mais sobre mim</ButtonSecondary>

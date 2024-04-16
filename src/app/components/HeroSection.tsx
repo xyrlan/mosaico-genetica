@@ -33,16 +33,26 @@ const HeroSection = () => {
 
         <motion.div
           style={{ x: x_ }}
-          className='z-10 flex items-center justify-center w-full lg:w-1/2 relative max-sm:mt-20 max-lg:mt-20'
+          className='z-10 flex items-center justify-center w-full lg:w-1/2 relative max-sm:mt-20 max-lg:mt-20 '
         >
-          <div className='bg-[#f5eaf0] absolute  w-full h-2/3 bottom-0 -z-10 shadow-2xl'>
-          </div>
-          <Image src={'/image3.png'} width={5616} height={3744} alt='Mulher com criança' className=' max-lg:max-h-[350px] max-lg:object-contain' />
+          <motion.div
+            initial={{ opacity: 0, x: "-100%" }}
+            whileInView={{ opacity: 1, x: "0%" }}
+            transition={{ ease: 'easeOut', duration: 1, delay: 0.5 }}
+            className='bg-[#f5eaf0] absolute w-full h-2/3 bottom-0 -z-10 lg:shadow-2xl'>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -300 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ ease: 'easeOut', duration: 1 }}
+          >
+            <Image src={'/image3.png'} width={1000} height={1000} alt='Mulher com criança' className=' max-lg:max-h-[350px] max-lg:object-contain' />
+          </motion.div>
         </motion.div>
 
         <motion.div
           style={{ x: x }}
-          className='lg:w-1/2 w-full h-full flex items-center justify-center'
+          className='lg:w-1/2 w-full h-full flex lg:items-center justify-center'
         >
           <HeroDescription />
         </motion.div>

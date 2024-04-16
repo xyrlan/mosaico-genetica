@@ -7,7 +7,7 @@ const Logo = () => {
   return (
     <Link href='#hero' className='cursor-pointer'>
       <Image src="/mosaicologo.png" alt="Logo" width={200} height={200} className='lg:block hidden w-auto h-auto max-3xl:h-16 select-none drop-shadow-xl' priority />
-      <Image src="/mosaicoico.png" alt="LogoImage" width={50} height={50} className='lg:hidden block w-auto h-auto select-none drop-shadow-xl' priority />
+      <Image src="/mosaicologo.png" alt="LogoImage" width={150} height={150} className='lg:hidden block w-auto h-auto select-none drop-shadow-xl' priority />
     </Link> 
   )
 }

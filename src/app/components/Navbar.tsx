@@ -17,14 +17,14 @@ const Navbar = (props: { scroll: boolean }) => {
   ]
 
   return (
-    <nav className='hidden md:flex items-center justify-between p-2 3xl:p-4'>
+    <nav className='hidden lg:flex items-center justify-between p-2 3xl:p-4'>
       <div className="flex items-center gap-10 ">
         {navItems.map((item) => (
           <div key={item.id} onClick={() => handleScrollToElement(item.href)} className='select-none cursor-pointer'>
             <p className='text-gray-500 hover:text-black duration-300 transition-all font-semibold tracking-tight  '>{item.name}</p>
           </div>
         ))}
-<AgendarConsulta />
+        <AgendarConsulta />
       </div>
     </nav>
   )

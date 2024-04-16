@@ -44,7 +44,7 @@ const NavbarMobile = () => {
 
   return (
     <>
-      <div className="flex md:hidden items-center justify-between p-2">
+      <div className="flex lg:hidden items-center justify-between p-2">
         <button onClick={() => setIsOpen(!isOpen)} className="text-xl">
           &#9776;
         </button>

@@ -3,13 +3,23 @@ import React from 'react'
 import ButtonSecondary from './ButtonSecondary'
 import { handleScrollToElement } from './Navbar'
 import AgendarConsulta from './AgendarConsulta'
+import { motion } from 'framer-motion'
 
 
 const HeroDescription = () => {
 
   return (
-    <div className="lg:max-w-lg z-20">
-      <div className='flex justify-center max-lg:hidden'>
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ ease: 'easeOut', duration: 1 }}
+      className="max-w-lg z-20 ">
+      <div className='flex justify-center max-lg:hidden relative'>
+        <motion.div
+          initial={{ scaleY: 1 }}
+          whileInView={{ scaleY: 0 }}
+          transition={{ ease: 'easeOut', duration: 1, delay: 0.5 }}
+          className='w-full h-full absolute bottom-0 bg-gray-50 origin-top' />
         <Image src="/mosaicoazul.png" alt="Mosaico Genética" width={400} height={400} priority className="h-auto w-auto max-3xl:max-h-[300px] select-none" />
       </div>
       <h1 className='sr-only'>Mosaico Genética Médica</h1>
@@ -26,7 +36,7 @@ const HeroDescription = () => {
         </ButtonSecondary>
 
       </div>
-    </div>
+    </motion.div>
   )
 }
 
