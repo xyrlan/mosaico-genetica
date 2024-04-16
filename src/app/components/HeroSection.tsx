@@ -19,7 +19,8 @@ const HeroSection = () => {
   const x = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "25%", "50%", "100%"])
   const x_ = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "-25%", "-50%", "-100%"])
 
-
+  const isLargeScreen = typeof window !== 'undefined' && window.innerWidth > 1024
+  
   return (
     <motion.section
       style={{ opacity }}
@@ -45,18 +46,11 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -300 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ ease: 'easeOut', duration: 1 }}
-            className='lg:block hidden'
+
           >
-            <Image src={'/image3.png'} width={846} height={564} alt='Mulher com criança' className='w-auto h-auto max-lg:max-h-[350px] max-lg:object-contain' priority />
+            <Image src={'/image3.png'} width={isLargeScreen ? 846 : 430} height={isLargeScreen ? 564 : 287} alt='Mulher com criança' className='w-auto h-auto max-lg:max-h-[350px] max-lg:object-contain' priority />
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: -300 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ ease: 'easeOut', duration: 1 }}
-            className='block lg:hidden'
-          >
-            <Image src={'/image3.png'} width={430} height={287} alt='Mulher com criança' className='w-auto h-auto max-lg:max-h-[350px] max-lg:object-contain' priority />
-          </motion.div>
+
         </motion.div>
 
         <motion.div
