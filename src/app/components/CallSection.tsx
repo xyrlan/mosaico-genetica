@@ -133,7 +133,7 @@ const H3Card = ({ text }: any) => (
         transition={{
           ease: 'easeOut',
           duration: 1,
-          delay: 1 + i * 0.2,
+          delay: 0.5 + i / 5,
         }}
         key={i}
       >
