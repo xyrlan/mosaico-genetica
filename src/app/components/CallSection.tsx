@@ -25,7 +25,7 @@ const CallSection = () => {
     <motion.section
       ref={targetRef}
       id='contato'
-      className='min-h-screen flex justify-center items-center px-4 py-24 relative'
+      className='min-h-screen flex justify-center items-center px-4 lg:py-24 py-12 relative'
     >
       <motion.div style={{ scaleY }} className='absolute h-full w-full bottom-0 bg-gradient-to-b from-[#f5eaf0]/90   to-transparent -z-10 origin-top opacity-80' />
       <div className="max-w-6xl flex flex-col items-center ">

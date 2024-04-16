@@ -42,7 +42,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id='servicos' className='min-h-screen relative py-24 px-4 flex flex-col items-center justify-center'>
+    <section id='servicos' className='min-h-screen relative lg:py-24 py-12 px-4 flex flex-col items-center justify-center'>
 
       <div className='max-w-6xl flex flex-col gap-7'>
         <motion.div

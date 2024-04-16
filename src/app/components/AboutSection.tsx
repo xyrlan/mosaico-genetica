@@ -13,7 +13,7 @@ const AboutSection = () => {
   return (
     <motion.section
       id="nosso-especialista"
-      className="min-h-screen flex items-center relative py-24 overflow-hidden">
+      className="min-h-screen flex items-center relative lg:py-24 py-12 overflow-hidden">
 
       <div className="max-w-6xl mx-auto z-10">
         <div className="flex lg:flex-row flex-col justify-between items-center gap- lg:gap-20  ">
