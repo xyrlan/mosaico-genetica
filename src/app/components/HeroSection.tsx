@@ -46,7 +46,7 @@ const HeroSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ ease: 'easeOut', duration: 1 }}
           >
-            <Image src={'/image3.png'} width={5616} height={3744} alt='Mulher com criança' className='w-auto h-auto max-lg:max-h-[350px] max-lg:object-contain' />
+            <Image src={'/image3.png'} width={5616} height={3744} alt='Mulher com criança' className='w-auto h-auto max-lg:max-h-[350px] max-lg:object-contain' priority />
           </motion.div>
         </motion.div>
 
