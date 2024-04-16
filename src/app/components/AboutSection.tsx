@@ -12,7 +12,7 @@ const AboutSection = () => {
   return (
     <motion.section
       id="nosso-especialista"
-      className="min-h-screen flex items-center relative py-24 overflow-hidden ">
+      className="min-h-screen flex items-center relative py-24 overflow-hidden">
 
       <div className="max-w-6xl mx-auto z-10">
         <div className="flex lg:flex-row flex-col justify-between items-center gap- lg:gap-20  ">
@@ -47,17 +47,21 @@ const AboutSection = () => {
             <ButtonSecondary>Mais sobre mim</ButtonSecondary>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 0.8, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="lg:block hidden relative w-2/3 overflow-hidden rounded ">
-            <Image src="/fabricio2.png" alt="Especialista" width={700} height={700} className="w-full h-full rounded hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl " />
-            
+            className="lg:block hidden relative w-2/3  rounded ">
+            <Image src="/fabricio2.png" alt="Especialista" width={700} height={700} className="w-full h-full rounded hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl  " />
+            <div className='absolute h-full w-full bg-[#f5eaf0] translate-x-8 -translate-y-8 bottom-0 -z-10 shadow-xl' />
           </motion.div>
         </div>
 
-        <div className=" flex lg:flex-row flex-col justify-between items-center gap-5 lg:gap-20 max-lg:mt-5 mt-20 bg-[#d9edf2] relative py-10 rounded">
-          <div className='bg-[#d9edf2] h-full w-full absolute -right-full'></div>
+        <motion.div
+          initial={{ opacity: 0, x: "100%" }}
+          whileInView={{ opacity: 1, x: "0%" }}
+          transition={{ duration: 1 }}
+          className=" flex lg:flex-row flex-col justify-between items-center gap-5 lg:gap-20 max-lg:mt-5 mt-20 bg-[#d9edf2] relative py-10 rounded">
+          <div className='bg-[#d9edf2] h-full w-full absolute -right-full' />
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -89,7 +93,7 @@ const AboutSection = () => {
             </p>
             <AgendarConsulta />
           </motion.div>
-        </div>
+        </motion.div>
 
 
 

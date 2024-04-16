@@ -1,9 +1,9 @@
 'use client'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import HeroDescription from './HeroDescription'
-import SplineViewer from './SplineViewer'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import Image from 'next/image'
+
 
 const HeroSection = () => {
   const targetRef = useRef<HTMLDivElement>(null)

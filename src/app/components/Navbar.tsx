@@ -17,7 +17,7 @@ const Navbar = (props: { scroll: boolean }) => {
   ]
 
   return (
-    <nav className='hidden md:flex items-center justify-between p-2 2xl:p-4'>
+    <nav className='hidden md:flex items-center justify-between p-2 3xl:p-4'>
       <div className="flex items-center gap-10 ">
         {navItems.map((item) => (
           <div key={item.id} onClick={() => handleScrollToElement(item.href)} className='select-none cursor-pointer'>

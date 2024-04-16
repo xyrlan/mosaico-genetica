@@ -35,7 +35,7 @@ const CallSection = () => {
           transition={{ ease: 'easeOut', duration: 1 }}
           className="flex flex-col items-center gap-4 lg:gap-7 rounded">
           <H2>Todo gene conta uma história,<br /> <span className=''>qual é a sua?</span></H2>
-          <p className='text-sm md:text-lg 2xl:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>Na genética, cada gene possui uma narrativa única e um impacto profundo. Em nosso trabalho, além der lermos essas histórias genéticas; nós as interpretamos e utilizamos esse conhecimento para orientar tratamentos, prever riscos e, em última análise, melhorar vidas.</p>
+          <p className='text-sm md:text-lg 3xl:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>Na genética, cada gene possui uma narrativa única e um impacto profundo. Em nosso trabalho, além der lermos essas histórias genéticas; nós as interpretamos e utilizamos esse conhecimento para orientar tratamentos, prever riscos e, em última análise, melhorar vidas.</p>
         </motion.div>
 
         <StepsComponent />
@@ -125,7 +125,7 @@ const ContactLinks = () => (
 
 
 const H3Card = ({ text }: any) => (
-  <h3 className='font-medium justify-center text-xl lg:text-2xl 2xl:text-3xl mt-5 max-md:text-center px-6 sm:px-10'>
+  <h3 className='font-medium justify-center text-xl lg:text-2xl 3xl:text-3xl mt-5 max-md:text-center px-6 sm:px-10'>
     {text.map((el: string, i: number) => (
       <motion.span
         initial={{ opacity: 0 }}
