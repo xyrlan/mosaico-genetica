@@ -52,8 +52,8 @@ const AboutSection = () => {
           initial={{ opacity: 0, x: "100%" }}
           whileInView={{ opacity: 1, x: "0%" }}
           transition={{ duration: 1 }}
-          className=" flex lg:flex-row flex-col justify-between items-center gap-5 lg:gap-20 max-lg:mt-5 mt-20 bg-[#d9edf2] relative py-10 rounded">
-          <div className='bg-[#d9edf2] h-full w-full absolute -right-full' />
+          className=" flex lg:flex-row flex-col justify-between items-center gap-5 lg:gap-20 max-lg:mt-5 mt-20 bg-[#d9edf2] relative py-10 rounded drop-shadow-lg">
+          <div className='bg-[#d9edf2] h-full w-full absolute -right-full ' />
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

@@ -16,13 +16,16 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-[#cbe7ed] border border-gray-300 ">
+    <footer className=" bg-[#cbe7ed] border border-gray-300 relative bg-opacity-30 ">
+      <Image src={'/jaleco-mosaico.jpg'} width={550} height={800} alt='Mosaico Genética' className='w-full h-full object-cover object-bottom absolute left-0 top-0 select-none opacity-50 -z-10' />
+
+
       <div className="mx-auto max-w-5xl px-4 py-4 lg:py:8 3xl:py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center text-teal-600">
           <Image src="/slogan-mosaico.png" alt="logo" width={200} height={200} />
         </div>
 
-        <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
+        <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 font-medium">
           Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias.
         </p>
 

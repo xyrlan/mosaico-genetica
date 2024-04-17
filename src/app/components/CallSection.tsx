@@ -25,10 +25,11 @@ const CallSection = () => {
     <motion.section
       ref={targetRef}
       id='contato'
-      className='min-h-screen flex justify-center items-center px-4 lg:py-24 py-12 relative'
+      className='min-h-screen flex justify-center items-center px-4 lg:py-24 py-12 relative overflow-hidden '
     >
-      <motion.div style={{ scaleY }} className='absolute h-full w-full bottom-0 bg-gradient-to-b from-[#f5eaf0]/90   to-transparent -z-10 origin-top opacity-80' />
-      <div className="max-w-6xl flex flex-col items-center ">
+      {/* <motion.div style={{ scaleY }} className='absolute h-full w-full bottom-0 bg-gradient-to-b from-gray-50 to-transparent -z-10 origin-top opacity-80' /> */}
+      <div className="max-w-6xl flex flex-col items-center relative">
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,8 +43,8 @@ const CallSection = () => {
 
         <motion.div className='flex max-md:flex-col w-full relative rounded mt-10 md:mt-20 '>
 
-          <div className="flex flex-col justify-around max-md:items-center gap-10 w-full md:w-1/2 py-6 md:py-10 md:h-[475px] shadow-xl z-20 relative rounded">
-
+          <div className="flex flex-col justify-around max-md:items-center gap-10 w-full md:w-1/2 py-6 md:py-10 md:h-[475px] drop-shadow-sm lg:drop-shadow-xl z-20 relative rounded">
+          <div className='bg-[#d9edf2] h-full top-0 w-full absolute -left-full ' />
             <div className='bg-[#d9edf2] -z-20 absolute left-0 top-0 w-full h-full rounded ' />
             <H3Card text={text} />
             <p className='max-md:text-center text-gray-500 md:mt-8 text-base xl:text-lg font-medium px-4 md:px-10 '>Em caso de dúvidas ou problemas para agendar seu atendimento entre em contato com a nossa equipe por telefone ou Whatsapp.</p>
@@ -93,7 +94,7 @@ const CallSection = () => {
 }
 
 const ContactLinks = () => (
-  <ul className='text-gray-500 px-6 sm:px-10'>
+  <ul className='text-gray-500 px-6 sm:px-12'>
     <li>
       <Link href={'https://wa.me/5561998570759'} target='_blank' className='inline-flex items-center gap-3 font-medium my-3 text-base max-md:text-sm duration-300 transition-all hover:text-gray-700 group '>
         <Image src={'/whats.png'} width={20} height={20} className='w-7 h-7' alt='whatsapp-icon' /> (61) 9 9857-0759
