@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   description: "Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias com doenças raras.",
   alternates: {
-    canonical: 'https://www.mosaico.med.br',
+    canonical: 'https://mosaico.med.br',
   },
   openGraph: {
     title: "Mosaico Genética Médica",
