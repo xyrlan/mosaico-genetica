@@ -1,9 +1,8 @@
 'use client'
-import React, { use, useRef } from 'react'
+import React, { useRef } from 'react'
 import HeroDescription from './HeroDescription'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import Image from 'next/image'
-import useMediaQuery from '../utils/useMediaQuery'
 
 
 const HeroSection = () => {
@@ -19,8 +18,6 @@ const HeroSection = () => {
   })
   const x = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "25%", "50%", "100%"])
   const x_ = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "-25%", "-50%", "-100%"])
-
-  const isLargeScreen = useMediaQuery('(min-width: 1024px)')
   
   return (
     <motion.section
@@ -49,7 +46,7 @@ const HeroSection = () => {
             transition={{ ease: 'easeOut', duration: 1 }}
 
           >
-            <Image src={'/image3.png'} width={isLargeScreen ? 846 : 430} height={isLargeScreen ? 564 : 287} alt='Mulher com criança' className='w-auto h-auto max-lg:max-h-[350px] max-lg:object-contain' priority />
+            <Image src={'/image3.png'} width={846} height={564} alt='Mulher com criança' className='w-auto h-auto max-lg:max-h-[350px] max-lg:object-contain' priority />
           </motion.div>
 
         </motion.div>
