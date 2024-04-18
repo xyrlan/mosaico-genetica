@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       "https://www.mosaico.med.br/_next/image?url=%2Fmosaicoico.png&w=256&q=75",
-      "https://www.mosaico.med.br/_next/image?url=%2Fmosaicologo.png&w=256&q=75"
     ]
   }
 };
