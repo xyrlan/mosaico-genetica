@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer className=" bg-[#cdd9c6] border border-gray-300 relative bg-opacity-30 ">
-      <Image src="/mosaicoico.png" alt="logo" width={200} height={200} className='absolute h-1/2 w-auto left-0 opacity-30 -z-10' />
+      <Image src="/logomosaico.png" alt="logo" width={200} height={200} className='absolute h-1/2 w-auto left-0 opacity-30 -z-10' />
       <div className="mx-auto max-w-5xl px-4 py-4 lg:py:8 3xl:py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center text-teal-600">
           <Image src="/slogan-mosaico.png" alt="logo" width={200} height={200} />

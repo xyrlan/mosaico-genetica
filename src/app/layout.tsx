@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: 'website',
     images: [
-      "https://www.mosaico.med.br/_next/image?url=%2Fmosaicoico.png&w=256&q=75",
+      "https://www.mosaico.med.br/_next/image?url=%2Flogomosaico.png&w=256&q=75",
     ]
   }
 };
