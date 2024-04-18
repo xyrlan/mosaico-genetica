@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     siteName: "Mosaico Genética Médica",
     locale: "pt_BR",
     type: 'website',
+    images: [
+      "https://www.mosaico.med.br/_next/image?url=%2Fmosaicoico.png&w=256&q=75",
+      "https://www.mosaico.med.br/_next/image?url=%2Fmosaicologo.png&w=256&q=75"
+    ]
   }
 };
 
