@@ -8,12 +8,14 @@ import Footer from "./components/Footer";
 const inter = Montserrat({ weight: ['400', '500', '600', '700'], subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Mosaico Genética Médica",
+  title: {
+    default: "Home",
+    template: "%s - Mosaico Genética"
+  },
   description: "Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias com doenças raras.",
   alternates: {
     canonical: 'mosaico.med.br',
   },
-
 };
 
 export default function RootLayout({
