@@ -7,12 +7,13 @@ import H2 from './H2'
 import ButtonSecondary from './ButtonSecondary'
 import AgendarConsulta from './AgendarConsulta'
 import LinksComponents from './LinksComponents'
+import Link from 'next/link'
 
 const AboutSection = () => {
 
   return (
     <motion.section
-      id="nosso-especialista"
+      id="sobre"
       className="min-h-screen flex items-center relative lg:py-24 py-12 overflow-hidden">
 
       <div className="max-w-6xl mx-auto z-10">
@@ -36,14 +37,16 @@ const AboutSection = () => {
             <p className="text-center text-gray-500 lg:mt-4 text-base xl:text-lg font-medium">
               Na Mosaico, meu objetivo é trazer a expertise adquirida ao longo desses anos de formação para criar um espaço acolhedor, onde as famílias encontrem não apenas um profissional, mas um parceiro dedicado em suas jornadas genéticas.
             </p>
-            <ButtonSecondary>Mais sobre mim</ButtonSecondary>
+            <Link href={'/sobre'} >
+              <ButtonSecondary>Mais sobre mim</ButtonSecondary>
+            </Link>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.8, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
             className="lg:block hidden relative w-2/3  rounded ">
-            <Image src="/fabricio2.png" alt="Especialista" width={331} height={331} className="w-full h-full rounded hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl  " />
+            <Image src="/fabricio2.png" alt="Especialista" width={331} height={441} className="w-full h-full rounded hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl  " />
             <div className='absolute h-full w-full bg-[#f5eaf0] translate-x-8 -translate-y-8 bottom-0 -z-10 shadow-xl' />
           </motion.div>
         </div>

@@ -5,13 +5,15 @@ import Image from "next/image";
 import LinksComponents from "./LinksComponents";
 import CopyCredits from "./CopyCredits";
 import AgendarConsulta from "./AgendarConsulta";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 const NavbarMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { id: 1, name: 'Início', href: 'hero' },
-    { id: 2, name: 'Nosso Especialista', href: 'nosso-especialista' },
+    { id: 2, name: 'Sobre', href: 'sobre' },
     { id: 3, name: 'Serviços', href: 'servicos' },
     { id: 4, name: 'Contato', href: 'contato' },
   ];
@@ -41,6 +43,9 @@ const NavbarMobile = () => {
       }
     }
   });
+
+  const router = useRouter()
+  const pathname = usePathname()
 
   return (
     <>
@@ -88,12 +93,30 @@ const NavbarMobile = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0, transition: { delay: 0.4 + index * 0.1 } }}
                   exit={{ opacity: 0, y: 20, transition: { duration: 0.1 } }}
-                  onClick={() => { handleScrollToElement(item.href); setIsOpen(false); }}
+                  onClick={() => {
+                    if (pathname === '/') {
+                      handleScrollToElement(item.href)
+                      setIsOpen(false)
+                    } else {
+                      router.push(`/#${item.href}`, { scroll: true })
+                      setIsOpen(false)
+                    }
+                  }}
                   className="text-center cursor-pointer font-semibold text-xl text-gray-600"
                 >
                   {item.name}
                 </motion.div>
               ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0, transition: { delay: 0.4 + 4 * 0.1 } }}
+                exit={{ opacity: 0, y: 20, transition: { duration: 0.1 } }}
+                onClick={() => {
+                  router.push('/sobre')
+                  setIsOpen(false)
+                }}>
+                <p className="text-center cursor-pointer font-semibold text-xl text-gray-600">Dr. Fabrício</p>
+              </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0, transition: { delay: 0.5 } }}

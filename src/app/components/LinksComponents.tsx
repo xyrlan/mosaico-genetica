@@ -10,7 +10,7 @@ const LinksComponents = () => {
         href="https://wa.me/5561998570759"
         rel="noreferrer"
         target="_blank"
-        className="text-gray-700 transition hover:text-gray-700/75"
+        className="text-gray-700 transition hover:text-gray-700/75 "
       >
         <span className="sr-only">Whatsapp</span>
         <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -50,6 +50,18 @@ const LinksComponents = () => {
       >
         <span className="sr-only">Linktree</span>
         <Image src={'/lintree.png'} width={42} height={42} alt='linktree-logo' className=' duration-300 hover:saturate-150 transition-all -translate-x-2 -translate-y-[1px]' />
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        href="https://lattes.cnpq.br/6131512439187623"
+        rel="noreferrer"
+        target="_blank"
+        className="text-gray-700 transition hover:text-gray-700/75"
+      >
+        <span className="sr-only">Linktree</span>
+        <Image src={'/lattes.png'} width={32} height={32} alt='linktree-logo' className=' duration-300 hover:saturate-150 drop-shadow-md transition-all -translate-x-4 -translate-y-[1px]' />
       </Link>
     </li>
 

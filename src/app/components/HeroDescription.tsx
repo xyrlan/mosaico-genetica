@@ -4,6 +4,7 @@ import ButtonSecondary from './ButtonSecondary'
 import { handleScrollToElement } from './Navbar'
 import AgendarConsulta from './AgendarConsulta'
 import { motion } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
 
 
 const HeroDescription = () => {
@@ -31,8 +32,10 @@ const HeroDescription = () => {
       </p>
       <div className='flex lg:flex-row flex-col justify-center gap-7 lg:gap-10 mt-5 lg:mt-10 max-lg:px-4'>
         <AgendarConsulta />
-        <ButtonSecondary onClick={() => handleScrollToElement('nosso-especialista')}>
+
+        <ButtonSecondary onClick={() => handleScrollToElement('sobre')}>
           Conheça nosso especialista
+          <ArrowRight className='group-hover:rotate-90 transition-all duration-200 h-5 w-5' />
         </ButtonSecondary>
 
       </div>

@@ -1,0 +1,52 @@
+.timeline-container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  background-color: #e0f7fa; /* Cor de fundo azul claro, ajuste conforme necessário */
+}
+
+.timeline-line {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: #0097a7; /* Cor da linha, ajuste conforme necessário */
+  margin: 50px 0;
+}
+
+.milestone {
+  position: absolute;
+  bottom: 0; /* Ajuste conforme necessário para alinhar corretamente */
+}
+
+.milestone::before {
+  content: '';
+  position: absolute;
+  bottom: -20px; /* Ajuste para mover o ponto para cima ou para baixo da linha */
+  left: 50%; /* Centraliza o pseudo-elemento */
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.milestone[data-year="2010"] {
+  left: 10%; /* Ajuste conforme a posição do marco no seu layout */
+}
+
+.milestone[data-year="2013"] {
+  left: 30%; /* Ajuste conforme a posição do marco no seu layout */
+}
+
+/* ...estilos para outros marcos... */
+
+.content {
+  position: absolute;
+  bottom: 50px; /* Ajuste conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  /* Adicione sombra, borda e outros estilos conforme necessário */
+}
