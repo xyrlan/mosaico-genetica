@@ -20,7 +20,7 @@ const Footer = () => {
       <Image src="/logomosaico.png" alt="logo" width={200} height={200} className='absolute h-1/2 w-auto left-0 opacity-30 -z-10' />
       <div className="mx-auto max-w-5xl px-4 py-4 lg:py:8 3xl:py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center text-teal-600">
-          <Image src="/slogan-mosaico.png" alt="logo" width={200} height={200} />
+          <Image src="/slogan-mosaico.png" alt="logo" width={200} height={77} />
         </div>
 
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-600 font-medium">
