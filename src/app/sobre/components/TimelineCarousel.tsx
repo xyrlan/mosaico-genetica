@@ -52,8 +52,8 @@ export default function TimelineCarousel() {
         </ul>
       </nav>
       <div className=" w-full h-[500px] 3xl:h-[750px] rounded-lg overflow-hidden relative py-5 px-4">
-        <button onClick={handlePrev} className="hidden md:flex items-center gap-3 absolute left-0 top-1/2 -translate-y-1/2 px-4 py-4 text-gray-600 hover:text-[#5db7ce] bg-[#f5eaf0] rounded text-sm duration-200 z-20"><ArrowLeft/> </button>
-        <button onClick={handleNext} className="hidden md:flex item-center gap-3 absolute right-0 top-1/2 -translate-y-1/2 px-4 py-4 text-gray-600 hover:text-[#5db7ce] bg-[#f5eaf0] rounded text-sm duration-200 z-20"> <ArrowRight/> </button>
+        <button onClick={handlePrev} className="hidden md:flex items-center gap-3 absolute left-0 top-1/2 -translate-y-1/2 px-4 py-4 text-gray-600 hover:text-[#5db7ce] bg-[#f5eaf0] rounded text-sm duration-200 z-20"><ArrowLeft /> </button>
+        <button onClick={handleNext} className="hidden md:flex item-center gap-3 absolute right-0 top-1/2 -translate-y-1/2 px-4 py-4 text-gray-600 hover:text-[#5db7ce] bg-[#f5eaf0] rounded text-sm duration-200 z-20"> <ArrowRight /> </button>
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedTab ? selectedTab.date : "empty"}
@@ -74,8 +74,9 @@ export default function TimelineCarousel() {
             }}
             className='flex h-full w-full justify-around items-center'
           >
-            <div className='absolute h-full w-full bottom-0 bg-gradient-radial from-transparent to-[#d9edf2] to-90% -z-10' />
-            <Image src={selectedTab.image} alt={selectedTab.title} width={500} height={500} className='absolute h-full w-full bottom-0 opacity-20 object-cover object-center -z-20' />
+            {/* <div className='absolute h-full w-full bottom-0 bg-gradient-radial from-transparent to-[#d9edf2] to-90% -z-10' />
+            <div className='absolute h-full w-full bottom-0 bg-[#f5eaf0] -z-10' /> */}
+            {/* <Image src={selectedTab.image} alt={selectedTab.title} width={500} height={500} className='absolute h-full w-full bottom-0 opacity-20 object-cover object-center -z-20' /> */}
             <div className='flex flex-col '>
               <p className='self-center font-medium'>{selectedTab.date}</p>
               <H2>{selectedTab.title}</H2>

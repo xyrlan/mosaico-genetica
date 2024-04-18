@@ -22,7 +22,7 @@ export default function AboutHeroSection() {
           <h1 className='font-semibold text-2xl md:text-3xl lg:text-5xl 3xl:text-6xl drop-shadow-lg '>
             Dr. Fabrício Maciel Soares
           </h1>
-          <p className='self-end max-lg:text-sm'>GENETICISTA MÉDICO</p>
+          <p className='self-end max-lg:text-sm'>MÉDICO GENETICISTA</p>
         </motion.div>
         <motion.p
           initial={{ opacity: 0, y: 200 }}
