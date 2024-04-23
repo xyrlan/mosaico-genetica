@@ -5,6 +5,7 @@ import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import CallSection from "./components/CallSection";
 import { Metadata } from "next";
+import ReviewSection from "./components/ReviewSection";
 
 export const metadata: Metadata = {
   title: {
@@ -23,7 +24,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <CallSection />
-
+      <ReviewSection />
     </>
   );
 }

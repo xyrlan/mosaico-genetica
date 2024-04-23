@@ -15,6 +15,7 @@ const Navbar = (props: { scroll: boolean }) => {
     { id: 2, name: 'Sobre', href: 'sobre' },
     { id: 3, name: 'Serviços', href: 'servicos' },
     { id: 4, name: 'Contato', href: 'contato' },
+    { id: 5, name: 'Avaliações', href: 'review' },
   ]
 
   const router = useRouter()
@@ -22,7 +23,7 @@ const Navbar = (props: { scroll: boolean }) => {
 
   return (
     <nav className='hidden lg:flex items-center justify-between p-2 3xl:p-4'>
-      <div className="flex items-center gap-10 ">
+      <div className="flex items-center 3xl:gap-10 gap-5">
         {navItems.map((item) => (
           <div key={item.id} onClick={() => {
             if (pathname === '/') {

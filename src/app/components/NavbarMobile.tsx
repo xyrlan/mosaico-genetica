@@ -16,6 +16,7 @@ const NavbarMobile = () => {
     { id: 2, name: 'Sobre', href: 'sobre' },
     { id: 3, name: 'Serviços', href: 'servicos' },
     { id: 4, name: 'Contato', href: 'contato' },
+    { id: 5, name: 'Avaliações', href: 'review' },
   ];
 
   // Define the number of tiles and their animation
