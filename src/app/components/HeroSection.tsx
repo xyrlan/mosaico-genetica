@@ -20,7 +20,7 @@ const HeroSection = () => {
   const x_ = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "-25%", "-50%", "-100%"])
   
   return (
-    <motion.section
+    <motion.main
       style={{ opacity }}
       ref={targetRef}
       id="hero"
@@ -58,7 +58,7 @@ const HeroSection = () => {
           <HeroDescription />
         </motion.div>
       </motion.div>
-    </motion.section>
+    </motion.main>
   )
 }
 

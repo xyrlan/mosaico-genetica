@@ -3,6 +3,7 @@ import { Inter, Poppins, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 
 const inter = Montserrat({ weight: ['400', '500', '600', '700'], subsets: ['latin'] });
@@ -36,6 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <GoogleTagManager gtmId="GTM-M3JPJPTH" />
       <body className={`${inter.className} relative selection:bg-[#82a170]`}>
         <Header />
         {children}

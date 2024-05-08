@@ -18,9 +18,7 @@ export default function Home() {
 
   return (
     <>
-      <main>
-        <HeroSection />
-      </main>
+      <HeroSection />
       <AboutSection />
       <ServicesSection />
       <CallSection />
