@@ -15,20 +15,25 @@ const HeroDescription = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ ease: 'easeOut', duration: 1 }}
       className="max-w-lg z-20 max-h-screen">
-      <div className='flex justify-center max-lg:hidden relative'>
+      <div className='flex justify-center max-lg:mt-16 relative'>
         <motion.div
           initial={{ scaleY: 1 }}
           whileInView={{ scaleY: 0 }}
           transition={{ ease: 'easeOut', duration: 1, delay: 0.5 }}
           className='w-full h-full absolute bottom-0 bg-gray-50 origin-top' />
-        <Image src="/mosaicoazul.png" alt="Mosaico Genética" width={300} height={86} priority className="h-auto w-auto max-3xl:max-h-[300px] select-none" />
+          <h1 className='font-semibold text-3xl md:text-3xl lg:text-5xl 3xl:text-6xl drop-shadow-lg text-[#7fc2d2] '>
+            Dr. Fabrício Maciel 
+          </h1>
+        {/* <Image src="/mosaicoazul.png" alt="Mosaico Genética" width={300} height={86} priority className="h-auto w-auto max-3xl:max-h-[300px] select-none" /> */}
       </div>
+      <p className='text-center max-lg:text-base text-xl font-semibold text-gray-700'>Médico Geneticista em Brasília</p>
+
       <h1 className='sr-only'>Mosaico Genética Médica</h1>
-      <p className="text-base lg:text-xl 3xl:text-2xl font-medium text-gray-700 max-w-2xl text-center text-balance tracking-wide mt-5 max-lg:px-4">
-        Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias.
+      <p className="text-base lg:text-xl 3xl:text-2xl font- text-gray-700 max-w-2xl text-center text-balance tracking-wide mt-5 max-lg:px-4">
+        Aconselhamento, Diagnóstico e Acompanhamento Genético Adulto e Infantil.
         <br />
-        <br />
-        Atendimento de genética médica presencial em Brasília (DF) e online em todo o Brasil.
+
+        <span className='font-semibold'>Atendimento Presencial e Online em todo o Brasil</span>
       </p>
       <div className='flex lg:flex-row flex-col justify-center gap-7 lg:gap-10 mt-5 lg:mt-10 max-lg:px-4'>
         <AgendarConsulta />
