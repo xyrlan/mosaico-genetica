@@ -21,13 +21,17 @@ const HeroDescription = () => {
           whileInView={{ scaleY: 0 }}
           transition={{ ease: 'easeOut', duration: 1, delay: 0.5 }}
           className='w-full h-full absolute bottom-0 bg-gray-50 origin-top' />
-          <h1 className='font-semibold text-3xl md:text-3xl lg:text-5xl 3xl:text-6xl drop-shadow-lg text-[#7fc2d2] '>
-            Dr. Fabrício Maciel 
-          </h1>
+        <h1 className='font-semibold text-3xl md:text-3xl lg:text-5xl 3xl:text-6xl drop-shadow-lg text-[#7fc2d2] '>
+          Fabrício Maciel
+        </h1>
         {/* <Image src="/mosaicoazul.png" alt="Mosaico Genética" width={300} height={86} priority className="h-auto w-auto max-3xl:max-h-[300px] select-none" /> */}
       </div>
       <p className='text-center max-lg:text-base text-xl font-semibold text-gray-700'>Médico Geneticista em Brasília</p>
-
+      <div className='flex gap-2 items-center justify-center text-gray-500'>
+        <p className='text-xs'>CRM 31124</p>
+        |
+        <p className='text-xs'>RQE 22393</p>
+      </div>
       <h1 className='sr-only'>Mosaico Genética Médica</h1>
       <p className="text-base lg:text-xl 3xl:text-2xl font- text-gray-700 max-w-2xl text-center text-balance tracking-wide mt-5 max-lg:px-4">
         Aconselhamento, Diagnóstico e Acompanhamento Genético Adulto e Infantil.

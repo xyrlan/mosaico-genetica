@@ -41,7 +41,7 @@ const LinksComponents = () => {
       </Link>
     </li>
 
-    <li>
+    {/* <li>
       <Link
         href="https://linktr.ee/mosaico.gen"
         rel="noreferrer"
@@ -51,7 +51,7 @@ const LinksComponents = () => {
         <span className="sr-only">Linktree</span>
         <Image src={'/lintree.png'} width={42} height={42} alt='linktree-logo' className=' duration-300 hover:saturate-150 transition-all -translate-x-2 -translate-y-[1px]' />
       </Link>
-    </li>
+    </li> */}
 
     <li>
       <Link
@@ -60,8 +60,8 @@ const LinksComponents = () => {
         target="_blank"
         className="text-gray-700 transition hover:text-gray-700/75"
       >
-        <span className="sr-only">Linktree</span>
-        <Image src={'/lattes.png'} width={32} height={32} alt='linktree-logo' className=' duration-300 hover:saturate-150 drop-shadow-md transition-all -translate-x-4 -translate-y-[1px]' />
+        <span className="sr-only">Lattes</span>
+        <Image src={'/lattes.png'} width={32} height={32} alt='linktree-logo' className=' duration-300 hover:saturate-150 drop-shadow-md transition-all ' />
       </Link>
     </li>
 

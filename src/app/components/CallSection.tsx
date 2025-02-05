@@ -128,7 +128,7 @@ const ContactLinks = () => (
 
 
 const H3Card = ({ text }: any) => (
-  <h3 className='font-medium justify-center text-xl lg:text-2xl 3xl:text-3xl mt-5 max-md:text-center px-6 sm:px-10'>
+  <h3 className='font-medium justify-center text-xl lg:text-2xl  mt-5 max-md:text-center px-6 sm:px-10'>
     {text.map((el: string, i: number) => (
       <motion.span
         initial={{ opacity: 0 }}

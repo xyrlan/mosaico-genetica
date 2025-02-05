@@ -15,7 +15,6 @@ const AboutSection = () => {
     <motion.section
       id="sobre"
       className="min-h-screen flex items-center relative lg:py-24 py-12 overflow-hidden">
-
       <div className="max-w-6xl mx-auto z-10">
         <div className="flex lg:flex-row flex-col justify-between items-center gap- lg:gap-20  ">
           <motion.div
@@ -23,7 +22,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             className="max-lg:block hidden relative rounded w-[258px] overflow-hidden">
-            <Image src="/fabricio2.png" alt="Especialista" width={200} height={200} className="w-auto h-auto hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl " />
+            <Image src="/fabri2.jpeg" alt="Especialista" width={200} height={200} className="w-auto h-auto hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl " />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -31,7 +30,7 @@ const AboutSection = () => {
             transition={{ ease: 'easeOut', duration: 1 }}
             className="flex items-center flex-col w-full p-5 lg:p-10 gap-4">
             <H2>
-              Fabrício Maciel, MD, MSc
+              Fabrício Maciel
             </H2>
             <LinksComponents />
             <p className="text-center text-gray-500 lg:mt-4 text-base xl:text-lg font-medium">
@@ -46,7 +45,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
             className="lg:block hidden relative w-2/3  rounded ">
-            <Image src="/fabricio2.png" alt="Especialista" width={331} height={441} className="w-full h-full rounded hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl  " />
+            <Image src="/fabri2.jpeg" alt="Especialista" width={331} height={441} className="w-full h-full rounded hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl  " />
             <div className='absolute h-full w-full bg-[#f5eaf0] translate-x-8 -translate-y-8 bottom-0 -z-10 shadow-xl' />
           </motion.div>
         </div>
@@ -89,9 +88,6 @@ const AboutSection = () => {
             <AgendarConsulta />
           </motion.div>
         </motion.div>
-
-
-
       </div>
 
     </motion.section>

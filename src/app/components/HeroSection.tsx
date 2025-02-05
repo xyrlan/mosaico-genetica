@@ -1,5 +1,6 @@
 'use client'
-import React, { useRef } from 'react'
+
+import { useRef } from 'react'
 import HeroDescription from './HeroDescription'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import Image from 'next/image'
@@ -13,7 +14,7 @@ const HeroSection = () => {
   })
 
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
-  const position = useTransform(scrollYProgress, (pos) => {
+  const position = useTransform(scrollYProgress, (pos: any) => {
     return pos >= 1 ? "relative" : "fixed"
   })
   const x = useTransform(scrollYProgress, [0.1, 0.5, 0.7, 1], ["0%", "25%", "50%", "100%"])
