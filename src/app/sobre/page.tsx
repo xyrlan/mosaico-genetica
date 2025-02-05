@@ -5,7 +5,7 @@ import TrajectorySection from "./components/TrajectorySection";
 
 export const metadata: Metadata = {
   title: "Dr. Fabrício Maciel",
-  description: "Dr. Fabrício Maciel é um consultor médico especializado em genética e genética médica. Ele é especialista em diagnóstico, acompanhamento e aconselhamento genético de famílias com doenças raras.",
+  description: "Minha atuação é guiada pela precisão científica e pela busca contínua por inovação na genética médica, com um foco especial em doenças neuromusculares, onde me dedico a avançar no diagnóstico e manejo dessas condições raras.",
 };
 
 export default function AboutPage() {

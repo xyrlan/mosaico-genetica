@@ -28,7 +28,7 @@ export default function AboutHeroSection() {
           initial={{ opacity: 0, y: 200 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className='max-w-xl text-balance text-center text-gray-700 max-lg:mt-14 mt-7 self-center font-medium'>Na Mosaico, meu objetivo é trazer a expertise adquirida ao longo desses anos de formação para criar um espaço acolhedor, onde as famílias encontrem não apenas um profissional, mas um parceiro dedicado em suas jornadas genéticas.</motion.p>
+          className='max-w-xl text-balance text-center text-gray-700 max-lg:mt-14 mt-7 self-center font-medium'>Minha atuação é guiada pela precisão científica e pela busca contínua por inovação na genética médica, com um foco especial em doenças neuromusculares, onde me dedico a avançar no diagnóstico e manejo dessas condições raras.</motion.p>
         <motion.div
           initial={{ opacity: 0, y: 200 }}
           whileInView={{ opacity: 1, y: 0 }}

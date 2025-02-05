@@ -2,9 +2,9 @@
 
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { getPlaceDetails } from '../utils/getPlacesDetails'
 import AgendarConsulta from './AgendarConsulta'
 import { FaStar } from 'react-icons/fa'
+import H2 from './H2'
 
 interface Review {
   author_name: string
@@ -22,7 +22,10 @@ function ReviewSectionGoogle() {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const data = await getPlaceDetails()
+        const data = await fetch("/api/reviews", {
+          method: "GET",
+        }).then((response) => response.json() as Promise<Review[]>)
+
         setReviews(data)
       } catch (error) {
         console.error('Error fetching reviews:', error)
@@ -51,27 +54,37 @@ function ReviewSectionGoogle() {
       id="review"
       className="flex flex-col justify-center items-center px-4 lg:py-24 py-16 pb-32 bg-[#d9edf2] relative overflow-hidden drop-shadow-lg"
     >
-      <h2 className="text-4xl font-bold text-center mb-12 text-[#1e3a8a]">
-        O que nossos pacientes dizem
-      </h2>
+      <div className='mb-14'>
+        <H2>
+          O que nossos pacientes dizem
+        </H2>
+      </div>
 
       {loading ? (
         <div className="flex justify-center items-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1e3a8a]"></div>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        /** 
+         * Utilizando colunas para criar o efeito "masonry".
+         * - columns-1 em telas menores;
+         * - columns-2 em tamanho md;
+         * - columns-3 em tamanho lg;
+         * - gap-6 controla o espaçamento horizontal entre colunas;
+         * - space-y-6 controla o espaçamento vertical entre os elementos de cada coluna.
+         */
+        <div className="max-w-7xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {reviews.map((review, index) => (
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
-              style={{
-                height: 'fit-content',
-                breakInside: 'avoid'
-              }}
+              /** 
+               * break-inside-avoid previne a quebra do card dentro da coluna.
+               * mb-6 cria espaçamento no fim de cada card.
+               */
+              className="mb-6 break-inside-avoid bg-[#f5eaf0] rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-center mb-4">
                 <img
@@ -97,9 +110,9 @@ function ReviewSectionGoogle() {
         </div>
       )}
 
-      <div className="absolute lg:bottom-28 bottom-36 right-1/2 translate-x-1/2 z-50">
+      {/* <div className="absolute bottom-0 right-1/2 translate-x-1/2 z-50">
         <AgendarConsulta />
-      </div>
+      </div> */}
     </motion.section>
   )
 }

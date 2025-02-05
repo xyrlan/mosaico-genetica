@@ -12,7 +12,7 @@ const inter = Montserrat({ weight: ['400', '500', '600', '700'], subsets: ['lati
 
 export const metadata: Metadata = {
   title: {
-    default: "Mosaico Genética",
+    default: "Mosaico Genética - Dr. Fabrício Maciel",
     template: "%s - Mosaico Genética"
   },
   description: "Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias com doenças raras.",
@@ -29,7 +29,10 @@ export const metadata: Metadata = {
     images: [
       "https://www.mosaico.med.br/_next/image?url=%2Flogomosaico.png&w=256&q=75",
     ]
-  }
+  },
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({
