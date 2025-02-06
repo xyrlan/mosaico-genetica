@@ -24,7 +24,6 @@ const CallSection = () => {
   return (
     <motion.section
       ref={targetRef}
-      id='contato'
       className='min-h-screen flex justify-center items-center px-4 lg:py-24 py-12 relative overflow-hidden '
     >
       {/* <motion.div style={{ scaleY }} className='absolute h-full w-full bottom-0 bg-gradient-to-b from-gray-50 to-transparent -z-10 origin-top opacity-80' /> */}
@@ -41,7 +40,7 @@ const CallSection = () => {
 
         <StepsComponent />
 
-        <motion.div className='flex max-md:flex-col w-full relative rounded mt-10 md:mt-20 '>
+        <motion.section  className='flex max-md:flex-col w-full relative rounded mt-10 md:mt-20 '>
 
           <div className="flex flex-col justify-around max-md:items-center gap-10 w-full md:w-1/2 py-6 md:py-10 md:h-[475px] drop-shadow-sm lg:drop-shadow-xl z-20 relative rounded">
             <div className='bg-[#d9edf2] h-full top-0 w-full absolute -left-full ' />
@@ -89,7 +88,7 @@ const CallSection = () => {
             <ContactLinks />
           </motion.div>
 
-        </motion.div>
+        </motion.section>
       </div>
     </motion.section>
   )

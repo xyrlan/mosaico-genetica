@@ -5,15 +5,21 @@ import { handleScrollToElement } from './Navbar'
 import LinksComponents from './LinksComponents'
 import CopyCredits from './CopyCredits'
 import AgendarConsulta from './AgendarConsulta'
+import { i } from 'framer-motion/client'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 const Footer = () => {
 
   const navItems = [
     { id: 1, name: 'Início', href: 'hero' },
-    { id: 2, name: 'Nosso Especialista', href: 'nosso-especialista' },
     { id: 3, name: 'Serviços', href: 'servicos' },
     { id: 4, name: 'Contato', href: 'contato' },
+    { id: 5, name: 'FAQ', href: 'faq' },
   ]
+
+  const pathname = usePathname()
+
 
   return (
     <footer className=" bg-[#cdd9c6] border border-gray-300 relative bg-opacity-30 ">
@@ -28,11 +34,29 @@ const Footer = () => {
         </p>
 
         <ul className="mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-8 lg:gap-12">
-          {navItems.map((item) => (
-            <li key={item.id} onClick={() => handleScrollToElement(item.href)} className='select-none cursor-pointer'>
-              <p className='text-gray-500 hover:text-black duration-300 transition-all font-semibold tracking-tight  '>{item.name}</p>
-            </li>
-          ))}
+          {pathname === '/'
+            ? navItems.map((item) => (
+              <li key={item.id} onClick={() => handleScrollToElement(item.href)} className='select-none cursor-pointer'>
+                <p className='text-gray-500 hover:text-black duration-300 transition-all font-semibold tracking-tight'>
+                  {item.name}
+                </p>
+              </li>
+            ))
+            : navItems.map((item) => (
+              <li key={item.id} className='select-none cursor-pointer'>
+                <Link href={`/#${item.href}`}>
+                  <p className='text-gray-500 hover:text-black duration-300 transition-all font-semibold tracking-tight'>
+                    {item.name}
+                  </p>
+                </Link>
+              </li>
+            ))
+          }
+          <li>
+            <Link href={'/sobre'}>
+              <p className='text-gray-500 hover:text-black duration-300 transition-all font-semibold tracking-tight '>Dr. Fabrício</p>
+            </Link>
+          </li>
           <li>
             <AgendarConsulta />
           </li>
