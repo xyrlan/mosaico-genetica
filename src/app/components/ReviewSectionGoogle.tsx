@@ -55,7 +55,7 @@ function ReviewSectionGoogle() {
     >
       <div className='mb-14'>
         <H2>
-          O que nossos pacientes dizem
+          O que nossos clientes dizem
         </H2>
       </div>
 
