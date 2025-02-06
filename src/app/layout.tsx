@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: 'https://mosaico.med.br',
   },
   openGraph: {
-    title: "Mosaico Genética Médica",
+    title: "Mosaico Genética Médica - Dr. Fabrício Maciel",
     description: "Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias com doenças raras.",
     url: "https://www.mosaico.med.br",
     siteName: "Mosaico Genética Médica",

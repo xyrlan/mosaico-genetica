@@ -1,8 +1,7 @@
-import { ArrowUpRightIcon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import AgendarConsulta from './AgendarConsulta'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 export function handleScrollToElement(id: string) {
   const element = document.getElementById(id)
@@ -16,6 +15,7 @@ const Navbar = (props: { scroll: boolean }) => {
     { id: 3, name: 'Serviços', href: 'servicos' },
     { id: 4, name: 'Contato', href: 'contato' },
     { id: 5, name: 'Avaliações', href: 'review' },
+    { id: 6, name: 'FAQ', href: 'faq' },
   ]
 
   const router = useRouter()

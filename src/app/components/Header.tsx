@@ -22,12 +22,12 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`fixed bg-[#f5eaf0] rounded z-50 duration-300 transition-all w-full xl:container right-1/2 translate-x-1/2 flex justify-center backdrop-blur-xl bg-opacity-70 px-4 md:px-10 top-0 ${scroll ? ' py-1 drop-shadow-xl' : ' py-3 drop-shadow-md'}`}>
-      <div className="flex items-center justify-between container">
+    <header className={`fixed bg-[#f5eaf0] rounded z-50 duration-300 transition-all w-full xl:container right-1/2 translate-x-1/2 flex justify-between items-center backdrop-blur-xl bg-opacity-70 px-4 top-0 ${scroll ? ' py-1 drop-shadow-xl' : ' py-3 drop-shadow-md'}`}>
+      {/* <div className="flex items-center justify-between container w-full"> */}
         <Logo />
         <Navbar scroll={scroll} />
         <NavbarMobile />
-      </div>
+      {/* </div> */}
     </header>
   )
 }

@@ -30,8 +30,13 @@ const AboutSection = () => {
             transition={{ ease: 'easeOut', duration: 1 }}
             className="flex items-center flex-col w-full p-5 lg:p-10 gap-4">
             <H2>
-              Fabrício Maciel
+              Dr. Fabrício Maciel
             </H2>
+            <div className='flex gap-2 items-center justify-center text-gray-500'>
+              <p className='text-xs'>CRM 31124</p>
+              |
+              <p className='text-xs'>RQE 22393</p>
+            </div>
             <LinksComponents />
             <p className="text-center text-gray-500 lg:mt-4 text-base xl:text-lg font-medium">
               Na Mosaico, meu objetivo é trazer a expertise adquirida ao longo desses anos de formação para criar um espaço acolhedor, onde as famílias encontrem não apenas um profissional, mas um parceiro dedicado em suas jornadas genéticas.

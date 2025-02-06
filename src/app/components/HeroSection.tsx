@@ -38,13 +38,13 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, x: "-100%" }}
             whileInView={{ opacity: 1, x: "0%" }}
-            transition={{ ease: 'easeOut', duration: 1, delay: 0.5 }}
+            transition={{ ease: 'easeOut', duration: 1, delay: 1 }}
             className='bg-[#f5eaf0] absolute w-full h-2/3 bottom-0 -z-10 lg:shadow-2xl'>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: -300 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ ease: 'easeOut', duration: 1 }}
+            transition={{ ease: 'easeOut', duration: 1, delay: 0.5 }}
 
           >
             <Image src={'/image3.png'} width={846} height={564} alt='Mulher com criança' className='w-auto h-auto max-lg:max-h-[350px] max-lg:object-contain' priority />

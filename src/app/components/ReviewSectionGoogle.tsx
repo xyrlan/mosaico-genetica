@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import AgendarConsulta from './AgendarConsulta'
 import { FaStar } from 'react-icons/fa'
 import H2 from './H2'
 
