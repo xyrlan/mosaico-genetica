@@ -23,16 +23,17 @@ export const metadata: Metadata = {
     title: "Mosaico Genética Médica - Dr. Fabrício Maciel",
     description: "Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias com doenças raras.",
     url: "https://www.mosaico.med.br",
-    siteName: "Mosaico Genética Médica",
+    siteName: "Mosaico Genética",
     locale: "pt_BR",
     type: 'website',
     images: [
       "https://www.mosaico.med.br/_next/image?url=%2Flogomosaico.png&w=256&q=75",
-    ]
+    ],
   },
   icons: {
     icon: '/icon.png',
   },
+ 
 };
 
 export default function RootLayout({
