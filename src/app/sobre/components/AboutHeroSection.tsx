@@ -19,7 +19,7 @@ export default function AboutHeroSection() {
           transition={{ duration: 1 }}
           className='self-center max-w-xl flex flex-col'>
           <p className='max-lg:text-sm'>CONHEÇA MAIS</p>
-          <h1 className='font-semibold text-2xl md:text-3xl lg:text-5xl 3xl:text-6xl drop-shadow-lg '>
+          <h1 className='font-semibold text-[#1e3a8a] text-2xl md:text-3xl lg:text-5xl 3xl:text-6xl drop-shadow-lg '>
             Dr. Fabrício Maciel Soares
           </h1>
           <p className='self-end max-lg:text-sm'>MÉDICO GENETICISTA</p>

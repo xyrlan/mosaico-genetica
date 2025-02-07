@@ -6,6 +6,7 @@ import AgendarConsulta from './AgendarConsulta'
 import { motion } from 'framer-motion'
 import { ArrowRight, MapPin } from 'lucide-react'
 import Link from 'next/link'
+import StepsComponent from './StepsComponent'
 
 
 const HeroDescription = () => {

@@ -14,8 +14,9 @@ const Footer = () => {
   const navItems = [
     { id: 1, name: 'Início', href: 'hero' },
     { id: 3, name: 'Serviços', href: 'servicos' },
-    { id: 4, name: 'Contato', href: 'contato' },
+    { id: 2, name: 'Avaliações', href: 'review' },
     { id: 5, name: 'FAQ', href: 'faq' },
+    { id: 4, name: 'Contato', href: 'contato' },
   ]
 
   const pathname = usePathname()
@@ -23,7 +24,10 @@ const Footer = () => {
 
   return (
     <footer className=" bg-[#cdd9c6] border border-gray-300 relative bg-opacity-30 ">
-      <Image src="/logomosaico.png" alt="logo" width={200} height={200} className='absolute h-1/2 w-auto left-0 opacity-30 -z-10' />
+      {/* <div className={`absolute left-0 opacity-30 bg-repeat bg-[url('https://www.mosaico.med.br/logomosaico.png')] bg-center bg-contain`}></div> */}
+      <div className="w-full absolute h-40 left-0 opacity-10 -z-10 bg-repeat bg-[url('https://www.mosaico.med.br/logomosaico.png')] bg-contain"></div>
+      <div className="w-full absolute h-40 left-0 opacity-10 bottom-0 -z-10 bg-repeat bg-[url('https://www.mosaico.med.br/logomosaico.png')] bg-contain"></div>
+
       <div className="mx-auto max-w-5xl px-4 py-4 lg:py:8 3xl:py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center text-teal-600">
           <Image src="/slogan-mosaico.png" alt="logo" width={200} height={77} />
@@ -37,7 +41,7 @@ const Footer = () => {
           {pathname === '/'
             ? navItems.map((item) => (
               <li key={item.id} onClick={() => handleScrollToElement(item.href)} className='select-none cursor-pointer'>
-                <p className='text-gray-500 hover:text-black duration-300 transition-all font-semibold tracking-tight'>
+                <p className='text-gray-500 hover:text-[#1e3a8a] duration-300 transition-all font-semibold tracking-tight'>
                   {item.name}
                 </p>
               </li>
@@ -45,7 +49,7 @@ const Footer = () => {
             : navItems.map((item) => (
               <li key={item.id} className='select-none cursor-pointer'>
                 <Link href={`/#${item.href}`}>
-                  <p className='text-gray-500 hover:text-black duration-300 transition-all font-semibold tracking-tight'>
+                  <p className='text-gray-500 hover:text-[#1e3a8a] duration-300 transition-all font-semibold tracking-tight'>
                     {item.name}
                   </p>
                 </Link>
@@ -54,7 +58,7 @@ const Footer = () => {
           }
           <li>
             <Link href={'/sobre'}>
-              <p className='text-gray-500 hover:text-black duration-300 transition-all font-semibold tracking-tight '>Dr. Fabrício</p>
+              <p className='text-gray-500 hover:text-[#1e3a8a] duration-300 transition-all font-semibold tracking-tight'>Dr. Fabrício</p>
             </Link>
           </li>
           <li>

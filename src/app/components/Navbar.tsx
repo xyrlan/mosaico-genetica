@@ -34,13 +34,13 @@ const Navbar = (props: { scroll: boolean }) => {
 
           }}
             className='select-none cursor-pointer'>
-            <p className='text-gray-500 hover:text-black duration-300 transition-all font-semibold tracking-tight  '>{item.name}</p>
+            <p className='text-gray-500 hover:text-[#1e3a8a] duration-300 transition-all font-semibold tracking-tight  '>{item.name}</p>
           </div>
         ))}
         <Link href={'/sobre'}>
-          <p className='text-gray-500 hover:text-black duration-300 transition-all font-semibold tracking-tight '>Dr. Fabrício</p>
+          <p className='text-gray-500 hover:text-[#1e3a8a] duration-300 transition-all font-semibold tracking-tight '>Dr. Fabrício</p>
         </Link>
-        <AgendarConsulta />
+        {/* <AgendarConsulta /> */}
       </div>
     </nav>
   )

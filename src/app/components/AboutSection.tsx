@@ -1,6 +1,6 @@
 'use client'
 import { Hospital, Wifi } from 'lucide-react'
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import H2 from './H2'

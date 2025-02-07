@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
 import H2 from './H2'
-import AgendarConsulta from './AgendarConsulta'
+import StepsComponent from './StepsComponent'
 
 
 const ServicesSection = () => {
@@ -16,13 +16,13 @@ const ServicesSection = () => {
     },
     {
       name: 'Genética Preditiva',
-       description: 'A genética pode ser uma bússola para o futuro. Com testes preditivos, avaliamos o risco de desenvolver condições hereditárias antes mesmo dos primeiros sinais aparecerem.',
+      description: 'A genética pode ser uma bússola para o futuro. Com testes preditivos, avaliamos o risco de desenvolver condições hereditárias antes mesmo dos primeiros sinais aparecerem.',
       icon: '/predictive-chart.png'
     },
     {
-        name: 'Deficiência Intelectual',
-        description: 'Na Mosaico, buscamos compreender as causas genéticas da deficiência intelectual para oferecer um direcionamento adequado. Com isso, apoiamos famílias na construção de um futuro mais acessível e acolhedor para seus filhos.',
-        icon: '/disability.png'
+      name: 'Deficiência Intelectual',
+      description: 'Na Mosaico, buscamos compreender as causas genéticas da deficiência intelectual para oferecer um direcionamento adequado. Com isso, apoiamos famílias na construção de um futuro mais acessível e acolhedor para seus filhos.',
+      icon: '/disability.png'
     },
     {
       name: 'Erros Inatos do Metabolismo',
@@ -59,8 +59,8 @@ const ServicesSection = () => {
   return (
     <section id='servicos' className='min-h-screen relative px-4 flex flex-col lg:pb-24 pb-12 items-center justify-center overflow-hidden'>
       <div className='max-w-6xl flex flex-col gap-7 bg-[#f5eaf0] relative p-2 rounded lg:pt-24 pt-12 drop-shadow-lg '>
-      <div className='bg-[#f5eaf0] h-[10%] top-5 w-full absolute -left-full' />
-      <div className='bg-[#f5eaf0] h-[10%] bottom-5 w-full absolute left-full' />
+        <div className='bg-[#f5eaf0] h-[10%] top-5 w-full absolute -left-full' />
+        <div className='bg-[#f5eaf0] h-[10%] bottom-5 w-full absolute left-full' />
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,14 +69,16 @@ const ServicesSection = () => {
           <H2>Cuidado além do diagnóstico</H2>
           <p className='text-sm md:text-lg 3xl:text-xl font-medium text-gray-600 max-w-4xl text-center text-balance tracking-wide'>
             Na Mosaico, reconhecemos que cada jornada na genética é única. Por isso, proporcionamos aconselhamento especializado em várias áreas da genética clínica, buscando oferecer um suporte holístico e personalizado que atenda às necessidades específicas de cada paciente.</p>
+          <StepsComponent />
         </motion.div>
+
         <ul className="mt-14 text-base leading-7 text-gray-600 lg:max-w-none grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, i) => (
             <motion.li
               key={service.name}
-              initial={{ opacity: 0, y: -25,  }}
+              initial={{ opacity: 0, y: -25, }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ ease: 'easeOut', delay: i * 0.1}}
+              transition={{ ease: 'easeOut', delay: i * 0.1 }}
               className='h-full select-none'
             >
               <div className="h-full relative flex flex-col justify-around items-center bg-gray-200 rounded p-8 hover:-translate-y-2 duration-300 transition-all shadow-lg hover:shadow-2xl ">

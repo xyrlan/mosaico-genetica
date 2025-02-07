@@ -26,17 +26,17 @@ const StepIcon = ({ IconComponent, index }: any) => {
 
   return (
     <motion.div
-      className={`flex lg:flex-col items-center relative text-gray-600 ${stepData[index]?.color}`}
+      className={`flex flex-col items-center relative text-gray-600 ${stepData[index]?.color}`}
       custom={index}
       variants={stepVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <div className="h-16 w-16 lg:w-24 lg:h-24 rounded-full flex lg:justify-center items-center ">
-        <IconComponent className={'drop-shadow-md'} size={40}  />
+      <div className="h-16 w-16 rounded-full flex justify-center items-center ">
+        <IconComponent className={'drop-shadow-md'} size={35}  />
       </div>
-      <div className="mt-2 text-sm max-lg:absolute max-lg:left-16 font-semibold">{stepData[index].label}</div>
+      <div className=" text-sm font-semibold text-center max-w-[120px]">{stepData[index].label}</div>
     </motion.div>
   );
 };
@@ -62,14 +62,14 @@ const ConnectingLine = ({ index }: any) => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="flex-auto border-2 border-gray-600 mx-4 max-lg:h-10 lg:w-20 origin-left max-lg:origin-top"
+      className={`flex-auto border-2 border-gray-400 h-0.5 mx-4 w-full lg:w-20 origin-left ${index === 2 ? "max-lg:hidden" : ""}  `}
     />
   );
 };
 
 const StepsComponent = () => {
   return (
-    <div id='contato' className="flex max-lg:flex-col justify-between items-start lg:items-center p-5 my-3 lg:my-10">
+    <div className=" flex-wrap max-lg: grid grid-flow-col-dense max-lg:grid-cols-3 space-y-2 justify-between items-center p-5 ">
       {stepData.map((step, index) => (
         <React.Fragment key={`step-${index}`}>
           <StepIcon IconComponent={step.icon} index={index} />
