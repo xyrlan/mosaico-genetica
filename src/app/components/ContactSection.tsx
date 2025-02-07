@@ -30,7 +30,7 @@ const ContactSection = () => {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true)
-
+    const sanitizedPhone = formatPhoneForWhatsApp(data.phone);
     try {
       // Envia email com o EmailJS
       const response = await emailjs.send(
@@ -39,7 +39,7 @@ const ContactSection = () => {
         {
           user_name: data.name,
           user_email: data.email,
-          user_phone: data.phone,
+          user_phone: sanitizedPhone,
           to_name: 'Fabrício',
           message: data.message
         },
