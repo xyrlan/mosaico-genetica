@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Poppins, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { GoogleTagManager } from '@next/third-parties/google'
 import { AgendarWidgetProvider } from "./context/AgendarWidgetContext";
 import AgendarWidgetDropUp from "./components/AgendarWidget";
-
 
 const inter = Montserrat({ weight: ['400', '500', '600', '700'], subsets: ['latin'] });
 
@@ -33,7 +32,6 @@ export const metadata: Metadata = {
   icons: {
     icon: '/icon.png',
   },
- 
 };
 
 export default function RootLayout({

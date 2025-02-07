@@ -40,7 +40,7 @@ const Navbar = (props: { scroll: boolean }) => {
         <Link href={'/sobre'}>
           <p className='text-gray-500 hover:text-[#1e3a8a] duration-300 transition-all font-semibold tracking-tight '>Dr. Fabrício</p>
         </Link>
-        {/* <AgendarConsulta /> */}
+        <AgendarConsulta />
       </div>
     </nav>
   )

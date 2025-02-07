@@ -50,6 +50,7 @@ const ContactSection = () => {
             <div className='bg-[#d9edf2] -z-20 absolute left-0 top-0 w-full h-full rounded' />
 
             <H3Card text={text} />
+            <p className='text-sm text-gray-500 font-medium px-4 md:px-10 '>Envie qualquer dúvida sobre seu caso para o médico.</p>
 
             <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-4 px-6 md:px-10 text-sm'>
               <div className='relative'>
@@ -61,7 +62,7 @@ const ContactSection = () => {
                   placeholder="Nome"
                   className={`w-full pl-10 pr-4 py-2 rounded border ${errors.name ? 'border-red-500' : 'border-[#f5eaf0]'} focus:outline-none focus:border-[#7fc2d2] bg-[#f5eaf0]/50`}
                 />
-                {errors.name && <span className='text-red-500 text-sm mt-1'>{errors.name.message}</span>}
+                {errors.name && <span className='text-red-500 text-xs mt-1'>{errors.name.message}</span>}
               </div>
 
               <div className='relative'>
@@ -70,11 +71,12 @@ const ContactSection = () => {
                 </div>
                 <InputMask
                   {...register("phone", { required: "Telefone é obrigatório" })}
-                  mask="+55 (__) ____-____"
+                  mask="(__) _____-____"
+                  replacement={{ _: /\d/ }}
                   placeholder="Telefone"
                   className={`w-full pl-10 pr-4 py-2 rounded border ${errors.phone ? 'border-red-500' : 'border-[#f5eaf0]'} focus:outline-none focus:border-[#7fc2d2] bg-[#f5eaf0]/50`}
                 />
-                {errors.phone && <span className='text-red-500 text-sm mt-1'>{errors.phone.message}</span>}
+                {errors.phone && <span className='text-red-500 text-xs mt-1'>{errors.phone.message}</span>}
               </div>
 
               <div className='relative'>
@@ -92,7 +94,7 @@ const ContactSection = () => {
                   placeholder="Email"
                   className={`w-full pl-10 pr-4 py-2 rounded border ${errors.email ? 'border-red-500' : 'border-[#f5eaf0]'} focus:outline-none focus:border-[#7fc2d2] bg-[#f5eaf0]/50`}
                 />
-                {errors.email && <span className='text-red-500 text-sm mt-1'>{errors.email.message}</span>}
+                {errors.email && <span className='text-red-500 text-xs mt-1'>{errors.email.message}</span>}
               </div>
 
               <div className='relative'>
@@ -102,7 +104,7 @@ const ContactSection = () => {
                   rows={4}
                   className={`w-full px-4 py-2 rounded border min-h-28 ${errors.message ? 'border-red-500' : 'border-[#f5eaf0]'} focus:outline-none focus:border-[#7fc2d2] bg-[#f5eaf0]/50`}
                 />
-                {errors.message && <span className='text-red-500 text-sm mt-1'>{errors.message.message}</span>}
+                {errors.message && <span className='text-red-500 text-xs mt-1'>{errors.message.message}</span>}
               </div>
 
               <Button onClick={handleSubmit(onSubmit)}>
@@ -153,7 +155,7 @@ const ContactSection = () => {
             <H3Card text={text} />
             <p className='text-sm text-gray-500 font-medium px-4 md:px-10 text-center '>Em caso de dúvidas envie-a aqui nesse formulario ou problemas para agendar seu atendimento entre em contato com a nossa equipe por telefone ou Whatsapp.</p>
 
-           <H3Card text={text3} />
+            <H3Card text={text3} />
             <ContactLinks />
           </motion.div>
 

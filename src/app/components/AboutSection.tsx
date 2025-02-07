@@ -89,6 +89,8 @@ const AboutSection = () => {
             </h3>
             <p className="text-center text-gray-500 mt-4 text-base xl:text-lg font-medium">
               Estendemos nosso compromisso de cuidado a todo o Brasil, proporcionando suporte especializado e acolhimento a famílias em cada canto do país, porque acreditamos que nenhuma jornada genética deve ser percorrida sozinho.
+              <br/>
+              Atendemos presencialmente em Brasília - DF
             </p>
             <AgendarConsulta />
           </motion.div>

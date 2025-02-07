@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 import ButtonSecondary from './ButtonSecondary'
 import { handleScrollToElement } from './Navbar'
@@ -6,8 +5,6 @@ import AgendarConsulta from './AgendarConsulta'
 import { motion } from 'framer-motion'
 import { ArrowRight, MapPin } from 'lucide-react'
 import Link from 'next/link'
-import StepsComponent from './StepsComponent'
-
 
 const HeroDescription = () => {
 
@@ -24,9 +21,8 @@ const HeroDescription = () => {
           transition={{ ease: 'easeOut', duration: 1, delay: 0.5 }}
           className='w-full h-full absolute bottom-0 bg-gray-50 origin-top' />
         <h1 className='font-semibold text-3xl md:text-3xl lg:text-5xl drop-shadow-lg text-[#7fc2d2] mb-1'>
-          Dr. Fabrício Maciel
+          Dr. Fabrício Maciel <span className='sr-only'>Mosaico Genetica</span> <span className='sr-only'>Atendimento em todo o Brasil e presencialmente em Brasilia - DF </span>
         </h1>
-        {/* <Image src="/mosaicoazul.png" alt="Mosaico Genética" width={300} height={86} priority className="h-auto w-auto max-3xl:max-h-[300px] select-none" /> */}
       </div>
       <p className='text-center max-lg:text-base text-xl font-semibold text-[#7fc2d2] brightness-90'>Médico Geneticista em Brasília</p>
       <div className='flex gap-2 items-center justify-center text-gray-500'>
