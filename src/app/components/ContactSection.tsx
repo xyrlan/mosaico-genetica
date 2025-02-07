@@ -7,6 +7,9 @@ import { ArrowUpRightIcon, Mail, Phone, User } from 'lucide-react'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import { InputMask } from '@react-input/mask'
+import AgendarConsulta from './AgendarConsulta'
+import ButtonSecondary from './ButtonSecondary'
+import emailjs from '@emailjs/browser'
 
 interface FormData {
   name: string;
@@ -21,17 +24,41 @@ const ContactSection = () => {
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>()
 
+  const serviceId = 'service_7yfmx3n'
+  const templateId = 'template_ym27h1d'
+  const publicKey = 'OR9NOXgMcSID8jV2N' 
+
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true)
-    // Simulando envio
-    console.log('Form data:', data)
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    setIsSubmitting(false)
-    setShowSuccess(true)
-    reset()
-    setTimeout(() => setShowSuccess(false), 3000)
-  }
 
+    try {
+      // Envia email com o EmailJS
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          user_name: data.name,
+          user_email: data.email,
+          user_phone: data.phone,
+          to_name: 'Fabrício',
+          message: data.message
+        },
+        publicKey
+      )
+
+      console.log('EmailJS Response:', response.text)
+      setShowSuccess(true)
+      reset()
+
+      // Exibe a mensagem de sucesso por alguns segundos
+      setTimeout(() => setShowSuccess(false), 3000)
+    } catch (error) {
+      console.error('EmailJS Error:', error)
+      // Aqui você pode exibir uma mensagem de erro para o usuário se quiser
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   const text = "Retire suas dúvidas com um especialista".split(" ");
   const text2 = "Como podemos te ajudar?".split(" ");
   const text3 = "Outros canais de contato".split(" ");
@@ -137,7 +164,17 @@ const ContactSection = () => {
           >
             <H3Card text={text2} />
             <p className='text-sm text-gray-500 font-medium px-4 md:px-10 '>Em caso de dúvidas envie-a aqui nesse formulario ou problemas para agendar seu atendimento entre em contato com a nossa equipe por telefone ou Whatsapp.</p>
-
+            <div className='flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-5'>
+              <AgendarConsulta />
+              <Link href={'https://wa.me/5561998570759'} target='_blank' className='group' >
+                <ButtonSecondary >
+                  <div className='inline-flex gap-3 items-center '>
+                    Preços e informações
+                    <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={20} />
+                  </div>
+                </ButtonSecondary>
+              </Link>
+            </div>
             <H3Card text={text3} />
             <ContactLinks />
           </motion.div>
@@ -169,13 +206,13 @@ const ContactLinks = () => (
   <ul className='text-gray-500 px-6 sm:px-12'>
     <li>
       <Link href={'https://wa.me/5561998570759'} target='_blank' className='inline-flex items-center gap-3 font-medium my-3 text-base max-md:text-sm duration-300 transition-all hover:text-gray-700 group'>
-        <Image src={'/whats.png'} width={20} height={20} className='w-7 h-7' alt='whatsapp-icon' /> (61) 9 9857-0759
+        <Image src={'/whats.png'} width={20} height={20} className='w-6 h-6' alt='whatsapp-icon' /> (61) 9 9857-0759
         <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={18} />
       </Link>
     </li>
     <li>
       <Link href={'https://www.instagram.com/mosaico.gen'} target='_blank' className='inline-flex items-center gap-3 font-medium my-3 text-base max-md:text-sm duration-300 transition-all hover:text-gray-700 group'>
-        <Image src={'/insta.jpg'} width={20} height={20} className='w-7 h-7' alt='insta-icon' />
+        <Image src={'/insta.jpg'} width={20} height={20} className='w-6 h-6' alt='insta-icon' />
         @mosaico.gen
         <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={18} />
       </Link>
