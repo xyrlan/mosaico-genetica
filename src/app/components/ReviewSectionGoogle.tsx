@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaStar } from 'react-icons/fa'
 import H2 from './H2'
+import ButtonSecondary from './ButtonSecondary'
+import Link from 'next/link'
 
 interface Review {
   author_name: string
@@ -53,10 +55,14 @@ function ReviewSectionGoogle() {
       id="review"
       className="flex flex-col justify-center items-center px-4 lg:py-24 py-16 pb-32 bg-[#d9edf2] relative overflow-hidden drop-shadow-lg"
     >
-      <div className='mb-14'>
+      <div className='mb-14 flex items-center gap-5'>
         <H2>
-          O que nossos clientes dizem
+          Somos uma empresa 5 estrelas
         </H2>
+        <FaStar
+          size={30}
+          className='text-yellow-400'
+        />
       </div>
 
       {loading ? (
@@ -108,7 +114,9 @@ function ReviewSectionGoogle() {
           ))}
         </div>
       )}
-
+      <Link className='mt-5' target='_blank' href={'https://www.google.com/maps/place/Dr.+Fabr%C3%ADcio+Maciel,+M%C3%A9dico+Geneticista+Bras%C3%ADlia/@-15.7351381,-47.8974679,17.25z/data=!4m8!3m7!1s0x935a39b3c89c5d11:0xb1cebe83250b16ac!8m2!3d-15.7933292!4d-47.8930172!9m1!1b1!16s%2Fg%2F11vwwmcrxs?entry=ttu&g_ep=EgoyMDI1MDIwNC4wIKXMDSoASAFQAw%3D%3D'} >
+        <ButtonSecondary>Ver todas as avaliações</ButtonSecondary>
+      </Link>
       {/* <div className="absolute bottom-0 right-1/2 translate-x-1/2 z-50">
         <AgendarConsulta />
       </div> */}

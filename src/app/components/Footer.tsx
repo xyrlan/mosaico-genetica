@@ -5,7 +5,7 @@ import { handleScrollToElement } from './Navbar'
 import LinksComponents from './LinksComponents'
 import CopyCredits from './CopyCredits'
 import AgendarConsulta from './AgendarConsulta'
-import { i } from 'framer-motion/client'
+import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
@@ -63,6 +63,28 @@ const Footer = () => {
         </ul>
 
         <LinksComponents />
+
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          className='mt-8'
+        >
+          <iframe
+            allowFullScreen={true}
+            className="w-full rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 max-md:max-h-[200px] border-4 border-secondary/5"
+            height="300"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1920.1528566795077!2d-47.8982378!3d-15.7349586!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a39b3c89c5d11%3A0xb1cebe83250b16ac!2sDr.%20Fabr%C3%ADcio%20Maciel%2C%20M%C3%A9dico%20Geneticista%20Bras%C3%ADlia!5e0!3m2!1spt-BR!2sbr!4v1738937435443!5m2!1spt-BR!2sbr"
+            style={{ border: 0 }}
+            title="Mosaico Genetica localizacao Google Maps"
+            width="600"
+          />
+        </motion.div>
+
         <CopyCredits />
       </div>
     </footer>

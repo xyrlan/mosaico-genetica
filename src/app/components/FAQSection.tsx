@@ -68,7 +68,7 @@ const FAQSection = () => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </Head>
-      <section id='faq' className="min-h-screen relative px-4 flex flex-col lg:pb-24 pb-12 items-center justify-center overflow-hidden">
+      <section id='faq' className="min-h-screen relative px-4 flex flex-col lg:py-24 py-12 items-center justify-center overflow-hidden">
       <div className="max-w-6xl flex flex-col gap-7 bg-[#f5eaf0] relative p-2 rounded lg:pt-24 pt-12 drop-shadow-lg">
         <div className="bg-[#f5eaf0] h-[10%] bottom-5 w-full absolute -left-full" />
         <div className="bg-[#f5eaf0] h-[10%] top-5 w-full absolute left-full" />

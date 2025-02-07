@@ -28,7 +28,7 @@ const AboutSection = () => {
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: 'easeOut', duration: 1 }}
-            className="flex items-center flex-col w-full p-5 lg:p-10 gap-4">
+            className="flex items-center flex-col w-full p-5 lg:p-10 ">
             <H2>
               Dr. Fabrício Maciel
             </H2>
@@ -38,7 +38,7 @@ const AboutSection = () => {
               <p className='text-xs'>RQE 22393</p>
             </div>
             <LinksComponents />
-            <p className="text-center text-gray-500 lg:mt-4 text-base xl:text-lg font-medium">
+            <p className="text-center text-gray-500 lg:mt-4 text-base xl:text-lg font-medium py-6">
               Na Mosaico, meu objetivo é trazer a expertise adquirida ao longo desses anos de formação para criar um espaço acolhedor, onde as famílias encontrem não apenas um profissional, mas um parceiro dedicado em suas jornadas genéticas.
             </p>
             <Link href={'/sobre'} >
@@ -76,7 +76,7 @@ const AboutSection = () => {
             <H2>
               Atendimento onde você estiver
             </H2>
-            <h3 className=" text-lg xl:text-2xl font-semibold text-center mt-4 inline-flex items-center gap-4">
+            <h3 className=" text-lg xl:text-2xl font-semibold text-center mt-4 inline-flex items-center gap-4 text-gray-600">
               <div className='inline-flex items-center gap-2'>
                 <Wifi />
                 Online

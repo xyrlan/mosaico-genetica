@@ -13,9 +13,9 @@ const Navbar = (props: { scroll: boolean }) => {
     { id: 1, name: 'Início', href: 'hero' },
     { id: 2, name: 'Sobre', href: 'sobre' },
     { id: 3, name: 'Serviços', href: 'servicos' },
-    { id: 4, name: 'Contato', href: 'contato' },
     { id: 5, name: 'Avaliações', href: 'review' },
     { id: 6, name: 'FAQ', href: 'faq' },
+    { id: 4, name: 'Contato', href: 'contato' },
   ]
 
   const router = useRouter()

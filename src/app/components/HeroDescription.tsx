@@ -4,7 +4,8 @@ import ButtonSecondary from './ButtonSecondary'
 import { handleScrollToElement } from './Navbar'
 import AgendarConsulta from './AgendarConsulta'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, MapPin } from 'lucide-react'
+import Link from 'next/link'
 
 
 const HeroDescription = () => {
@@ -32,12 +33,16 @@ const HeroDescription = () => {
         |
         <p className='text-xs'>RQE 22393</p>
       </div>
+      <br />
+      <Link href={'https://www.google.com/maps/dir//Biosphere+-+Bloco+G+-+Lote+09,+Shln+-+Asa+Norte,+Bras%C3%ADlia+-+DF,+70770-560/@-15.7347274,-47.8950968,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x935a398fcc35baab:0x63994bb0af3e39df!2m2!1d-47.8942142!2d-15.7361804!3e0?entry=ttu'} target='_blank'>
+        <span className='text-sm text-gray-500 hover:text-[#7fc2d2]  flex items-center gap-2 justify-center duration-300 transition-all '><MapPin size={20} />Brasília - DF</span>
+      </Link>
       <h1 className='sr-only'>Mosaico Genética Médica</h1>
-      <p className="text-base lg:text-xl 3xl:text-2xl font- text-gray-700 max-w-2xl text-center text-balance tracking-wide md:my-16 xl:my-24 my-10 max-lg:px-4">
+      <p className="text-base lg:text-lg 3xl:text-xl font-medium text-gray-700 max-w-2xl text-center text-balance tracking-wide md:my-12 xl:my-16 my-10 max-lg:px-4">
         Aconselhamento, Diagnóstico e Acompanhamento Genético Adulto e Infantil.
         <br />
-
-        <span className='font-semibold'>Atendimento Presencial e Online em todo o Brasil</span>
+        <br />
+        <span className='font-medium text-gray-700'>Atendemos Presencial e Online em todo o Brasil</span>
       </p>
       <div className='flex lg:flex-row flex-col justify-center gap-7 lg:gap-10 mt-5 lg:mt-10 max-lg:px-4'>
         <AgendarConsulta />
