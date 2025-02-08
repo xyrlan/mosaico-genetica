@@ -14,13 +14,13 @@ const HeroDescription = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ ease: 'easeOut', duration: 1 }}
       className="max-w-lg z-20 max-h-screen">
-      <div className='flex justify-center max-lg:mt-16 relative'>
+      <div className='flex justify-center max-lg:mt-16 mt-10 relative'>
         <motion.div
           initial={{ scaleY: 1 }}
           whileInView={{ scaleY: 0 }}
           transition={{ ease: 'easeOut', duration: 1, delay: 0.5 }}
           className='w-full h-full absolute bottom-0 bg-gray-50 origin-top' />
-        <h1 className='font-semibold text-3xl md:text-3xl lg:text-5xl drop-shadow-lg text-[#7fc2d2] mb-1'>
+        <h1 className='font-semibold text-3xl md:text-3xl lg:text-4xl 3xl:text-5xl drop-shadow-lg text-[#7fc2d2] mb-1'>
           Dr. Fabrício Maciel <span className='sr-only'>Mosaico Genetica</span> <span className='sr-only'>Atendimento em todo o Brasil e presencialmente em Brasilia - DF </span>
         </h1>
       </div>
@@ -31,11 +31,14 @@ const HeroDescription = () => {
         <p className='text-xs'>RQE 22393</p>
       </div>
       <br />
-      <Link href={'https://www.google.com/maps/dir//Biosphere+-+Bloco+G+-+Lote+09,+Shln+-+Asa+Norte,+Bras%C3%ADlia+-+DF,+70770-560/@-15.7347274,-47.8950968,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x935a398fcc35baab:0x63994bb0af3e39df!2m2!1d-47.8942142!2d-15.7361804!3e0?entry=ttu'} target='_blank'>
-        <span className='text-sm text-gray-500 hover:text-[#7fc2d2]  flex items-center gap-2 justify-center duration-300 transition-all '><MapPin size={20} />Brasília - DF</span>
-      </Link>
+      <div className=' flex items-center justify-center' >
+        <Link className='text-sm text-gray-500 hover:text-[#7fc2d2] duration-300 transition-all flex items-center gap-2 w-fit' href={'https://www.google.com/maps/place/Dr.+Fabr%C3%ADcio+Maciel,+M%C3%A9dico+Geneticista+Bras%C3%ADlia/@-15.7918019,-47.8917543,17.04z/data=!4m6!3m5!1s0x935a39b3c89c5d11:0xb1cebe83250b16ac!8m2!3d-15.7933292!4d-47.8930172!16s%2Fg%2F11vwwmcrxs?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D'} target='_blank'>
+          <MapPin size={20} />
+          Brasília - DF
+        </Link>
+      </div>
       <h1 className='sr-only'>Mosaico Genética Médica</h1>
-      <p className="text-base lg:text-lg 3xl:text-xl font-medium text-gray-700 max-w-2xl text-center text-balance tracking-wide md:my-12 xl:my-16 my-10 max-lg:px-4">
+      <p className="text-base lg:text-lg 3xl:text-xl font-medium text-gray-700 max-w-2xl text-center text-balance tracking-wide md:my-8  max-lg:px-4">
         Aconselhamento, Diagnóstico e Acompanhamento Genético Adulto e Infantil.
         <br />
         <br />

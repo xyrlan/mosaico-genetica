@@ -43,7 +43,7 @@ export default function AboutHeroSection() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         className="relative rounded w-full">
-        <Image src="/fabi2.jpg" alt="Doutor Fabricio" width={638} height={850} className="w-full h-full max-w-[638px] max-h-[851px] rounded hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl object-cover " priority />
+        <Image src="/fabi2.jpeg" alt="Doutor Fabricio" width={638} height={850} className="w-full h-full max-w-[638px] max-h-[851px] rounded hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl object-cover brightness-110" priority />
         <motion.div
           initial={{ opacity: 0, x: 200, y: 100 }}
           whileInView={{ opacity: 1, x: 48, y: 24 }}
