@@ -60,7 +60,7 @@ const ContactSection = () => {
       setIsSubmitting(false)
     }
   }
-  const text = "Retire suas dúvidas com um especialista".split(" ");
+  const text = "Compartilhe seu caso com a gente!".split(" ");
   const text2 = "Como podemos te ajudar?".split(" ");
   const text3 = "Outros canais de contato".split(" ");
 
@@ -69,13 +69,13 @@ const ContactSection = () => {
       id='contato'
       className='min-h-screen px-4 lg:py-24 py-12'
     >
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ ease: 'easeOut', duration: 1 }}
-        className='flex justify-center mb-10'>
+      <div
+        // initial={{ opacity: 0, y: 50 }}
+        // whileInView={{ opacity: 1, y: 0 }}
+        // transition={{ ease: 'easeOut', duration: 1 }}
+        className='flex justify-center mb-10 sr-only'>
         <H2>Compartilhe seu caso com a gente!</H2>
-      </motion.div>
+      </div>
       <div className="flex justify-center items-center relative overflow-hidden">
         <div className="max-w-6xl flex flex-col items-center relative w-full">
           <motion.section className='flex max-md:flex-col w-full relative rounded'>
