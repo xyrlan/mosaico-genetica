@@ -14,7 +14,7 @@ const HeroDescription = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ ease: 'easeOut', duration: 1 }}
       className="max-w-lg z-20 max-h-screen">
-      <div className='flex justify-center max-lg:mt-16 mt-10 relative'>
+      <div className='flex justify-center max-lg:mt-10 mt-10 relative'>
         <motion.div
           initial={{ scaleY: 1 }}
           whileInView={{ scaleY: 0 }}
@@ -44,7 +44,7 @@ const HeroDescription = () => {
         <br />
         <span className='font-medium text-gray-700'>Atendemos Presencial e Online em todo o Brasil</span>
       </p>
-      <div className='flex lg:flex-row flex-col justify-center gap-7 lg:gap-10 mt-5 lg:mt-10 max-lg:px-4'>
+      <div className='flex lg:flex-row flex-col justify-center gap-4 md:gap-7 lg:gap-10 mt-5 lg:mt-10 max-lg:px-4'>
         <AgendarConsulta />
 
         <ButtonSecondary onClick={() => handleScrollToElement('sobre')}>

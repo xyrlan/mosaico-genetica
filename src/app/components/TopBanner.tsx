@@ -3,10 +3,10 @@ import TopBannerLinksComponents from './topbannerLinksCompoent';
 
 const TopBanner = () => {
   return (
-    <div className="border-b border-gray-300 py-2 px-4 w-full">
-      <div className=" mx-auto flex flex-wrap items-center justify-center lg:justify-between gap-4">
-        <div className="flex items-center  gap-4">
-          <p className='text-xs text-gray-600'>Como posso te ajudar? </p>
+    <div className="border-b border-gray-300 py-2 px-4 w-full ">
+      <div className=" mx-auto flex flex-wrap items-center justify-start lg:justify-between gap-4">
+        <div className="flex items-center gap-4">
+          <p className='text-xs text-gray-600'>Fale por Whatsapp </p>
           <a
             href="https://wa.me/5561998570759"
             rel="noreferrer"

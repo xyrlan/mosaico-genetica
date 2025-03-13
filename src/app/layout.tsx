@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import { GoogleTagManager } from '@next/third-parties/google'
 import { AgendarWidgetProvider } from "./context/AgendarWidgetContext";
 import AgendarWidgetDropUp from "./components/AgendarWidget";
+import WhatsAppWidget from "./components/WhatsAppWidget";
+import MobileContactButtons from "./components/MobileContactButtons";
 
 const inter = Montserrat({ weight: ['400', '500', '600', '700'], subsets: ['latin'] });
 
@@ -46,7 +48,9 @@ export default function RootLayout({
         <AgendarWidgetProvider>
           <Header />
           {children}
+          <WhatsAppWidget />
           <AgendarWidgetDropUp />
+          <MobileContactButtons />
           <Footer />
         </AgendarWidgetProvider>
       </body>
