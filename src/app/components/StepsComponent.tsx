@@ -69,7 +69,7 @@ const ConnectingLine = ({ index }: any) => {
 
 const StepsComponent = () => {
   return (
-    <div className=" flex-wrap max-lg: grid grid-flow-col-dense max-lg:grid-cols-3 space-y-2 justify-between items-center p-5 ">
+    <div className=" flex-wrap max-lg:hidden grid grid-flow-col-dense max-lg:grid-cols-3 space-y-2 justify-between items-center p-5 ">
       {stepData.map((step, index) => (
         <React.Fragment key={`step-${index}`}>
           <StepIcon IconComponent={step.icon} index={index} />
