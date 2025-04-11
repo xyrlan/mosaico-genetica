@@ -14,7 +14,7 @@ const MobileContactButtons = () => {
         className="bg-[#91bfca] text-white font-semibold text-center  py-3 w-full"
       >
         <Link
-          href="tel:+5561998570759" // Substitua pelo número correto
+          href="tel:+556121931447" // Substitua pelo número correto
           className="flex items-center justify-center gap-2 w-full h-full"
         >
           <PhoneCall className='text-white' size={20} />
