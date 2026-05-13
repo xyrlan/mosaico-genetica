@@ -4,8 +4,16 @@ import TrajectorySection from "./components/TrajectorySection";
 
 
 export const metadata: Metadata = {
-  title: "Dr. Fabrício Maciel",
-  description: "Minha atuação é guiada pela precisão científica e pela busca contínua por inovação na genética médica, com um foco especial em doenças neuromusculares, onde me dedico a avançar no diagnóstico e manejo dessas condições raras.",
+  title: "Sobre Dr. Fabrício Maciel — Geneticista em Brasília",
+  description: "Conheça o Dr. Fabrício Maciel, médico geneticista (CRM 31124 / RQE 22393) em Brasília. Formação, trajetória e áreas de atuação em genética médica.",
+  alternates: { canonical: "/sobre" },
+  openGraph: {
+    title: "Sobre o Dr. Fabrício Maciel — Mosaico Genética",
+    description: "Trajetória, formação acadêmica e áreas de atuação em genética médica.",
+    url: "https://www.mosaico.med.br/sobre",
+    type: "profile",
+    images: ["/fabri2.jpeg"],
+  },
 };
 
 export default function AboutPage() {

@@ -61,7 +61,7 @@ const LinksComponents = () => {
         className="text-gray-700 transition hover:text-gray-700/75"
       >
         <span className="sr-only">Lattes</span>
-        <Image src={'/lattes.png'} width={32} height={32} alt='linktree-logo' className=' duration-300 hover:saturate-150 drop-shadow-md transition-all ' />
+        <Image src={'/lattes.png'} width={32} height={32} alt='Currículo Lattes' className=' duration-300 hover:saturate-150 drop-shadow-md transition-all ' />
       </Link>
     </li>
 

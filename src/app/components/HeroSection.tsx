@@ -47,7 +47,7 @@ const HeroSection = () => {
             transition={{ ease: 'easeOut', duration: 1, delay: 0.3 }}
 
           >
-            <Image src={'/image3.png'} width={846} height={564} alt='Mulher com criança' className='w-auto h-auto max-lg:max-h-[350px] max-lg:object-contain' priority />
+            <Image src={'/image3.png'} width={846} height={564} alt='Mãe e filha em consulta de aconselhamento genético' className='w-auto h-auto max-lg:max-h-[350px] max-lg:object-contain' priority />
           </motion.div>
 
         </motion.div>

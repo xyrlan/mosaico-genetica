@@ -1,0 +1,94 @@
+{
+  "title": "Dr. Fabr\u00edcio Maciel - Mosaico Gen\u00e9tica",
+  "meta_description": "Minha atua\u00e7\u00e3o \u00e9 guiada pela precis\u00e3o cient\u00edfica e pela busca cont\u00ednua por inova\u00e7\u00e3o na gen\u00e9tica m\u00e9dica, com um foco especial em doen\u00e7as neuromusculares, onde me dedico a avan\u00e7ar no diagn\u00f3stico e manejo dessas condi\u00e7\u00f5es raras.",
+  "meta_robots": null,
+  "canonical": "https://mosaico.med.br",
+  "h1": [
+    "Dr. Fabr\u00edcio Maciel Soares"
+  ],
+  "h2": [
+    "Conhe\u00e7a um pouco da minha trajet\u00f3ria",
+    "Medicina - Universidade Federal do Maranh\u00e3o"
+  ],
+  "h3": [],
+  "images": [
+    {
+      "src": "/_next/image?url=%2Flattes.png&w=48&q=75",
+      "alt": "linktree-logo",
+      "width": "24",
+      "height": "24",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fmosaicologo.png&w=640&q=75",
+      "alt": "Logo",
+      "width": "200",
+      "height": "200",
+      "loading": null,
+      "lazy_method": "none"
+    },
+    {
+      "src": "/_next/image?url=%2Fmosaicologo.png&w=384&q=75",
+      "alt": "LogoImage",
+      "width": "150",
+      "height": "72",
+      "loading": null,
+      "lazy_method": "none"
+    },
+    {
+      "src": "/_next/image?url=%2Flattes.png&w=64&q=75",
+      "alt": "linktree-logo",
+      "width": "32",
+      "height": "32",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Ffabi2.jpeg&w=1920&q=75",
+      "alt": "Doutor Fabricio",
+      "width": "638",
+      "height": "850",
+      "loading": null,
+      "lazy_method": "none"
+    },
+    {
+      "src": "/_next/image?url=%2Fslogan-mosaico.png&w=640&q=75",
+      "alt": "logo",
+      "width": "200",
+      "height": "77",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Flattes.png&w=64&q=75",
+      "alt": "linktree-logo",
+      "width": "32",
+      "height": "32",
+      "loading": "lazy",
+      "lazy_method": "native"
+    }
+  ],
+  "links": {
+    "internal": [],
+    "external": []
+  },
+  "schema": [],
+  "open_graph": {
+    "og:title": "Mosaico Gen\u00e9tica M\u00e9dica - Dr. Fabr\u00edcio Maciel",
+    "og:description": "Um consult\u00f3rio m\u00e9dico dedicado ao diagn\u00f3stico, acompanhamento e aconselhamento gen\u00e9tico de fam\u00edlias com doen\u00e7as raras.",
+    "og:url": "https://www.mosaico.med.br",
+    "og:site_name": "Mosaico Gen\u00e9tica",
+    "og:locale": "pt_BR",
+    "og:image": "https://www.mosaico.med.br/_next/image?url=%2Flogomosaico.png&w=256&q=75",
+    "og:type": "website"
+  },
+  "twitter_card": {
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Mosaico Gen\u00e9tica M\u00e9dica - Dr. Fabr\u00edcio Maciel",
+    "twitter:description": "Um consult\u00f3rio m\u00e9dico dedicado ao diagn\u00f3stico, acompanhamento e aconselhamento gen\u00e9tico de fam\u00edlias com doen\u00e7as raras.",
+    "twitter:image": "https://www.mosaico.med.br/_next/image?url=%2Flogomosaico.png&w=256&q=75"
+  },
+  "word_count": 122,
+  "hreflang": []
+}

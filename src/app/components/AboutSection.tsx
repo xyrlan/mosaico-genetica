@@ -22,7 +22,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             className="max-lg:block hidden relative rounded w-[258px] overflow-hidden">
-            <Image src="/fabri2.jpeg" alt="Especialista" width={200} height={200} className="w-auto h-auto hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl " />
+            <Image src="/fabri2.jpeg" alt="Dr. Fabrício Maciel, médico geneticista" width={200} height={200} className="w-auto h-auto hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl " />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -50,7 +50,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
             className="lg:block hidden relative w-2/3  rounded ">
-            <Image src="/fabri2.jpeg" alt="Especialista" width={331} height={441} className="w-full h-full rounded hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl  " />
+            <Image src="/fabri2.jpeg" alt="Dr. Fabrício Maciel, médico geneticista" width={331} height={441} className="w-full h-full rounded hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl  " />
             <div className='absolute h-full w-full bg-[#f5eaf0] translate-x-8 -translate-y-8 bottom-0 -z-10 shadow-xl' />
           </motion.div>
         </div>
@@ -66,7 +66,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             className="relative rounded ">
-            <Image src="/atendimento.png" alt="foto-atendimento" width={408} height={229} className="w-auto h-auto max-lg:max-h-[250px] rounded hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl lg:-translate-x-10" />
+            <Image src="/atendimento.png" alt="Consultório Mosaico Genética em Brasília-DF" width={408} height={229} className="w-auto h-auto max-lg:max-h-[250px] rounded hover:scale-105 duration-300 transition-all select-none shadow-lg hover:shadow-2xl lg:-translate-x-10" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 100 }}
@@ -77,15 +77,15 @@ const AboutSection = () => {
               Atendimento onde você estiver
             </H2>
             <h3 className=" text-lg xl:text-2xl font-semibold text-center mt-4 inline-flex items-center gap-4 text-gray-600">
-              <div className='inline-flex items-center gap-2'>
+              <span className='inline-flex items-center gap-2'>
                 <Wifi />
                 Online
-              </div>
-              e
-              <div className='inline-flex items-center gap-2'>
+              </span>
+              <span>e</span>
+              <span className='inline-flex items-center gap-2'>
                 <Hospital />
                 Presencial
-              </div>
+              </span>
             </h3>
             <p className="text-center text-gray-500 mt-4 text-base xl:text-lg font-medium">
               Estendemos nosso compromisso de cuidado a todo o Brasil, proporcionando suporte especializado e acolhimento a famílias em cada canto do país, porque acreditamos que nenhuma jornada genética deve ser percorrida sozinho.

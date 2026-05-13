@@ -1,0 +1,243 @@
+{
+  "title": "Mosaico Gen\u00e9tica - Dr. Fabr\u00edcio Maciel",
+  "meta_description": "Um consult\u00f3rio m\u00e9dico dedicado ao diagn\u00f3stico, acompanhamento e aconselhamento gen\u00e9tico de fam\u00edlias com doen\u00e7as raras.",
+  "meta_robots": null,
+  "canonical": "https://mosaico.med.br",
+  "h1": [
+    "Dr. Fabr\u00edcio MacielMosaico GeneticaAtendimento em todo o Brasil e presencialmente em Brasilia - DF",
+    "Mosaico Gen\u00e9tica M\u00e9dica"
+  ],
+  "h2": [
+    "Dr. Fabr\u00edcio Maciel",
+    "Atendimento onde voc\u00ea estiver",
+    "Cuidado al\u00e9m do diagn\u00f3stico",
+    "Somos uma empresa 5 estrelas",
+    "FAQ - Perguntas Frequentes",
+    "Compartilhe seu caso com a gente!"
+  ],
+  "h3": [
+    "OnlineePresencial",
+    "Autismo (Infantil e Adulto)",
+    "Gen\u00e9tica Preditiva",
+    "Defici\u00eancia Intelectual",
+    "Erros Inatos do Metabolismo",
+    "Neurogen\u00e9tica",
+    "Gen\u00e9tica Reprodutiva",
+    "Oncogen\u00e9tica",
+    "Interpreta\u00e7\u00e3o de Exames Gen\u00e9ticos",
+    "Pareceres",
+    "Compartilheseucasocomagente!",
+    "Comopodemosteajudar?",
+    "Outroscanaisdecontato",
+    "Comopodemosteajudar?",
+    "Outroscanaisdecontato"
+  ],
+  "images": [
+    {
+      "src": "/_next/image?url=%2Flattes.png&w=48&q=75",
+      "alt": "linktree-logo",
+      "width": "24",
+      "height": "24",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fmosaicologo.png&w=640&q=75",
+      "alt": "Logo",
+      "width": "200",
+      "height": "200",
+      "loading": null,
+      "lazy_method": "none"
+    },
+    {
+      "src": "/_next/image?url=%2Fmosaicologo.png&w=384&q=75",
+      "alt": "LogoImage",
+      "width": "150",
+      "height": "72",
+      "loading": null,
+      "lazy_method": "none"
+    },
+    {
+      "src": "/_next/image?url=%2Fimage3.png&w=1920&q=75",
+      "alt": "Mulher com crian\u00e7a",
+      "width": "846",
+      "height": "564",
+      "loading": null,
+      "lazy_method": "none"
+    },
+    {
+      "src": "/_next/image?url=%2Ffabri2.jpeg&w=640&q=75",
+      "alt": "Especialista",
+      "width": "200",
+      "height": "200",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Flattes.png&w=64&q=75",
+      "alt": "linktree-logo",
+      "width": "32",
+      "height": "32",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Ffabri2.jpeg&w=750&q=75",
+      "alt": "Especialista",
+      "width": "331",
+      "height": "441",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fatendimento.png&w=828&q=75",
+      "alt": "foto-atendimento",
+      "width": "408",
+      "height": "229",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fautism.png&w=640&q=75",
+      "alt": "Autismo (Infantil e Adulto)",
+      "width": "300",
+      "height": "300",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fpredictive-chart.png&w=640&q=75",
+      "alt": "Gen\u00e9tica Preditiva",
+      "width": "300",
+      "height": "300",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fdisability.png&w=640&q=75",
+      "alt": "Defici\u00eancia Intelectual",
+      "width": "300",
+      "height": "300",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fmetabolism.png&w=640&q=75",
+      "alt": "Erros Inatos do Metabolismo",
+      "width": "300",
+      "height": "300",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fbraindna.png&w=640&q=75",
+      "alt": "Neurogen\u00e9tica",
+      "width": "300",
+      "height": "300",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Ffertilization.png&w=640&q=75",
+      "alt": "Gen\u00e9tica Reprodutiva",
+      "width": "300",
+      "height": "300",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fdna.png&w=640&q=75",
+      "alt": "Oncogen\u00e9tica",
+      "width": "300",
+      "height": "300",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fsearch.png&w=640&q=75",
+      "alt": "Interpreta\u00e7\u00e3o de Exames Gen\u00e9ticos",
+      "width": "300",
+      "height": "300",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fclipboard.png&w=640&q=75",
+      "alt": "Pareceres",
+      "width": "300",
+      "height": "300",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fwhats.png&w=48&q=75",
+      "alt": "whatsapp-icon",
+      "width": "20",
+      "height": "20",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Finsta.jpg&w=48&q=75",
+      "alt": "insta-icon",
+      "width": "20",
+      "height": "20",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fwhats.png&w=48&q=75",
+      "alt": "whatsapp-icon",
+      "width": "20",
+      "height": "20",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Finsta.jpg&w=48&q=75",
+      "alt": "insta-icon",
+      "width": "20",
+      "height": "20",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Fslogan-mosaico.png&w=640&q=75",
+      "alt": "logo",
+      "width": "200",
+      "height": "77",
+      "loading": "lazy",
+      "lazy_method": "native"
+    },
+    {
+      "src": "/_next/image?url=%2Flattes.png&w=64&q=75",
+      "alt": "linktree-logo",
+      "width": "32",
+      "height": "32",
+      "loading": "lazy",
+      "lazy_method": "native"
+    }
+  ],
+  "links": {
+    "internal": [],
+    "external": []
+  },
+  "schema": [],
+  "open_graph": {
+    "og:title": "Mosaico Gen\u00e9tica M\u00e9dica - Dr. Fabr\u00edcio Maciel",
+    "og:description": "Um consult\u00f3rio m\u00e9dico dedicado ao diagn\u00f3stico, acompanhamento e aconselhamento gen\u00e9tico de fam\u00edlias com doen\u00e7as raras.",
+    "og:url": "https://www.mosaico.med.br",
+    "og:site_name": "Mosaico Gen\u00e9tica",
+    "og:locale": "pt_BR",
+    "og:image": "https://www.mosaico.med.br/_next/image?url=%2Flogomosaico.png&w=256&q=75",
+    "og:type": "website"
+  },
+  "twitter_card": {
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Mosaico Gen\u00e9tica M\u00e9dica - Dr. Fabr\u00edcio Maciel",
+    "twitter:description": "Um consult\u00f3rio m\u00e9dico dedicado ao diagn\u00f3stico, acompanhamento e aconselhamento gen\u00e9tico de fam\u00edlias com doen\u00e7as raras.",
+    "twitter:image": "https://www.mosaico.med.br/_next/image?url=%2Flogomosaico.png&w=256&q=75"
+  },
+  "word_count": 1035,
+  "hreflang": []
+}

@@ -61,7 +61,7 @@ const TopBannerLinksComponents = () => {
         className="text-gray-700 transition hover:text-gray-700/75"
       >
         <span className="sr-only">Lattes</span>
-        <Image src={'/lattes.png'} width={24} height={24} alt='linktree-logo' className=' duration-300 hover:saturate-150 drop-shadow-md transition-all ' />
+        <Image src={'/lattes.png'} width={24} height={24} alt='Currículo Lattes' className=' duration-300 hover:saturate-150 drop-shadow-md transition-all ' />
       </Link>
     </li>
 

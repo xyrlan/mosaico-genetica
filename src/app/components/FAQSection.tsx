@@ -3,7 +3,6 @@ import React from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import H2 from './H2';
-import Head from 'next/head';
 import ButtonSecondary from './ButtonSecondary';
 import { handleScrollToElement } from './Navbar';
 
@@ -64,12 +63,10 @@ const FAQSection = () => {
 
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
       <section id='faq' className="min-h-screen relative px-4 flex flex-col lg:py-24 py-12 items-center justify-center overflow-hidden">
         <div className="max-w-6xl flex flex-col gap-7 bg-[#f5eaf0] relative p-2 rounded lg:pt-24 pt-12 drop-shadow-lg">
           <div className="bg-[#f5eaf0] h-[10%] bottom-5 w-full absolute -left-full" />
