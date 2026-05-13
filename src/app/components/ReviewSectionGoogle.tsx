@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaStar } from 'react-icons/fa'
+import Image from 'next/image'
 import H2 from './H2'
 import ButtonSecondary from './ButtonSecondary'
 import Link from 'next/link'
@@ -83,19 +84,23 @@ function ReviewSectionGoogle() {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              key={index}
-              /** 
-               * break-inside-avoid previne a quebra do card dentro da coluna.
-               * mb-6 cria espaçamento no fim de cada card.
-               */
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.5,
+                ease: 'easeOut',
+                delay: Math.min(index * 0.08, 0.5),
+              }}
+              key={`${review.author_name}-${index}`}
               className="mb-6 break-inside-avoid bg-[#f5eaf0] rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-center mb-4">
-                <img
+                <Image
                   src={review.profile_photo_url}
                   alt={review.author_name}
-                  className="w-12 h-12 rounded-full mr-4"
+                  width={48}
+                  height={48}
+                  unoptimized
+                  className="w-12 h-12 rounded-full mr-4 object-cover"
                 />
                 <div>
                   <h3 className="font-semibold text-lg text-[#1e3a8a]">
