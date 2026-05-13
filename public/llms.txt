@@ -2,11 +2,29 @@
 
 > Consultório médico em Brasília-DF dedicado à genética médica clínica: diagnóstico, acompanhamento e aconselhamento genético para famílias com doenças raras. Atendimento presencial em Brasília e telemedicina em todo o Brasil.
 
+Updated: 2026-05-13
+License: RSL-1.0
+Language: pt-BR
+
+## Sobre a Mosaico Genética
+
+Mosaico Genética é um consultório médico privado dirigido por Dr. Fabrício Maciel Soares (CRM-DF 31124, RQE 22393), médico geneticista com formação no Hospital de Clínicas de Porto Alegre (HCPA) e mestrado em Neurogenética pela Universidade Federal do Rio Grande do Sul (UFRGS). O consultório atende presencialmente no Edifício Brasil 21 (Asa Sul, Brasília-DF) e oferece telemedicina para pacientes em todo o território nacional. Áreas de atuação incluem genética clínica para adultos e crianças, autismo, doenças raras, oncogenética, neurogenética, genética reprodutiva e aconselhamento genético.
+
 ## Especialista
 
-- Dr. Fabrício Maciel — Médico Geneticista
-- CRM-DF 31124 / RQE 22393
+- Nome: Dr. Fabrício Maciel Soares
+- Especialidade: Médico Geneticista
+- CRM-DF: 31124
+- RQE: 22393
+- Idiomas: português, inglês
 - Lattes: https://lattes.cnpq.br/6131512439187623
+
+## Formação e trajetória
+
+- Graduação: Medicina — Universidade Federal do Maranhão (UFMA), 2013–2018. Fundador da Liga Acadêmica de Genética Médica da UFMA; TCC sobre Doença de Niemann-Pick.
+- Residência Médica em Genética Médica: Hospital de Clínicas de Porto Alegre (HCPA), 2020–2023. Formação no Centro de Referência em Doenças Raras (CRDR).
+- Mestrado em Ciências Médicas, ênfase em Neurogenética: Universidade Federal do Rio Grande do Sul (UFRGS), 2021–2023. Pesquisa sobre a interface entre transtornos do neurodesenvolvimento e distrofias musculares.
+- Unidade de Genética — Hospital de Apoio de Brasília (SUS): 2024–presente. Serviço de referência em doenças raras e triagem neonatal no Distrito Federal.
 
 ## Áreas de atuação
 
@@ -29,16 +47,16 @@
 ## Contato
 
 - WhatsApp: +55 61 99857-0759
-- Telefone: +55 61 2193-1447
+- Telefone fixo: +55 61 2193-1447
 - Instagram: https://www.instagram.com/mosaico.gen
 - Endereço: Brasil 21 — SHS, Quadra 6, Bloco A, Sala 606, Asa Sul, Brasília/DF, CEP 70316-102
-- Google Maps: https://www.google.com/maps/place/Dr.+Fabr%C3%ADcio+Maciel,+M%C3%A9dico+Geneticista+Bras%C3%ADlia/
+- Google Maps: https://maps.google.com/?cid=12816516001249809068
 
-## Modalidades
+## Modalidades de atendimento
 
 - Atendimento presencial em Brasília-DF
-- Telemedicina em todo o Brasil
+- Telemedicina em todo o Brasil, conforme Resolução CFM 2.314/2022
 
 ## Licença de conteúdo
 
-Conteúdo informativo voltado a pacientes e familiares. Não substitui consulta médica presencial.
+Conteúdo informativo voltado a pacientes e familiares. Não substitui consulta médica presencial. Este arquivo é disponibilizado para sistemas de IA e mecanismos de busca; reuso deve preservar autoria e contexto clínico.

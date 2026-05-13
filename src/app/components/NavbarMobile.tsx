@@ -11,12 +11,16 @@ import Link from "next/link";
 const NavbarMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = [
-    { id: 1, name: 'Início', href: 'hero' },
-    { id: 2, name: 'Sobre', href: 'sobre' },
-    { id: 3, name: 'Serviços', href: 'servicos' },
-    { id: 4, name: 'Contato', href: 'contato' },
-    { id: 5, name: 'Avaliações', href: 'review' },
+  type NavItem =
+    | { id: number; name: string; type: 'anchor'; href: string }
+    | { id: number; name: string; type: 'route'; href: string };
+
+  const navItems: NavItem[] = [
+    { id: 1, name: 'Início', type: 'anchor', href: 'hero' },
+    { id: 2, name: 'Sobre', type: 'anchor', href: 'sobre' },
+    { id: 3, name: 'Serviços', type: 'route', href: '/servicos' },
+    { id: 4, name: 'Contato', type: 'anchor', href: 'contato' },
+    { id: 5, name: 'Avaliações', type: 'anchor', href: 'review' },
   ];
 
   // Define the number of tiles and their animation
@@ -95,12 +99,13 @@ const NavbarMobile = () => {
                   animate={{ opacity: 1, y: 0, transition: { delay: 0.4 + index * 0.1 } }}
                   exit={{ opacity: 0, y: 20, transition: { duration: 0.1 } }}
                   onClick={() => {
-                    if (pathname === '/') {
+                    setIsOpen(false)
+                    if (item.type === 'route') {
+                      router.push(item.href)
+                    } else if (pathname === '/') {
                       handleScrollToElement(item.href)
-                      setIsOpen(false)
                     } else {
                       router.push(`/#${item.href}`, { scroll: true })
-                      setIsOpen(false)
                     }
                   }}
                   className="text-center cursor-pointer font-semibold text-xl text-gray-600"

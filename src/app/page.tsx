@@ -4,11 +4,12 @@ import ServicesSection from "./components/ServicesSection";
 import ReviewSectionGoogle from "./components/ReviewSectionGoogle";
 import FAQSection from "./components/FAQSection";
 import ContactSection from "./components/ContactSection";
-import H2 from "./components/H2";
+import FAQSchemaScript from "./components/FAQSchemaScript";
 
 export default async function Home() {
   return (
     <>
+      <FAQSchemaScript />
       <HeroSection />
       <AboutSection />
       <ServicesSection />

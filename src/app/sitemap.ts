@@ -16,5 +16,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: 'https://www.mosaico.med.br/servicos',
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: 'https://www.mosaico.med.br/autismo',
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'https://www.mosaico.med.br/oncogenetica',
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
   ]
 }

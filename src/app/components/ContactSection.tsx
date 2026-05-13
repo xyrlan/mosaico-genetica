@@ -257,7 +257,7 @@ const ContactLinks = () => (
           Localização
           <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={20} />
         </Link>
-        <p className='max-w-sm text-sm'> Brasil 21 - SHS, QD 06, Bl A, sala 606 - Asa Sul - Brasília - DF CEP 70316-102</p>
+        <p className='max-w-sm text-sm'> Brasil 21 - SHS, Quadra 6, Bloco A, Sala 606 - Asa Sul - Brasília - DF CEP 70316-102</p>
       </div>
     </li>
   </ul>
