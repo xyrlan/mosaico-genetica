@@ -15,47 +15,56 @@ const ServicesSection = () => {
     {
       name: 'Autismo (Infantil e Adulto)',
       description: 'Na Mosaico, buscamos entender as bases genéticas do Transtorno do Espectro Autista (TEA), tanto em crianças quanto em adultos, para oferecer um diagnóstico mais preciso e um acompanhamento personalizado',
-      icon: '/autism.png'
+      icon: '/autism.png',
+      href: '/autismo'
     },
     {
       name: 'Genética Preditiva',
       description: 'A genética pode ser uma bússola para o futuro. Com testes preditivos, avaliamos o risco de desenvolver condições hereditárias antes mesmo dos primeiros sinais aparecerem.',
-      icon: '/predictive-chart.png'
+      icon: '/predictive-chart.png',
+      href: '/servicos'
     },
     {
       name: 'Deficiência Intelectual',
       description: 'Na Mosaico, buscamos compreender as causas genéticas da deficiência intelectual para oferecer um direcionamento adequado. Com isso, apoiamos famílias na construção de um futuro mais acessível e acolhedor para seus filhos.',
-      icon: '/disability.png'
+      icon: '/disability.png',
+      href: '/servicos'
     },
     {
       name: 'Erros Inatos do Metabolismo',
       description: 'Nossa equipe especializada em Erros Inatos do Metabolismo está aqui para desvendar os complexos desafios metabólicos especíicos da pessoa.',
-      icon: '/metabolism.png'
+      icon: '/metabolism.png',
+      href: '/servicos'
     },
     {
       name: 'Neurogenética',
       description: 'Na Mosaico, compreendemos as nuances da Neurogenética, focando em condições neurológicas hereditárias e oferecendo soluções clínicas avançadas para enfrentar desafios neurogenéticos.',
-      icon: '/braindna.png'
+      icon: '/braindna.png',
+      href: '/servicos'
     },
     {
       name: 'Genética Reprodutiva',
       description: 'Em Genética Reprodutiva, concentramo-nos em auxiliar casais que buscam orientação sobre riscos genéticos durante a gestação.',
-      icon: '/fertilization.png'
+      icon: '/fertilization.png',
+      href: '/servicos'
     },
     {
       name: 'Oncogenética',
       description: 'Para aqueles que enfrentam desafios oncológicos hereditários, nossa equipe proporciona aconselhamento e estratégias personalizadas de monitoramento.',
-      icon: '/dna.png'
+      icon: '/dna.png',
+      href: '/oncogenetica'
     },
     {
       name: 'Interpretação de Exames Genéticos',
       description: 'Na era da genômica, oferecemos interpretação avançada de exames genéticos.',
-      icon: '/search.png'
+      icon: '/search.png',
+      href: '/servicos'
     },
     {
       name: 'Pareceres',
       description: 'Nossa equipe atua em estreita colaboração com hospitais, proporcionando pareceres genéticos abrangentes para crianças enfrentando desafios médicos complexos.',
-      icon: '/clipboard.png'
+      icon: '/clipboard.png',
+      href: '/servicos'
     }
   ];
 
@@ -81,19 +90,23 @@ const ServicesSection = () => {
               key={service.name}
               initial={{ opacity: 0, y: -25, }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ ease: 'easeOut', delay: i * 0.1 }}
               className='h-full select-none'
             >
-              <div className="h-full relative flex flex-col justify-around items-center bg-gray-200 rounded p-8 hover:-translate-y-2 duration-300 transition-all shadow-lg hover:shadow-2xl ">
+              <Link
+                href={service.href}
+                className="group h-full relative flex flex-col justify-around items-center bg-gray-200 rounded p-8 hover:-translate-y-2 duration-300 transition-all shadow-lg hover:shadow-2xl"
+              >
                 <Image src={service.icon} alt={service.name} width={300} height={300} className='h-[40px] md:h-[50px] w-auto object-center saturate-[40%] select-none' />
-                <h3 className="font-semibold justify-center text-xl lg:text-2xl  mt-5 text-center">
+                <h3 className="font-semibold justify-center text-xl lg:text-2xl mt-5 text-center group-hover:text-[#1e3a8a] transition-colors">
                   {service.name}
                 </h3>
-                <p className="mt-3 text-center text-sm ">{service.description}</p>
-                {/* <div className=' flex justify-center mt-4'>
-                  <AgendarConsulta />
-                </div> */}
-              </div>
+                <p className="mt-3 text-center text-sm">{service.description}</p>
+                <span className="mt-4 text-sm font-semibold text-[#7fc2d2] group-hover:text-[#1e3a8a] transition-colors">
+                  Saiba mais →
+                </span>
+              </Link>
             </motion.li>
           ))}
         </ul>

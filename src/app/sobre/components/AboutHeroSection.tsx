@@ -9,7 +9,7 @@ import LinksComponents from '@/app/components/LinksComponents'
 
 export default function AboutHeroSection() {
   return (
-    <div className='min-h-[88vh] px-4 pt-6 lg:pt-10 pb-16 lg:pb-24 flex lg:flex-row flex-col items-center justify-around relative gap-12 lg:gap-20 drop-shadow-lg overflow-hidden'>
+    <div className='min-h-[60vh] lg:min-h-[68vh] px-4 pt-4 lg:pt-6 pb-16 lg:pb-24 flex lg:flex-row flex-col items-center justify-around relative gap-12 lg:gap-20 drop-shadow-lg overflow-hidden'>
       <div className='hidden lg:block h-1/2 w-1/2 bg-[#f5eaf0] absolute top-1/4 right-0 -z-10 rounded-l' />
       <div className='lg:hidden h-[40%] w-full bg-[#f5eaf0]/60 absolute top-1/3 left-0 -z-10' />
       <div className='flex flex-col w-full'>

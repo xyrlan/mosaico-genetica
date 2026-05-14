@@ -6,7 +6,7 @@ import { PhoneCall } from 'lucide-react';
 
 const MobileContactButtons = () => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white shadow-lg flex items-center md:hidden text-xs">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white shadow-lg flex items-center md:hidden text-xs pb-[env(safe-area-inset-bottom)]">
       {/* Botão "Clique para Ligar" */}
       <motion.div
         whileHover={{ scale: 1.05 }}

@@ -10,7 +10,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
   return (
     <nav
       aria-label="Trilha de navegação"
-      className="px-4 pt-28 lg:pt-32 pb-2 max-w-6xl mx-auto w-full"
+      className="px-4 pt-36 lg:pt-40 pb-0 max-w-6xl mx-auto w-full"
     >
       <ol className="flex flex-wrap items-center gap-1 text-sm text-gray-500">
         {items.map((item, i) => {
