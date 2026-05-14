@@ -7,6 +7,7 @@ import ServiceFaq, { type FaqItem } from '../servicos/components/ServiceFaq'
 import ServiceCTASection from '../servicos/components/ServiceCTASection'
 import ServiceSchemaScript from '../servicos/components/ServiceSchemaScript'
 import LastReviewedByline from '../servicos/components/LastReviewedByline'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 const PAGE_URL = 'https://www.mosaico.med.br/oncogenetica'
 const DATE_MODIFIED = '2026-05-13'
@@ -14,7 +15,7 @@ const DATE_MODIFIED = '2026-05-13'
 export const metadata: Metadata = {
   title: 'Oncogenética em Brasília — Câncer Hereditário',
   description:
-    'Avaliação de risco de câncer hereditário em Brasília com Dr. Fabrício Maciel. Painéis BRCA1/BRCA2, Lynch e multigênicos. Atendimento presencial e telemedicina.',
+    'Avaliação de risco de câncer hereditário em Brasília com Dr. Fabrício Maciel. Painéis BRCA1/2 e Lynch. Presencial e telemedicina nacional.',
   alternates: { canonical: '/oncogenetica' },
   openGraph: {
     title: 'Oncogenética em Brasília — Mosaico Genética',
@@ -111,6 +112,14 @@ export default function OncogeneticaPage() {
         breadcrumbs={breadcrumbs}
         dateModified={DATE_MODIFIED}
         extraNodes={[medicalProcedureNode]}
+      />
+
+      <Breadcrumbs
+        items={[
+          { name: 'Início', href: '/' },
+          { name: 'Serviços', href: '/servicos' },
+          { name: 'Oncogenética' },
+        ]}
       />
 
       <ServiceHero

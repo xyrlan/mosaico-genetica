@@ -4,8 +4,6 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { GoogleTagManager } from '@next/third-parties/google'
-import { AgendarWidgetProvider } from "./context/AgendarWidgetContext";
-import AgendarWidgetDropUp from "./components/AgendarWidget";
 import WhatsAppWidget from "./components/WhatsAppWidget";
 import MobileContactButtons from "./components/MobileContactButtons";
 
@@ -14,10 +12,10 @@ const inter = Montserrat({ weight: ['400', '500', '600', '700'], subsets: ['lati
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mosaico.med.br"),
   title: {
-    default: "Médico Geneticista em Brasília | Mosaico Genética — Dr. Fabrício Maciel",
+    default: "Médico Geneticista em Brasília | Mosaico Genética",
     template: "%s | Mosaico Genética"
   },
-  description: "Um consultório médico dedicado ao diagnóstico, acompanhamento e aconselhamento genético de famílias com doenças raras.",
+  description: "Médico geneticista em Brasília — diagnóstico, acompanhamento e aconselhamento genético para famílias com doenças raras. Presencial e telemedicina. Agende.",
   alternates: {
     canonical: "/",
   },
@@ -166,14 +164,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <AgendarWidgetProvider>
-          <Header />
-          {children}
-          <WhatsAppWidget />
-          <AgendarWidgetDropUp />
-          <MobileContactButtons />
-          <Footer />
-        </AgendarWidgetProvider>
+        <Header />
+        {children}
+        <WhatsAppWidget />
+        <MobileContactButtons />
+        <Footer />
       </body>
     </html>
   );

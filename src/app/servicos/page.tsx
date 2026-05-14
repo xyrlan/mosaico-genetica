@@ -8,6 +8,7 @@ import ServiceFaq, { type FaqItem } from './components/ServiceFaq'
 import ServiceCTASection from './components/ServiceCTASection'
 import ServiceSchemaScript from './components/ServiceSchemaScript'
 import LastReviewedByline from './components/LastReviewedByline'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 const SERVICOS_DATE_MODIFIED = '2026-05-13'
 const SERVICOS_URL = 'https://www.mosaico.med.br/servicos'
@@ -15,7 +16,7 @@ const SERVICOS_URL = 'https://www.mosaico.med.br/servicos'
 export const metadata: Metadata = {
   title: 'Serviços de Genética Médica em Brasília',
   description:
-    'Consulta de genética médica em Brasília e telemedicina em todo o Brasil. Autismo, neurogenética, oncogenética, doenças raras, exames e pareceres com Dr. Fabrício Maciel (CRM-DF 31124).',
+    'Consulta de genética médica em Brasília e telemedicina nacional: autismo, neurogenética, oncogenética, doenças raras e exames com Dr. Fabrício Maciel.',
   alternates: { canonical: '/servicos' },
   openGraph: {
     title: 'Serviços | Mosaico Genética — Dr. Fabrício Maciel',
@@ -140,6 +141,9 @@ export default function ServicosPage() {
         description="Consulta de genética médica em Brasília e telemedicina em todo o Brasil com Dr. Fabrício Maciel."
         breadcrumbs={breadcrumbs}
         dateModified={SERVICOS_DATE_MODIFIED}
+      />
+      <Breadcrumbs
+        items={[{ name: 'Início', href: '/' }, { name: 'Serviços' }]}
       />
       <ServiceHero
         eyebrow="Serviços"

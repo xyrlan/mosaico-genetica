@@ -7,6 +7,7 @@ import ServiceFaq, { type FaqItem } from '../servicos/components/ServiceFaq'
 import ServiceCTASection from '../servicos/components/ServiceCTASection'
 import ServiceSchemaScript from '../servicos/components/ServiceSchemaScript'
 import LastReviewedByline from '../servicos/components/LastReviewedByline'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 const PAGE_URL = 'https://www.mosaico.med.br/autismo'
 const DATE_MODIFIED = '2026-05-13'
@@ -14,7 +15,7 @@ const DATE_MODIFIED = '2026-05-13'
 export const metadata: Metadata = {
   title: 'Geneticista para Autismo (TEA) em Brasília',
   description:
-    'Investigação genética do Transtorno do Espectro Autista (TEA) para crianças e adultos com Dr. Fabrício Maciel. Atendimento presencial em Brasília e telemedicina em todo o Brasil.',
+    'Investigação genética do autismo (TEA) para crianças e adultos com Dr. Fabrício Maciel. Atendimento presencial em Brasília e telemedicina nacional.',
   alternates: { canonical: '/autismo' },
   openGraph: {
     title: 'Geneticista para Autismo (TEA) em Brasília | Mosaico Genética',
@@ -117,6 +118,14 @@ export default function AutismoPage() {
         breadcrumbs={breadcrumbs}
         dateModified={DATE_MODIFIED}
         extraNodes={[medicalConditionNode]}
+      />
+
+      <Breadcrumbs
+        items={[
+          { name: 'Início', href: '/' },
+          { name: 'Serviços', href: '/servicos' },
+          { name: 'Autismo (TEA)' },
+        ]}
       />
 
       <ServiceHero

@@ -1,23 +1,26 @@
+'use client'
 import { ArrowUpRightIcon } from 'lucide-react'
 import React from 'react'
-import Button from './Button'
+import Link from 'next/link'
 import { sendGTMEvent } from '@next/third-parties/google'
-import { useAgendarWidgetContext } from '../context/AgendarWidgetContext'
+
+const WHATSAPP_URL = 'https://wa.me/5561998570759'
 
 const AgendarConsulta = () => {
-  const { setIsOpen } = useAgendarWidgetContext();
   return (
-    <div className='group'>
-      <Button onClick={() => {
-        setIsOpen(true)
-        sendGTMEvent({ event: 'buttonClicked' })
-      }}>
-        <div className='inline-flex gap-3 items-center text-gray-800 text-nowrap'>
-          Agendar Consulta
-          <ArrowUpRightIcon className='group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all' size={20} />
-        </div>
-      </Button>
-    </div>
+    <Link
+      href={WHATSAPP_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => sendGTMEvent({ event: 'buttonClicked' })}
+      className="group inline-flex h-12 px-5 py-1.5 w-full items-center justify-center gap-3 bg-[#7fc2d2] hover:bg-[#63b4c9] duration-200 text-gray-800 text-sm font-medium rounded select-none"
+    >
+      <span className="text-nowrap">Agendar Consulta</span>
+      <ArrowUpRightIcon
+        className="group-hover:translate-x-1 group-hover:-translate-y-1 duration-200 transition-all"
+        size={20}
+      />
+    </Link>
   )
 }
 

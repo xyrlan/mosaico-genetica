@@ -7,6 +7,7 @@ import AbordagemClinica from "./components/AbordagemClinica";
 import SobreFaq from "./components/SobreFaq";
 import LastReviewed from "./components/LastReviewed";
 import SobreSchemaScript from "./components/SobreSchemaScript";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const SOBRE_DATE_MODIFIED = "2026-05-13";
 
@@ -29,6 +30,7 @@ export default function AboutPage() {
   return (
     <>
       <SobreSchemaScript />
+      <Breadcrumbs items={[{ name: "Início", href: "/" }, { name: "Sobre" }]} />
       <AboutHeroSection />
       <AbordagemClinica />
       <AreasAtuacao />
