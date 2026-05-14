@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import { GoogleTagManager } from '@next/third-parties/google'
 import WhatsAppWidget from "./components/WhatsAppWidget";
 import MobileContactButtons from "./components/MobileContactButtons";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Montserrat({ weight: ['400', '500', '600', '700'], subsets: ['latin'] });
 
@@ -175,6 +176,7 @@ export default function RootLayout({
         <WhatsAppWidget />
         <MobileContactButtons />
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
